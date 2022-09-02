@@ -1,0 +1,32 @@
+/** 此 LESS 仅针对于 index.html
+  * 用于应对不同宽度的设备进行浏览
+  */
+
+/* 1200px--1600px */
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 0 15%;
+    }
+    .introduction {
+        .avatar {
+            width: 30%;
+        }
+        .info {
+            width: 70%;
+        }
+    }
+}
+/* 1600--2560px */
+@media screen and (min-width: 1600px) {
+    body {
+        padding: 0 20%;
+    }
+    .introduction {
+        .avatar {
+            width: 25%;
+        }
+        .info {
+            width: 75%;
+        }
+    }
+}

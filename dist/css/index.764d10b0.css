@@ -1,0 +1,58 @@
+
+/** 此 LESS 仅针对于 index.html
+  * 用于应对不同宽度的设备进行浏览
+  */
+/* 1200px--1600px */
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 0 15%;
+  }
+  .introduction .avatar {
+    width: 30%;
+  }
+  .introduction .info {
+    width: 70%;
+  }
+}
+/* 1600--2560px */
+@media screen and (min-width: 1600px) {
+  body {
+    padding: 0 20%;
+  }
+  .introduction .avatar {
+    width: 25%;
+  }
+  .introduction .info {
+    width: 75%;
+  }
+}
+
+body {
+  background-image: url(.././img/bg.7dfe1a18.jpg);
+}
+.introduction {
+  margin-top: 120px;
+  overflow: hidden;
+}
+.introduction .avatar {
+  float: left;
+}
+.introduction .avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+.introduction .info {
+  float: right;
+}
+.introduction .info .title {
+  font-size: 64px;
+  margin: 20px 0;
+}
+.introduction .info .subtitle {
+  font-size: 32px;
+  font-family: '';
+}
+
+
+/*# sourceMappingURL=index.764d10b0.css.map*/

@@ -10,7 +10,7 @@ const path = require('path');
 module.exports = {
     entry: {
         main: './src/main.js',
-        component: './src/main.components.js'
+        component: './src/components.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -56,9 +56,6 @@ module.exports = {
             template: path.resolve(__dirname, "../public/index.html")
         })
     ],
-    // 独立于 loader 和 plugins，devServer 是单独的配置
-    // 注：开发服务器没有输出！所有东西都是在内存里
-    // 停止 devServer 的方法：按下两次 Ctrl + C
     devServer: {
         host: "localhost", // 启动服务器的域名
         port: 3000,        // 端口

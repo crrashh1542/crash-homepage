@@ -9,7 +9,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: './js/[name].[contenthash:8].js',
+        filename: './static/js/[name].[contenthash:8].js',
         clean: true
     },
     module: {
@@ -31,21 +31,21 @@ module.exports = {
                     }
                 },
                 generator: {
-                    filename: './img/[name].[contenthash:8][ext]'
+                    filename: './static/img/[name].[contenthash:8][ext]'
                 }
             },
             { 
                 test: /\.woff2$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: './fonts/[name].[contenthash:8][ext]'
+                    filename: './static/fonts/[name].[contenthash:8][ext]'
                 }
             }
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: './css/index.[contenthash:8].css'
+            filename: './static/css/index.[contenthash:8].css'
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../public/index.html")

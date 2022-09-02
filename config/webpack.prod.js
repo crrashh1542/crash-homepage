@@ -5,11 +5,11 @@ const path = require('path');
 module.exports = {
     entry: {
         main: './src/main.js',
-        component: './src/main.components.js'
+        component: './src/components.js'
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: './js/main.[contenthash:8].js',
+        filename: './js/[name].[contenthash:8].js',
         clean: true
     },
     module: {

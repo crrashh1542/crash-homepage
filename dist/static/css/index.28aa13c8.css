@@ -1,0 +1,123 @@
+body {
+    background-image: url(../.././static/img/bg.7dfe1a18.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+/** 此 LESS 仅针对于 index.html
+  * 用于应对不同宽度的设备进行浏览
+  */
+/* 800--1024px */
+@media screen and (min-width: 800px) {
+  .introduction {
+    padding: 120px 7.5%;
+  }
+  .introduction .avatar {
+    width: 20%;
+  }
+  .introduction .avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
+  .introduction .info {
+    width: 75%;
+  }
+  .introduction .info .title {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+  .introduction .info .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .content {
+    padding: 0 15%;
+  }
+}
+/* 1024--1366px */
+@media screen and (min-width: 1024px) {
+  .introduction {
+    padding: 120px 10%;
+  }
+  .introduction .avatar {
+    width: 20%;
+  }
+  .introduction .avatar img {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+  }
+  .introduction .info {
+    width: 75%;
+  }
+  .introduction .info .title {
+    font-size: 52px;
+    margin: 20px 0;
+  }
+  .introduction .info .subtitle {
+    font-size: 32px;
+    font-weight: 300;
+  }
+  .content {
+    padding: 0 15%;
+  }
+}
+/* 1366px--1600px */
+@media screen and (min-width: 1366px) {
+  .introduction {
+    padding: 120px 15%;
+  }
+  .introduction .avatar {
+    width: 30%;
+  }
+  .introduction .avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
+  .introduction .info {
+    width: 70%;
+  }
+  .introduction .info .title {
+    font-size: 64px;
+    margin: 20px 0;
+  }
+  .introduction .info .subtitle {
+    font-size: 32px;
+    font-weight: 300;
+  }
+}
+/* 1600px-- */
+@media screen and (min-width: 1600px) {
+  .introduction .avatar {
+    width: 25%;
+  }
+  .introduction .info {
+    width: 75%;
+  }
+}
+
+.introduction {
+  overflow: hidden;
+}
+.introduction .avatar {
+  float: left;
+}
+.introduction .info {
+  float: right;
+}
+.content {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.content .card-list {
+  padding: 20px;
+}
+.content .footer {
+  padding: 30px;
+  text-align: center;
+}
+
+
+/*# sourceMappingURL=index.28aa13c8.css.map*/

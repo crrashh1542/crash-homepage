@@ -1,26 +1,20 @@
-body {
-    background-image: url("../images/bg.jpg");
-}
 .introduction {
-    margin-top: 120px;
     overflow: hidden;
     .avatar {
         float: left;
-        img {
-            width: 200px;
-            height: 200px;
-            border-radius: 100px;
-        }
     }
     .info {
         float: right;
-        .title {
-            font-size: 64px;
-            margin: 20px 0;
-        }
-        .subtitle {
-            font-size: 32px;
-            font-family: '';
-        }
+    }
+}
+.content {
+    background-color: rgba(255, 255, 255, 0.25);
+    // backdrop-filter: blur(3px); 不用，会导致页面卡顿
+    .card-list{
+        padding: 20px;
+    }
+    .footer {
+        padding: 30px;
+        text-align: center;
     }
 }

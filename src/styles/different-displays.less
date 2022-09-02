@@ -2,25 +2,92 @@
   * 用于应对不同宽度的设备进行浏览
   */
 
-/* 1200px--1600px */
-@media screen and (min-width: 1200px) {
-    body {
+/* 800--1024px */
+@media screen and (min-width: 800px) {
+    .introduction {
+        padding: 120px 7.5%;
+        .avatar {
+            width: 20%;
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 75px;
+            }
+        }
+        .info {
+            width: 75%;
+            .title {
+                font-size: 36px;
+                margin: 20px 0;
+            }
+            .subtitle {
+                font-size: 24px;
+                font-weight: 300;
+            }
+        }
+    }
+    .content {
         padding: 0 15%;
     }
+}
+
+/* 1024--1366px */
+@media screen and (min-width: 1024px) {
     .introduction {
+        padding: 120px 10%;
+        .avatar {
+            width: 20%;
+            img {
+                width: 180px;
+                height: 180px;
+                border-radius: 90px;
+            }
+        }
+        .info {
+            width: 75%;
+            .title {
+                font-size: 52px;
+                margin: 20px 0;
+            }
+            .subtitle {
+                font-size: 32px;
+                font-weight: 300;
+            }
+        }
+    }
+    .content {
+        padding: 0 15%;
+    }
+}
+
+/* 1366px--1600px */
+@media screen and (min-width: 1366px) {
+    .introduction {
+        padding: 120px 15%;
         .avatar {
             width: 30%;
+            img {
+                width: 200px;
+                height: 200px;
+                border-radius: 100px;
+            }
         }
         .info {
             width: 70%;
+            .title {
+                font-size: 64px;
+                margin: 20px 0;
+            }
+            .subtitle {
+                font-size: 32px;
+                font-weight: 300;
+            }
         }
     }
 }
-/* 1600--2560px */
+
+/* 1600px-- */
 @media screen and (min-width: 1600px) {
-    body {
-        padding: 0 20%;
-    }
     .introduction {
         .avatar {
             width: 25%;

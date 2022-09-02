@@ -1,6 +1,6 @@
 {
-  "name": "www.crrashh1542.top",
-  "version": "1.0.02",
+  "name": "crash-webfrontend",
+  "version": "1.0.03",
   "description": "The frontend index webpage of crrashh1542's website.",
   "main": "index.js",
   "scripts": {

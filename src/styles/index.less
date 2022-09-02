@@ -1,3 +1,4 @@
+@charset 'utf-8';
 .introduction {
     overflow: hidden;
     .avatar {
@@ -10,8 +11,31 @@
 .content {
     background-color: rgba(255, 255, 255, 0.25);
     // backdrop-filter: blur(3px); 不用，会导致页面卡顿
-    .card-list{
-        padding: 20px;
+    .title {
+        padding: 50px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .menu {
+        color: #444;
+        font-size: 24px;
+    }
+    .mdui-card {
+        margin: 20px 10px;
+    }
+    .contacts {
+        padding: 10px;
+        text-align: center;
+        font-family: 'iconfont';
+        a {
+            line-height: 48px;
+            margin: auto;
+            margin: 5px;
+            font-family: 'iconfont';
+            width: 48px;
+            height: 48px;
+        }
     }
     .footer {
         padding: 30px;

@@ -27,6 +27,6 @@
 }
 export default function sayAge(birthday){
     let age_all = getAge (birthday.split('-'));
-    console.log("[birthday.js] 来自大佬 Gaoice，看看他的主页吧 https://gaoice.top \n云萧的实际年龄：" + age_all[0] + "岁" + age_all[1] + "月" + age_all[2] + "天");
+    console.log("[birthday.js] By Gaoice，看看他的主页吧 https://gaoice.top \n云萧的实际年龄：" + age_all[0] + "岁" + age_all[1] + "月" + age_all[2] + "天");
     console.log()
 }

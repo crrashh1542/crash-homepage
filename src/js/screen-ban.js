@@ -6,7 +6,7 @@ export default function banUser(std) {
     if (resolution >= std) {
         console.log("[Screen Ban] 屏幕分辨率通过！");
     } else {
-        let isAccess = confirm("我还未对您的屏幕分辨率进行适配呐~\n一定要继续吗？");
+        let isAccess = confirm("还未对您的屏幕分辨率进行适配呐~\n一定要继续吗？");
         if (isAccess) {
             console.log("[Screen Ban] 屏幕分辨率不通过！");
         } else {

@@ -4,4 +4,5 @@ import screenBan from './js/screen-ban'
 
 // 1. 年龄显示
 sayAge("2007-3-18");
+// 2. 限制宽度800px以下用户访问
 screenBan(800);

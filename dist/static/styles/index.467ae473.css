@@ -1,18 +1,44 @@
 @charset 'utf-8';
-body {
-    background-image: url(../.././static/images/bg.7dfe1a18.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
+.introduction {
+  overflow: hidden;
 }
-@font-face {
-    font-family: 'iconfont';  /* Project id 3626945 */
-    src: url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.woff2?t=1662338516799') format('woff2'),
-         url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.woff?t=1662338516799') format('woff'),
-         url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.ttf?t=1662338516799') format('truetype');
-  }
+.introduction .avatar {
+  float: left;
+}
+.introduction .info {
+  float: right;
+}
+.content .title {
+  padding: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+.content .menu {
+  color: #444;
+  font-size: 24px;
+}
+.content .mdui-card {
+  margin: 20px 10px;
+}
+.content .contacts {
+  padding: 10px;
+  text-align: center;
+  font-family: 'iconfont';
+}
+.content .contacts a {
+  line-height: 48px;
+  margin: auto;
+  margin: 5px;
+  font-family: 'iconfont';
+  width: 48px;
+  height: 48px;
+}
+.content .footer {
+  padding: 30px;
+  text-align: center;
+}
+
 @charset 'utf-8';
 /** 此 LESS 仅针对于 index.html
   * 用于应对不同宽度的设备进行浏览
@@ -69,9 +95,6 @@ body {
     font-size: 24px;
     font-weight: 300;
   }
-  .content {
-    padding: 0 10%;
-  }
 }
 /* 1024--1366px */
 @media screen and (min-width: 1024px) {
@@ -103,9 +126,6 @@ body {
 }
 /* 1366px--1600px */
 @media screen and (min-width: 1366px) {
-  .appbar {
-    padding: 0 15%;
-  }
   .introduction {
     padding: 120px 15%;
   }
@@ -128,9 +148,6 @@ body {
     font-size: 32px;
     font-weight: 300;
   }
-  .content {
-    padding: 0 15%;
-  }
 }
 /* 1600px-- */
 @media screen and (min-width: 1600px) {
@@ -142,49 +159,5 @@ body {
   }
 }
 
-@charset 'utf-8';
-.introduction {
-  overflow: hidden;
-}
-.introduction .avatar {
-  float: left;
-}
-.introduction .info {
-  float: right;
-}
-.content {
-  background-color: rgba(255, 255, 255, 0.25);
-}
-.content .title {
-  padding: 50px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-}
-.content .menu {
-  color: #444;
-  font-size: 24px;
-}
-.content .mdui-card {
-  margin: 20px 10px;
-}
-.content .contacts {
-  padding: 10px;
-  text-align: center;
-  font-family: 'iconfont';
-}
-.content .contacts a {
-  line-height: 48px;
-  margin: auto;
-  margin: 5px;
-  font-family: 'iconfont';
-  width: 48px;
-  height: 48px;
-}
-.content .footer {
-  padding: 30px;
-  text-align: center;
-}
 
-
-/*# sourceMappingURL=index.0a49c83c.css.map*/
+/*# sourceMappingURL=index.467ae473.css.map*/

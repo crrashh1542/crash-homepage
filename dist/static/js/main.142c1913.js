@@ -1,2 +1,2 @@
 (()=>{"use strict";!function(t){let e=function(t){let e=new Date,o=[e.getFullYear(),e.getMonth()+1,e.getDate()],n=o.map(((e,o)=>e-t[o]));if(n[2]<0){let t=new Date(o[0],o[1],0);n[1]--,n[2]+=t.getDate()}return n[1]<0&&(n[0]--,n[1]+=12),n}("2007-3-18".split("-"));console.log("[birthday.js] By Gaoice，看看他的主页吧 https://gaoice.top \n云萧的实际年龄："+e[0]+"岁"+e[1]+"月"+e[2]+"天"),console.log()}()})();
-//# sourceMappingURL=component.1e53d36c.js.map
+//# sourceMappingURL=main.142c1913.js.map

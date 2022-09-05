@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
     entry: {
         main: './src/main.js',
-        component: './src/components.js'
+        index: './src/index.js'
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -47,8 +47,18 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: './static/styles/index.[contenthash:8].css'
         }),
+        // 多个文件
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../public/index.html")
+            template: path.resolve(__dirname, "../public/index.html"),
+            filename: "index.html",
+            chunks: ["index", "main"],
+            favicon: "./public/favicon.ico"
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../public/about/index.html"),
+            filename: "about/index.html",
+            chunks: ["main"],
+            favicon: "./public/favicon.ico"
         })
     ],
     mode: 'production',

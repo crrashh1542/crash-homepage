@@ -1,6 +1,6 @@
 @charset 'utf-8';
 body {
-    background-image: url("../images/bg.jpg");
+    background-image: url(../.././static/images/bg.7dfe1a18.jpg);
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -31,3 +31,5 @@ body {
         padding: 0 15%;
     }
 }
+
+/*# sourceMappingURL=index.638e4c59.css.map*/

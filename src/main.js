@@ -5,3 +5,9 @@ import './styles/reset.css'
 
 // 1. 年龄显示
 sayAge("2007-3-18");
+// 2. mdui 初始化
+var $ = mdui.$;
+var inst = new mdui.Dialog('#info');
+$('#about').on('click', function () {
+    inst.open();
+});

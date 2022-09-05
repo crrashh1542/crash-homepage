@@ -17,6 +17,19 @@ body {
     /* backdrop-filter: blur(3px); 不用，会导致页面卡顿 */
     background-color: rgba(255, 255, 255, 0.25);
 }
+.content .contacts {
+    padding: 10px;
+    text-align: center;
+    font-family: 'iconfont';
+}
+.content .contacts .mdui-btn-icon {
+    line-height: 48px;
+    margin: auto;
+    margin: 5px;
+    font-family: 'iconfont';
+    width: 48px;
+    height: 48px;
+}
 /* 对于不同的设备设置不同的.content */
 @media screen and (min-width: 800px) {
     .content {
@@ -32,4 +45,4 @@ body {
     }
 }
 
-/*# sourceMappingURL=index.638e4c59.css.map*/
+/*# sourceMappingURL=index.f6195af2.css.map*/

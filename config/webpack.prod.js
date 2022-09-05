@@ -31,7 +31,7 @@ module.exports = {
                     }
                 },
                 generator: {
-                    filename: './static/img/[name].[contenthash:8][ext]'
+                    filename: './static/images/[name].[contenthash:8][ext]'
                 }
             },
             { 
@@ -45,7 +45,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: './static/css/index.[contenthash:8].css'
+            filename: './static/styles/index.[contenthash:8].css'
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../public/index.html")

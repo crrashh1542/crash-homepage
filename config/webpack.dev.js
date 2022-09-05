@@ -53,7 +53,8 @@ module.exports = {
             filename: './styles/index.[contenthash:8].css'
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../public/index.html")
+            template: path.resolve(__dirname, "../public/index.html"),
+            favicon: "./public/favicon.ico"
         })
     ],
     devServer: {

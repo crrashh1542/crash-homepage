@@ -9,15 +9,42 @@ body {
 }
 @font-face {
     font-family: 'iconfont';  /* Project id 3626945 */
-    src: url('//at.alicdn.com/t/c/font_3626945_0igtxnd5tvxm.woff2?t=1662128673853') format('woff2'),
-         url('//at.alicdn.com/t/c/font_3626945_0igtxnd5tvxm.woff?t=1662128673853') format('woff'),
-         url('//at.alicdn.com/t/c/font_3626945_0igtxnd5tvxm.ttf?t=1662128673853') format('truetype');
-  
-}
+    src: url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.woff2?t=1662338516799') format('woff2'),
+         url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.woff?t=1662338516799') format('woff'),
+         url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.ttf?t=1662338516799') format('truetype');
+  }
 @charset 'utf-8';
 /** 此 LESS 仅针对于 index.html
   * 用于应对不同宽度的设备进行浏览
   */
+/* 800--1024px */
+@media screen and (max-width: 800px) {
+  .introduction {
+    padding: 120px 7.5%;
+  }
+  .introduction .avatar {
+    width: 20%;
+  }
+  .introduction .avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+  }
+  .introduction .info {
+    width: 75%;
+  }
+  .introduction .info .title {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+  .introduction .info .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .content {
+    padding: 0 10%;
+  }
+}
 /* 800--1024px */
 @media screen and (min-width: 800px) {
   .introduction {
@@ -76,6 +103,9 @@ body {
 }
 /* 1366px--1600px */
 @media screen and (min-width: 1366px) {
+  .appbar {
+    padding: 0 15%;
+  }
   .introduction {
     padding: 120px 15%;
   }
@@ -157,4 +187,4 @@ body {
 }
 
 
-/*# sourceMappingURL=index.c239ce8c.css.map*/
+/*# sourceMappingURL=index.4aff674c.css.map*/

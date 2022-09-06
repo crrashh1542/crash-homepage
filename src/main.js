@@ -7,7 +7,12 @@ import './styles/reset.css'
 sayAge("2007-3-18");
 // 2. mdui 初始化
 var $ = mdui.$;
-var inst = new mdui.Dialog('#info');
 $('#about').on('click', function () {
-    inst.open();
+    mdui.dialog({
+        title: "关于本网站",
+        content: "本网站由云萧（@crrashh1542）自己搭建。<br>部分使用 MDUI 进行 Material 化设计。<br>采用 Webpack 5 打包（但是没有其他框架，因为我菜qwq）<br>此网站代码开源，详见 Github@crrashh1542",
+        buttons: [{
+            text: "了解"
+        }]
+    })
 });

@@ -1,4 +1,7 @@
 @charset 'utf-8';
+.introduction {
+  margin-right: 0;
+}
 .content .title {
   padding: 50px;
   text-align: center;
@@ -117,4 +120,4 @@
 }
 
 
-/*# sourceMappingURL=index.5476e77c.css.map*/
+/*# sourceMappingURL=index.b0b492f7.css.map*/

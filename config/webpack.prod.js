@@ -55,8 +55,8 @@ module.exports = {
             favicon: "./public/favicon.ico"
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../public/about/index.html"),
-            filename: "about/index.html",
+            template: path.resolve(__dirname, "../public/contacts/index.html"),
+            filename: "contacts/index.html",
             chunks: ["main"],
             favicon: "./public/favicon.ico"
         })

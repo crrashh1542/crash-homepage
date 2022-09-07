@@ -13,6 +13,11 @@ body {
          url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.woff?t=1662338516799') format('woff'),
          url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.ttf?t=1662338516799') format('truetype');
 }
+.appbar .btn {
+    margin: 0;
+    text-align: center;
+    width: 70px;
+}
 .content {
     /* backdrop-filter: blur(3px); 不用，会导致页面卡顿 */
     background-color: rgba(255, 255, 255, 0.25);

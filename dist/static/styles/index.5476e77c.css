@@ -1,13 +1,4 @@
 @charset 'utf-8';
-.introduction {
-  overflow: hidden;
-}
-.introduction .avatar {
-  float: left;
-}
-.introduction .info {
-  float: right;
-}
 .content .title {
   padding: 50px;
   text-align: center;
@@ -30,13 +21,13 @@
 /** 此 LESS 仅针对于 index.html
   * 用于应对不同宽度的设备进行浏览
   */
-/* 800--1024px */
+/* --800px */
 @media screen and (max-width: 800px) {
   .introduction {
     padding: 120px 7.5%;
   }
   .introduction .avatar {
-    width: 20%;
+    margin: auto;
   }
   .introduction .avatar img {
     width: 120px;
@@ -44,7 +35,7 @@
     border-radius: 60px;
   }
   .introduction .info {
-    width: 75%;
+    margin: auto;
   }
   .introduction .info .title {
     font-size: 36px;
@@ -64,7 +55,7 @@
     padding: 120px 7.5%;
   }
   .introduction .avatar {
-    width: 20%;
+    margin: auto;
   }
   .introduction .avatar img {
     width: 150px;
@@ -72,10 +63,10 @@
     border-radius: 75px;
   }
   .introduction .info {
-    width: 75%;
+    margin: auto;
   }
   .introduction .info .title {
-    font-size: 36px;
+    font-size: 32px;
     margin: 20px 0;
   }
   .introduction .info .subtitle {
@@ -88,19 +79,13 @@
   .introduction {
     padding: 120px 10%;
   }
-  .introduction .avatar {
-    width: 20%;
-  }
   .introduction .avatar img {
     width: 180px;
     height: 180px;
     border-radius: 90px;
   }
-  .introduction .info {
-    width: 75%;
-  }
   .introduction .info .title {
-    font-size: 52px;
+    font-size: 42px;
     margin: 20px 0;
   }
   .introduction .info .subtitle {
@@ -116,19 +101,13 @@
   .introduction {
     padding: 120px 15%;
   }
-  .introduction .avatar {
-    width: 30%;
-  }
   .introduction .avatar img {
     width: 200px;
     height: 200px;
     border-radius: 100px;
   }
-  .introduction .info {
-    width: 70%;
-  }
   .introduction .info .title {
-    font-size: 64px;
+    font-size: 48px;
     margin: 20px 0;
   }
   .introduction .info .subtitle {
@@ -136,15 +115,6 @@
     font-weight: 300;
   }
 }
-/* 1600px-- */
-@media screen and (min-width: 1600px) {
-  .introduction .avatar {
-    width: 25%;
-  }
-  .introduction .info {
-    width: 75%;
-  }
-}
 
 
-/*# sourceMappingURL=index.e10ec1cb.css.map*/
+/*# sourceMappingURL=index.5476e77c.css.map*/

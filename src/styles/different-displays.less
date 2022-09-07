@@ -3,12 +3,12 @@
   * 用于应对不同宽度的设备进行浏览
   */
 
-/* 800--1024px */
+/* --800px */
 @media screen and (max-width: 800px) {
     .introduction {
         padding: 120px 7.5%;
         .avatar {
-            width: 20%;
+            margin: auto;
             img {
                 width: 120px;
                 height: 120px;
@@ -16,7 +16,7 @@
             }
         }
         .info {
-            width: 75%;
+            margin: auto;
             .title {
                 font-size: 36px;
                 margin: 20px 0;
@@ -36,7 +36,7 @@
     .introduction {
         padding: 120px 7.5%;
         .avatar {
-            width: 20%;
+            margin: auto;
             img {
                 width: 150px;
                 height: 150px;
@@ -44,9 +44,9 @@
             }
         }
         .info {
-            width: 75%;
+            margin: auto;
             .title {
-                font-size: 36px;
+                font-size: 32px;
                 margin: 20px 0;
             }
             .subtitle {
@@ -62,7 +62,6 @@
     .introduction {
         padding: 120px 10%;
         .avatar {
-            width: 20%;
             img {
                 width: 180px;
                 height: 180px;
@@ -70,9 +69,8 @@
             }
         }
         .info {
-            width: 75%;
             .title {
-                font-size: 52px;
+                font-size: 42px;
                 margin: 20px 0;
             }
             .subtitle {
@@ -91,7 +89,6 @@
     .introduction {
         padding: 120px 15%;
         .avatar {
-            width: 30%;
             img {
                 width: 200px;
                 height: 200px;
@@ -99,27 +96,14 @@
             }
         }
         .info {
-            width: 70%;
             .title {
-                font-size: 64px;
+                font-size: 48px;
                 margin: 20px 0;
             }
             .subtitle {
                 font-size: 32px;
                 font-weight: 300;
             }
-        }
-    }
-}
-
-/* 1600px-- */
-@media screen and (min-width: 1600px) { 
-    .introduction {
-        .avatar {
-            width: 25%;
-        }
-        .info {
-            width: 75%;
         }
     }
 }

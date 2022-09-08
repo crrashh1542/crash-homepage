@@ -50,7 +50,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: './styles/index.[contenthash:8].css'
+            filename: './styles/[name].[contenthash:8].css'
         }),
 
         // 多个文件
@@ -64,7 +64,6 @@ module.exports = {
             template: path.resolve(__dirname, "../public/contacts/index.html"),
             filename: "contacts/index.html",
             chunks: ["main"],
-            favicon: "./public/favicon.ico"
         })
     ],
     devServer: {

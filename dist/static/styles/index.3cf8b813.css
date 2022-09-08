@@ -3,7 +3,7 @@
   margin-right: 0;
 }
 .content .title {
-  padding: 50px;
+  padding: 50px 0;
   text-align: center;
   font-size: 24px;
   font-weight: 500;
@@ -42,11 +42,12 @@
   }
   .introduction .info .title {
     font-size: 36px;
-    margin: 20px 0;
+    margin: 20px auto;
   }
   .introduction .info .subtitle {
     font-size: 24px;
     font-weight: 300;
+    margin: 0 auto;
   }
   .content {
     padding: 0 10%;
@@ -70,11 +71,12 @@
   }
   .introduction .info .title {
     font-size: 32px;
-    margin: 20px 0;
+    margin: 20px auto;
   }
   .introduction .info .subtitle {
     font-size: 24px;
     font-weight: 300;
+    margin: 0 auto;
   }
 }
 /* 1024--1366px */
@@ -89,10 +91,9 @@
   }
   .introduction .info .title {
     font-size: 42px;
-    margin: 20px 0;
   }
   .introduction .info .subtitle {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 300;
   }
   .content {
@@ -110,14 +111,14 @@
     border-radius: 100px;
   }
   .introduction .info .title {
-    font-size: 48px;
+    font-size: 42px;
     margin: 20px 0;
   }
   .introduction .info .subtitle {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 300;
   }
 }
 
 
-/*# sourceMappingURL=index.b0b492f7.css.map*/
+/*# sourceMappingURL=index.3cf8b813.css.map*/

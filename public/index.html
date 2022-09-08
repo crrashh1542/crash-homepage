@@ -4,18 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link crossorigin="anonymous" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
     <title>云萧的小破站 / in building...</title>
+    <link crossorigin="anonymous" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
 </head>
-<body>
-
+<body class="mdui-drawer-body-left">
+    <!-- 抽屉栏 -->
+    <div class="mdui-drawer" id="drawer"><ul class="mdui-list">
+        <div class="info">
+            <div class="avatar">
+                <img src="https://www.crrashh1542.top/img/avatars/crrashh1542.jpg" alt="">
+            </div><br>
+            <div class="title">云萧只会咕咕咕</div>
+            <div class="subtitle mdui-text-color-grey-700">高一狗，前端废物一个</div>
+        </div>
+        <a href="https://blogs.crrashh1542.top/" target="_blank"><li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+            <div class="mdui-list-item-content">博客</div>
+        </li></a>
+        <a href="https://blogs.crrashh1542.top/index.php/archives/12" target="_blank"><li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">info_outline</i>
+            <div class="mdui-list-item-content">关于</div>
+        </li></a>
+        <a href="contacts/" target="_blank"><li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">perm_contact_calendar</i>
+            <div class="mdui-list-item-content">联系</div>
+        </li></a>
+    </ul></div>
     <!-- Appbar -->
     <div class="appbar mdui-appbar">
         <div class="mdui-toolbar">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple" id="drawer-btn">
+                <i class="mdui-icon material-icons">menu</i>
+            </a>
             <a href="/" class="mdui-typo-headline">云萧的小破站</a>
             <div class="mdui-toolbar-spacer"></div>
             <a href="https://blogs.crrashh1542.top/" class="btn mdui-ripple" target="_blank">博客</a>
             <a href="https://blogs.crrashh1542.top/index.php/archives/12" class="btn mdui-ripple" target="_blank">关于</a>
+            <a href="contacts/" class="btn mdui-ripple" target="_blank">联系</a>
         </div>
     </div>
     <!-- 顶部 banner -->
@@ -45,7 +70,7 @@
                         <img src="https://www.crrashh1542.top/static/images/1.bf3ab909.jpg"/>
                         <div class="mdui-card-media-covered">
                             <div class="mdui-card-primary">
-                                <div class="mdui-card-primary-title">云萧的咕咕盘</div>
+                                <div class="mdui-card-primary-title">云萧的咕咕盘（已罢工）</div>
                                 <div class="mdui-card-primary-subtitle">基于 Cloudreve 对接 Onedrive 服务</div>
                             </div>
                       </div>

@@ -9,10 +9,10 @@ body {
 }
 @font-face {
     font-family: 'iconfont';  /* Project id 3626945 */
-    src: url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.woff2?t=1662338516799') format('woff2'),
-         url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.woff?t=1662338516799') format('woff'),
-         url('//at.alicdn.com/t/c/font_3626945_4li9tpqjoq4.ttf?t=1662338516799') format('truetype');
-}
+    src: url('//at.alicdn.com/t/c/font_3626945_v1pblbjvl8.woff2?t=1662690811603') format('woff2'),
+         url('//at.alicdn.com/t/c/font_3626945_v1pblbjvl8.woff?t=1662690811603') format('woff'),
+         url('//at.alicdn.com/t/c/font_3626945_v1pblbjvl8.ttf?t=1662690811603') format('truetype');
+  }
 /* 抽屉栏 */
 #drawer {
     .info {
@@ -57,6 +57,21 @@ body {
     .mdui-panel-item {
         background-color: rgba(255, 255, 255, 0.2);
         cursor: default;
+        .title {
+            .icon {
+                font-family: 'iconfont';
+                margin-right: 15px;
+                font-size: 22px;
+            }
+            font-size: 18px;
+        }
+        .item {
+            font-size: 18px;
+        }
+        a {color: #444;}
+    }
+    a {
+        text-decoration: none;
     }
     .contacts { /* 底部按钮 */
         padding: 10px;
@@ -70,6 +85,10 @@ body {
             width: 48px;
             height: 48px;
         }
+    }
+    .footer {
+        padding: 30px;
+        text-align: center;
     }
 }
 /* 对于不同的设备设置不同的.content */

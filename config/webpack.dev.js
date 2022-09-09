@@ -1,8 +1,4 @@
-// 搭建开发服务器（devServer）的原因：每次写完代码都要手动通过 npx webpack 进行编译，这样比较麻烦，我们需要【自动化】
-// 注：devServer 实际上是一个服务器环境，需要下载（ npm i webpack-dev-server -D ）
-//     在开启 devServer 之前需要 >>>【在 webpack.config.js 中进行配置】<<<
-//     配置完毕之后，需要通过 npx webpack-dev-server 来启动
-
+// 开发环境用配置，启动方式：npm run dev
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');

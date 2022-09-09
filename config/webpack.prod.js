@@ -1,3 +1,4 @@
+// 生产环境用配置，启动方式：npm run build
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');

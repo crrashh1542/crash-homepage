@@ -52,6 +52,7 @@ body {
 .content .mdui-panel-item {
   background-color: rgba(255, 255, 255, 0.2);
   cursor: default;
+  color: #444;
 }
 .content .mdui-panel-item .title {
   font-size: 18px;
@@ -123,4 +124,4 @@ body {
 }
 
 
-/*# sourceMappingURL=main.20a9455f.css.map*/
+/*# sourceMappingURL=main.7f8520e1.css.map*/

@@ -1,59 +1,12 @@
-@charset 'utf-8';
-/* 此样式表用于所有页面的初始化 */
-body {
-    background-image: url("../images/bg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%;
-    background-repeat: no-repeat;
-}
-@font-face {
-    font-family: 'iconfont';  /* Project id 3626945 */
-    src: url('//at.alicdn.com/t/c/font_3626945_v1pblbjvl8.woff2?t=1662690811603') format('woff2'),
-         url('//at.alicdn.com/t/c/font_3626945_v1pblbjvl8.woff?t=1662690811603') format('woff'),
-         url('//at.alicdn.com/t/c/font_3626945_v1pblbjvl8.ttf?t=1662690811603') format('truetype');
-  }
-/* 抽屉栏 */
-#drawer {
-    .info {
-        padding: 20px;
-        * {display: block;}
-        .avatar {
-            img {
-                border-radius: 50px;
-                height: 100px;
-                width: 100px;
-                margin: auto;
-            }
-        }
-        .title {
-            margin: 5px 0 15px;
-            text-align: center;
-            font-size: 24px;
-        }
-        .subtitle {
-            text-align: center;
-            font-size: 18px;
-        }
-    }
-}
-/* 顶部栏 */
-@media screen and (max-width: 800px){
-    .appbar { .btn {
-        display: none;
-    }}
-}
-.appbar {
-    .btn {
-        margin: 0;
-        text-align: center;
-        width: 70px;
-    }
-}
+@charset "utf-8";
+/* 此样式表用于对内容部分进行初始化
+ * Date: 2022-10-02 / Version: 1.0.0
+ */
 
 .content {
     /* backdrop-filter: blur(3px); 达咩，会导致页面卡顿 */
     background-color: rgba(255, 255, 255, 0.25);
+
     .mdui-panel-item {
         background-color: rgba(255, 255, 255, 0.2);
         cursor: default;
@@ -92,7 +45,8 @@ body {
         text-align: center;
     }
 }
-/* 对于不同的设备设置不同的.content */
+
+/* 对于不同的设备设置不同的 .content */
 @media screen and (max-width: 800px){
     .content { padding: 20px; }
 }

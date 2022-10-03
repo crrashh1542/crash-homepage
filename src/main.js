@@ -8,13 +8,13 @@ import './styles/reset/content.less'
 
 /* functions */
 // 1. 年龄显示
-sayAge("2007-3-18");
+sayAge("2007-3-18")
 
 // 2. mdui 抽屉栏初始化
-var $ = mdui.$;
-var drawer = new mdui.Drawer("#drawer");
+var $ = mdui.$
+var drawer = new mdui.Drawer("#drawer")
 $('#drawer-btn').on('click', function () {
-    drawer.toggle();
+    drawer.toggle()
 });
 
 // 3. mdui 对话框初始化
@@ -29,22 +29,13 @@ $('#about').on('click', function () {
 });
 
 // 4. 设置 Vue 对象
-Vue.config.productionTip = false
-// 设置检测模块，如果网页中有 index-app 则不启用默认的
-window.onload = function() {
-    const isSpecificAppExist = document.getElementById("app") !== null
-    if(isSpecificAppExist){
-        console.log("No specific app.");
-        // 正片开始
-        const vm = new Vue({
-            el: "#app",
-            data: function(){
-                return {
-                    links: ["http://wpa.qq.com/msgrd?v=3&uin=3247380086&site=qq&menu=yes", "mailto:junzhu12345@qq.com", "https://github.com/crrashh1542"]
-                }
-            }
-        });
-    } else {
-        console.log("A specific app already exists.");
+Vue.config.productionTip = false // 关闭生产模式提示
+// 底部栏
+new Vue({
+    el: "#contacts",
+    data: function(){
+        return {
+            links: ["http://wpa.qq.com/msgrd?v=3&uin=3247380086&site=qq&menu=yes", "mailto:junzhu12345@qq.com", "https://github.com/crrashh1542"]
+        }
     }
-}
+})

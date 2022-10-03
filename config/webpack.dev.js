@@ -6,7 +6,8 @@ const path = require('path');
 module.exports = {
     entry: {
         main: './src/main.js',
-        index: './src/index.js'
+        index: './src/index.js',
+        1: './src/1.js' // 1 -> /friends
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -60,6 +61,11 @@ module.exports = {
             template: path.resolve(__dirname, "../public/contacts/index.html"),
             filename: "contacts/index.html",
             chunks: ["main"],
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../public/friends/index.html"),
+            filename: "friends/index.html",
+            chunks: ["main", "1"],
         })
     ],
     devServer: {

@@ -8,9 +8,8 @@
     <link crossorigin="anonymous" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
     <style>/* 实现左右浮动且垂直居中 */.panel{display:block;overflow:hidden;line-height:48px;}@media screen and (max-width: 600px){.item{display:none;}}@media screen and (min-width: 600px){.item{display:block;}}</style>
 <body class="mdui-drawer-body-left">
-    <div id="app">
-        <!-- 抽屉栏 -->
-        <div class="mdui-drawer" id="drawer"><ul class="mdui-list">
+    <!-- 抽屉栏 -->
+    <div class="mdui-drawer" id="drawer"><ul class="mdui-list">
             <div class="info">
                 <div class="avatar">
                     <img src="https://www.crrashh1542.top/img/avatars/crrashh1542.jpg" alt="">
@@ -26,27 +25,32 @@
                 <i class="mdui-list-item-icon mdui-icon material-icons">info_outline</i>
                 <div class="mdui-list-item-content">关于</div>
             </li></a>
-            <a href="" target="_blank"><li class="mdui-list-item mdui-ripple">
+            <a href="/contacts" target="_blank"><li class="mdui-list-item mdui-ripple">
                 <i class="mdui-list-item-icon mdui-icon material-icons">perm_contact_calendar</i>
                 <div class="mdui-list-item-content">联系</div>
             </li></a>
-        </ul></div>
-        <!-- Appbar -->
-        <div class="appbar mdui-appbar">
-            <div class="mdui-toolbar">
-                <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple" id="drawer-btn">
-                    <i class="mdui-icon material-icons">menu</i>
-                </a>
-                <a href="/" class="mdui-typo-headline">云萧的小破站</a>
-                <div class="mdui-toolbar-spacer"></div>
-                <a href="https://blogs.crrashh1542.top/" class="btn mdui-ripple">博客</a>
-                <a href="https://blogs.crrashh1542.top/index.php/archives/12" class="btn mdui-ripple">关于</a>
-                <a href="" class="btn mdui-ripple" target="_blank">联系</a>
-            </div>
+            <a href="/friends" target="_blank"><li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+                <div class="mdui-list-item-content">友链</div>
+            </li></a>
+    </ul></div>
+    <!-- Appbar -->
+    <div class="appbar mdui-appbar">
+        <div class="mdui-toolbar">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple" id="drawer-btn">
+                <i class="mdui-icon material-icons">menu</i>
+            </a>
+            <a href="/" class="mdui-typo-headline">云萧的小破站</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="https://blogs.crrashh1542.top/" class="btn mdui-ripple">博客</a>
+            <a href="https://blogs.crrashh1542.top/index.php/archives/12" class="btn mdui-ripple">关于</a>
+            <a href="/contacts" class="btn mdui-ripple" target="_blank">联系</a>
+            <a href="/friends" class="btn mdui-ripple" target="_blank">友链</a>
         </div>
+    </div>
 
-        <!-- 联系方式 -->
-        <div class="content">
+    <!-- 联系方式 -->
+    <div class="content">
             <br><br><br>
             <div class="mdui-typo-display-1"><i class="mdui-icon material-icons">perm_contact_calendar</i>&nbsp;&nbsp;&nbsp;云萧的联系方式</div><br><br>
             <div class="mdui-panel mdui-panel-gapless">
@@ -108,16 +112,14 @@
                 </div>
             </div>
             
-        <div class="contacts">
+        <div class="contacts" id="contacts">
             <a :href="links[0]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple">&#xe882;</a>
             <a :href="links[1]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple">&#xe918;</a>
             <a :href="links[2]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple">&#xe712;</a>
             <button class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple" id="about"><i class="mdui-icon material-icons">info</i></button>
         </div>
         <div class="footer">&copy; Copyright 2019-2022 Bakuhota Crashed. All Rights Reserved.<br><a href="https://icp.gov.moe/?keyword=20220551">萌 ICP 备 20220551 号</a></div>
-        </div>
     </div>
-
 
     <script crossorigin="anonymous" src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
     <script crossorigin="anonymous" src="https://cdn.staticfile.org/vue/2.7.10/vue.js"></script>

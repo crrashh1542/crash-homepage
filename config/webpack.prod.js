@@ -7,6 +7,7 @@ module.exports = {
     entry: {
         main: './src/main.js',
         index: './src/index.js',
+        1: './src/1.js' // 1 -> friends
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -49,7 +50,7 @@ module.exports = {
             filename: './static/styles/[name].[contenthash:8].css'
         }),
         // 多个文件
-        new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({ // 
             template: path.resolve(__dirname, "../public/index.html"),
             filename: "index.html",
             chunks: ["index", "main"],
@@ -59,6 +60,11 @@ module.exports = {
             template: path.resolve(__dirname, "../public/contacts/index.html"),
             filename: "contacts/index.html",
             chunks: ["main"],
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../public/friends/index.html"),
+            filename: "friends/index.html",
+            chunks: ["main", "1"],
         })
     ],
     mode: 'production',

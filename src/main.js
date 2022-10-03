@@ -32,7 +32,8 @@ $('#about').on('click', function () {
 Vue.config.productionTip = false
 // 设置检测模块，如果网页中有 index-app 则不启用默认的
 window.onload = function() {
-    if($("#app") !== null){
+    const isSpecificAppExist = document.getElementById("app") !== null
+    if(isSpecificAppExist){
         console.log("No specific app.");
         // 正片开始
         const vm = new Vue({

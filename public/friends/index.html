@@ -52,41 +52,50 @@
     <!-- Main -->
     <div class="content">
         <h1>奇妙的传送门</h1><br>
-        <div class="mdui-container">
-            <ul id="links" class="mdui-row">
-                <li><a href="https://gaoice.top">
+        <div class="mdui-container" id="links">
+            <ul class="mdui-row">
+                <li><a :href="friends[0].link">
                     <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
                         <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" src="https://www.crrashh1542.top/img/avatars/gaoice.jpg"/>
-                            <div class="mdui-card-header-title">Gaoice !喵</div>
-                            <div class="mdui-card-header-subtitle">传说中的某大佬</div>
+                            <img class="mdui-card-header-avatar" :src="friends[0].avatar"/>
+                            <div class="mdui-card-header-title">{{friends[0].name}}</div>
+                            <div class="mdui-card-header-subtitle">{{friends[0].intro}}</div>
                         </div>
                     </div>
                 </a></li>
-                <li><a href="https://baizhi.fun">
+                <li><a :href="friends[1].link">
                     <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
                         <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" src="https://www.crrashh1542.top/img/avatars/bai.jpg"/>
-                            <div class="mdui-card-header-title">bai</div>
-                            <div class="mdui-card-header-subtitle">一个安静的学习站</div>
+                            <img class="mdui-card-header-avatar" :src="friends[1].avatar"/>
+                            <div class="mdui-card-header-title">{{friends[1].name}}</div>
+                            <div class="mdui-card-header-subtitle">{{friends[1].intro}}</div>
                         </div>
                     </div>
                 </a></li>
-                <li><a href="https://blog.licaoz.com">
+                <li><a :href="friends[2].link">
                     <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
                         <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" src="https://source.licaoz.com/images/pubicon.png"/>
-                            <div class="mdui-card-header-title">LCZBlog</div>
-                            <div class="mdui-card-header-subtitle">寄蜉蝣於天地，渺滄海之一粟。</div>
+                            <img class="mdui-card-header-avatar" :src="friends[2].avatar"/>
+                            <div class="mdui-card-header-title">{{friends[2].name}}</div>
+                            <div class="mdui-card-header-subtitle">{{friends[2].intro}}</div>
                         </div>
                     </div>
                 </a></li>
-                <li><a href="https://tutime.cn/">
+                <li><a :href="friends[3].link">
                     <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
                         <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" src="https://www.crrashh1542.top/img/avatars/tutime.png"/>
-                            <div class="mdui-card-header-title">土土博客</div>
-                            <div class="mdui-card-header-subtitle">追逐幻想</div>
+                            <img class="mdui-card-header-avatar" :src="friends[3].avatar"/>
+                            <div class="mdui-card-header-title">{{friends[3].name}}</div>
+                            <div class="mdui-card-header-subtitle">{{friends[3].intro}}</div>
+                        </div>
+                    </div>
+                </a></li>
+                <li><a :href="friends[4].link">
+                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" :src="friends[4].avatar"/>
+                            <div class="mdui-card-header-title">{{friends[4].name}}</div>
+                            <div class="mdui-card-header-subtitle">{{friends[4].intro}}</div>
                         </div>
                     </div>
                 </a></li>

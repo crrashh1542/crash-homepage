@@ -5,10 +5,20 @@
 
 .content {
     /* backdrop-filter: blur(3px); 达咩，会导致页面卡顿 */
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, .5);
+
+    p a {
+        color: #607dbb;
+    }
+    p a:visited {
+        color: #607dbb;
+    }
+    p a:hover {
+        color: #78909c;
+    }
 
     .mdui-panel-item {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, .2);
         cursor: default;
         color: #444;
         .title {
@@ -43,8 +53,10 @@
     .footer {
         padding: 30px;
         text-align: center;
+        line-height: 1.5;
     }
 }
+
 
 /* 对于不同的设备设置不同的 .content */
 @media screen and (max-width: 800px){

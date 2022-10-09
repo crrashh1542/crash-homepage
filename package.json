@@ -1,6 +1,6 @@
 {
   "name": "crash-webfrontend",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "The frontend index webpage of crrashh1542's website.",
   "main": "index.js",
   "scripts": {

@@ -11,7 +11,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './js/[name].[contenthash:8].js',
+        filename: './js/[name].js',
         clean: true
     },
     module: {
@@ -47,7 +47,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: './styles/[name].[contenthash:8].css'
+            filename: './styles/[name].css'
         }),
 
         // 多个文件

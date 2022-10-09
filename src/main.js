@@ -17,18 +17,7 @@ $('#drawer-btn').on('click', function () {
     drawer.toggle()
 });
 
-// 3. mdui 对话框初始化
-$('#about').on('click', function () {
-    mdui.dialog({
-        title: "关于本站",
-        content: "本站由云萧（@crrashh1542）自己搭建。<br>部分使用 MDUI 进行 Material 化设计，采用 Webpack 5 打包<br>本网站的 Vue 化已经提上日程！<br>此网站代码详见 Github@crrashh1542",
-        buttons: [{
-            text: "了解"
-        }]
-    })
-});
-
-// 4. 设置 Vue 对象
+// 3. 设置 Vue 对象
 Vue.config.productionTip = false // 关闭生产模式提示
 // 底部栏
 new Vue({
@@ -36,6 +25,19 @@ new Vue({
     data: function(){
         return {
             links: ["http://wpa.qq.com/msgrd?v=3&uin=3247380086&site=qq&menu=yes", "mailto:junzhu12345@qq.com", "https://github.com/crrashh1542"]
+        }
+    },
+    methods: {
+
+        // 4. 显示页面信息
+        about(){
+            mdui.dialog({
+                title: "关于本站",
+                content: "本站由云萧（@crrashh1542）自己搭建。<br>部分使用 MDUI 进行 Material 化设计，采用 Webpack 5 打包<br>本网站的 Vue 化已经提上日程！<br>此网站代码详见 Github@crrashh1542",
+                buttons: [{
+                    text: "了解"
+                }]
+            })
         }
     }
 })

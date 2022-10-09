@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>友情链接 | 云萧的小破站</title>
     <link crossorigin="anonymous" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
-    <style>.card{margin: 5px;}</style>
 <body class="mdui-drawer-body-left">
     <!-- 抽屉栏 -->
     <div class="mdui-drawer" id="drawer"><ul class="mdui-list">
@@ -35,7 +34,7 @@
             </li></a>
     </ul></div>
     <!-- Appbar -->
-    <div class="appbar mdui-appbar">
+    <div class="appbar mdui-appbar mdui-color-blue-grey mdui-color-text-white">
             <div class="mdui-toolbar">
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple" id="drawer-btn">
                     <i class="mdui-icon material-icons">menu</i>
@@ -43,7 +42,7 @@
                 <a href="/" class="mdui-typo-headline">云萧的小破站</a>
                 <div class="mdui-toolbar-spacer"></div>
                 <a href="https://blogs.crrashh1542.top/" class="btn mdui-ripple">博客</a>
-                <a href="https://blogs.crrashh1542.top/index.php/archives/12" class="btn mdui-ripple">关于</a>
+                <a href="https://blogs.crrashh1542.top/archives/12" class="btn mdui-ripple">关于</a>
                 <a href="/contacts" class="btn mdui-ripple" target="_blank">联系</a>
                 <a href="/friends" class="btn mdui-ripple" target="_blank">友链</a>
             </div>
@@ -51,11 +50,15 @@
 
     <!-- Main -->
     <div class="content">
-        <h1>奇妙的传送门</h1><br>
+        <p class="title">
+            <h1>奇妙的传送门</h1>
+            <span><a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-blue-grey-200" href="https://blogs.crrashh1542.top/lyb">去申请一个吧&nbsp;&nbsp;<i class="mdui-icon material-icons">arrow_forward</i></a></span>
+            <span><a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-blue-grey-200" href="https://github.com/crrashh1542/my-webfrontend/blob/master/src/js/friends.json" >或者...&nbsp;&nbsp;<i class="mdui-icon material-icons">arrow_forward</i></a></span>
+        </p>
         <div class="mdui-container" id="links">
             <ul class="mdui-row">
                 <li><a :href="friends[0].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
+                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
                         <div class="mdui-card-header">
                             <img class="mdui-card-header-avatar" :src="friends[0].avatar"/>
                             <div class="mdui-card-header-title">{{friends[0].name}}</div>
@@ -64,7 +67,7 @@
                     </div>
                 </a></li>
                 <li><a :href="friends[1].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
+                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
                         <div class="mdui-card-header">
                             <img class="mdui-card-header-avatar" :src="friends[1].avatar"/>
                             <div class="mdui-card-header-title">{{friends[1].name}}</div>
@@ -73,7 +76,7 @@
                     </div>
                 </a></li>
                 <li><a :href="friends[2].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
+                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
                         <div class="mdui-card-header">
                             <img class="mdui-card-header-avatar" :src="friends[2].avatar"/>
                             <div class="mdui-card-header-title">{{friends[2].name}}</div>
@@ -82,7 +85,7 @@
                     </div>
                 </a></li>
                 <li><a :href="friends[3].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
+                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
                         <div class="mdui-card-header">
                             <img class="mdui-card-header-avatar" :src="friends[3].avatar"/>
                             <div class="mdui-card-header-title">{{friends[3].name}}</div>
@@ -91,11 +94,20 @@
                     </div>
                 </a></li>
                 <li><a :href="friends[4].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10">
+                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
                         <div class="mdui-card-header">
                             <img class="mdui-card-header-avatar" :src="friends[4].avatar"/>
                             <div class="mdui-card-header-title">{{friends[4].name}}</div>
                             <div class="mdui-card-header-subtitle">{{friends[4].intro}}</div>
+                        </div>
+                    </div>
+                </a></li>
+                <li><a :href="friends[5].link">
+                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" :src="friends[5].avatar"/>
+                            <div class="mdui-card-header-title">{{friends[5].name}}</div>
+                            <div class="mdui-card-header-subtitle">{{friends[5].intro}}</div>
                         </div>
                     </div>
                 </a></li>

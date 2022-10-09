@@ -1,10 +1,11 @@
-// This is served for friends/index.html
-// You can also take it as a friend list.
-import friends from "./js/friends.json"
+// import style
+import "./styles/friends.less"
+// import friend list
+import frList from "./js/friends.json"
 
 new Vue({
-    "el": "#links",
-    "data": {
-        "friends": friends
+    el: "#links",
+    data: {
+        friends: frList
     }
 })

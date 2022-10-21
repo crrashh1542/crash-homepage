@@ -57,69 +57,16 @@
         </p>
         <div class="mdui-container" id="links">
             <ul class="mdui-row">
-                <li><a :href="friends[0].link">
+                <li v-for="(f, index) in friends" :key="index"><a :href="f.link">
                     <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
                         <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" :src="friends[0].avatar"/>
-                            <div class="mdui-card-header-title">{{friends[0].name}}</div>
-                            <div class="mdui-card-header-subtitle">{{friends[0].intro}}</div>
+                            <img class="mdui-card-header-avatar" :src="f.avatar"/>
+                            <div class="mdui-card-header-title">{{f.name}}</div>
+                            <div class="mdui-card-header-subtitle">{{f.intro}}</div>
                         </div>
                     </div>
                 </a></li>
-                <li><a :href="friends[1].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
-                        <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" :src="friends[1].avatar"/>
-                            <div class="mdui-card-header-title">{{friends[1].name}}</div>
-                            <div class="mdui-card-header-subtitle">{{friends[1].intro}}</div>
-                        </div>
-                    </div>
-                </a></li>
-                <li><a :href="friends[2].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
-                        <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" :src="friends[2].avatar"/>
-                            <div class="mdui-card-header-title">{{friends[2].name}}</div>
-                            <div class="mdui-card-header-subtitle">{{friends[2].intro}}</div>
-                        </div>
-                    </div>
-                </a></li>
-                <li><a :href="friends[3].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
-                        <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" :src="friends[3].avatar"/>
-                            <div class="mdui-card-header-title">{{friends[3].name}}</div>
-                            <div class="mdui-card-header-subtitle">{{friends[3].intro}}</div>
-                        </div>
-                    </div>
-                </a></li>
-                <li><a :href="friends[4].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
-                        <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" :src="friends[4].avatar"/>
-                            <div class="mdui-card-header-title">{{friends[4].name}}</div>
-                            <div class="mdui-card-header-subtitle">{{friends[4].intro}}</div>
-                        </div>
-                    </div>
-                </a></li>
-                <li><a :href="friends[5].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
-                        <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" :src="friends[5].avatar"/>
-                            <div class="mdui-card-header-title">{{friends[5].name}}</div>
-                            <div class="mdui-card-header-subtitle">{{friends[5].intro}}</div>
-                        </div>
-                    </div>
-                </a></li>
-                <li><a :href="friends[6].link">
-                    <div class="mdui-card card mdui-ripple mdui-col-lg-5 mdui-col-md-8 mdui-col-sm-10 mdui-hoverable">
-                        <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" :src="friends[6].avatar"/>
-                            <div class="mdui-card-header-title">{{friends[6].name}}</div>
-                            <div class="mdui-card-header-subtitle">{{friends[6].intro}}</div>
-                        </div>
-                    </a></li>
-                </ul><br><br><br><br>
+            </ul><br><br><br><br>
         </div>
 
         <div class="contacts" id="contacts">

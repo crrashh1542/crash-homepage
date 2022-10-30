@@ -1,5 +1,3 @@
-# my-webfrontend
-这里是云萧的网站源代码( ·v·)，采用Webpack打包（因为vite还没学-w-）  
-后续会逐渐加入新功能的呐~！  
-欢迎各位大佬来[小站](https://www.crrashh1542.top/)看看呐  
- 
+# crash-webfrontend on Vue
+云萧的小破站 准备全面 Vue 化了！！！  
+此 `branch` 用于 Vue 化期间开发工作！

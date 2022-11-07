@@ -1,6 +1,9 @@
 <script>
+    import GhChart from './contents/GhChart.vue'
+    import Cards from './contents/Cards.vue'
+    import Footer from './contents/Footer.vue'
     export default {
-        name: 'Content'
+        name: 'Conteny'
     }
 </script>
 
@@ -53,6 +56,7 @@
                 </div>
             </div>
         </div>
+        <footer></footer>
     </div>
 </template>
 

@@ -5,7 +5,7 @@
             </div>
             <div class="info mdui-col-lg-9 mdui-col-md-8">
                 <div class="title">云萧的小破站ヾ(ﾟ∀ﾟゞ)</div>
-                <div class="subtitle">KOTSUKI CRASHED</div>
+                <div class="subtitle">KOTSUKI CRRASHH</div>
                 <br><p>" Creating makes miracles. "</p>
             </div>
     </div>

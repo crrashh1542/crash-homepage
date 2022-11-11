@@ -12,13 +12,19 @@
     <div class="content">
         <div class="title">高一狗，搞笑人，2.75次元，平时不怎么正常</div>
         <!-- Github contributions -->
-        <gh-chart></gh-chart>
+        <p class="menu">
+            <i class="mdui-icon material-icons">code</i>&nbsp;&nbsp;今天咕了没！<i class="mdui-icon material-icons">arrow_downward</i>
+        </p>
+        <GhChart></GhChart>
 
         <!-- Functions -->
-        <cards></cards>
+        <p class="menu">
+            <i class="mdui-icon material-icons">widgets</i>&nbsp;&nbsp;本咕的好东西<i class="mdui-icon material-icons">arrow_downward</i>
+        </p>
+        <Cards></Cards>
 
         <!-- Footer -->
-        <footer></footer>
+        <Footer></Footer>
     </div>
 </template>
 

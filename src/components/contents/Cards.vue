@@ -5,9 +5,6 @@ export default {
 </script>
 
 <template>
-    <p class="menu">
-        <i class="mdui-icon material-icons">widgets</i>&nbsp;&nbsp;本咕的好东西<i class="mdui-icon material-icons">arrow_downward</i>
-    </p>
     <div class="mdui-row card-list">
         <div class="mdui-col-lg-5 mdui-col-md-6 mdui-col-xs-12">
             <div class="mdui-card">

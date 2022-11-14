@@ -1,3 +1,9 @@
+<script>
+    export default {
+        name: 'Banner'
+    }
+</script>
+
 <template>
     <div class="introduction mdui-row">
             <div class="avatar mdui-col-lg-3 mdui-col-md-4">
@@ -10,10 +16,6 @@
             </div>
     </div>
 </template>
-
-<script>
-
-</script>
 
 <style>
     .introduction {

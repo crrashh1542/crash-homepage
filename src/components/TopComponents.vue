@@ -9,12 +9,6 @@
             "drawer": Drawer,
             "appbar": Appbar
         },
-        methods: {
-            drawerOpen(){ // 咕了，放个TODO
-                // let drawerTrigger = new Mdui.Drawer("#drawer")
-                // drawerTrigger.open()
-            }
-        }
     }
 </script>
 

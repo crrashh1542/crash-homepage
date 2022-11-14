@@ -1,3 +1,16 @@
+<script>
+    export default {
+        name: 'Drawer',
+        methods: {
+            drawerOpen(){ // 咕了，放个TODO
+                let drawerEl = document.getElementById("drawer")
+                let drawerTrigger = new Mdui.Drawer(drawerEl)
+                drawerTrigger.open()
+            }
+        }
+    }
+</script>
+
 <template>
     <div class="mdui-drawer" id="drawer">
         <ul class="mdui-list">
@@ -23,12 +36,6 @@
         </ul>
     </div>
 </template>
-
-<script>
-export default {
-    
-}
-</script>
 
 <style>
 

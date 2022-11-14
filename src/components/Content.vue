@@ -1,10 +1,10 @@
 <script>
     import GhChart from './contents/GhChart.vue'
     import Cards from './contents/Cards.vue'
-    import Footer from './contents/Footer.vue'
+    import Foo from './contents/Footer.vue'
     export default {
         name: 'content',
-        components: { GhChart, Cards, Footer }
+        components: { GhChart, Cards, Foo }
     }
 </script>
 
@@ -15,16 +15,16 @@
         <p class="menu">
             <i class="mdui-icon material-icons">code</i>&nbsp;&nbsp;今天咕了没！<i class="mdui-icon material-icons">arrow_downward</i>
         </p>
-        <GhChart></GhChart>
+        <gh-chart></gh-chart>
 
         <!-- Functions -->
         <p class="menu">
             <i class="mdui-icon material-icons">widgets</i>&nbsp;&nbsp;本咕的好东西<i class="mdui-icon material-icons">arrow_downward</i>
         </p>
-        <Cards></Cards>
+        <cards></cards>
 
         <!-- Footer -->
-        <Footer></Footer>
+        <foo></foo>
     </div>
 </template>
 
@@ -48,30 +48,12 @@
             color: #78909c;
         }
 
-        .mdui-panel-item {
-            background-color: rgba(255, 255, 255, .2);
-            cursor: default;
-            color: #444;
-            .title {
-                .icon {
-                    font-family: 'iconfont';
-                    margin-right: 15px;
-                    font-size: 22px;
-                }
-                font-size: 18px;
-            }
-            .item {
-                font-size: 18px;
-            }
-            a {color: #444;}
-        }
         a {
             text-decoration: none;
         }
         .footer { /* 底部按钮 */
             padding: 10px;
             text-align: center;
-            font-family: 'iconfont';
             .mdui-btn-icon {
                 line-height: 48px;
                 margin: auto;

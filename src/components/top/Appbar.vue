@@ -21,6 +21,10 @@
     </div>
 </template>
 
-<style>
-    
+<style lang="less">
+@media screen and (max-width: 800px){
+    .appbar .btn {
+        display: none;
+    }
+}
 </style>

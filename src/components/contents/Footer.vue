@@ -5,14 +5,18 @@
         data(){
             return {
                 links: [
-                "http://wpa.qq.com/msgrd?v=3&uin=3247380086&site=qq&menu=yes", "mailto:junzhu12345@qq.com", "https://github.com/crrashh1542", "javascript:;"
-            ]}
+                "http://wpa.qq.com/msgrd?v=3&uin=3247380086&site=qq&menu=yes",
+                "mailto:junzhu12345@qq.com",
+                "https://github.com/crrashh1542",
+                "javascript:;"
+                ]
+            }
         },
         methods: {
             about(){
                 Mdui.dialog({
                     title: "关于本站",
-                    content: "本站由云萧（@crrashh1542）自己搭建。<br>部分使用 MDUI 进行 Material 化设计<br>本网站由 Vue 3 + Vite 技术构建。<br>此网站代码详见 Github@crrashh1542",
+                    content: "本站由云萧（@crrashh1542）自己搭建。<br>部分使用 MDUI 进行 Material 化设计<br>本网站由 Vue 3 + Vite 技术构建，代码详见 Github@crrashh1542",
                     buttons: [{
                         text: "了解"
                     }]

@@ -74,20 +74,9 @@
         .content { padding: 20px; }
     }
     @media screen and (min-width: 800px) {
-        body.mdui-drawer-body-left {padding-left: 0;}
-        #drawer {display: none;}
-        .appbar {
-            .mdui-btn-icon{
-                display: none;
-            }
-        }
         .content {padding: 10px 10%;}
     }
-    @media screen and (min-width: 1024px) {
-        .appbar {padding: 0 10%;}
-    }
     @media screen and (min-width: 1366px) {
-        .appbar {padding: 0 15%;}
         .content {padding: 10px 15%;}
     }
 

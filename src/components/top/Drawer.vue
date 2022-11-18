@@ -16,7 +16,7 @@
         <ul class="mdui-list">
             <div class="info">
                 <div class="avatar">
-                    <img src="https://www.crrashh.cn/img/avatars/crrashh1542.jpg" alt="">
+                    <img src="https://res.crrashh.cn/img/avatars/crrashh1542.jpg" alt="">
                 </div><br>
                 <div class="title">云萧只会咕咕咕</div>
                 <div class="subtitle mdui-text-color-grey-700">高一狗，前端废物一个</div>

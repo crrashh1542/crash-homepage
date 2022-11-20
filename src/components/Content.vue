@@ -51,23 +51,6 @@
         a {
             text-decoration: none;
         }
-        .footer { /* 底部按钮 */
-            padding: 10px;
-            text-align: center;
-            .mdui-btn-icon {
-                line-height: 48px;
-                margin: auto;
-                margin: 5px;
-                font-family: 'iconfont';
-                width: 48px;
-                height: 48px;
-            }
-            .info {
-                padding: 30px;
-                text-align: center;
-                line-height: 1.5;
-            }
-        }
     }
     /* 对于不同的设备设置不同的 .content */
     @media screen and (max-width: 800px){

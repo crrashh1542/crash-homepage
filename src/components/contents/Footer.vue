@@ -39,11 +39,28 @@
     </div>
 </template>
 
-<style>
-    .footer {
-        padding: 10px;
-        text-align: center;
-        font-family: Roboto, 'iconfont';
+<style lang="less">
+    .footer { /* 底部按钮 */
+            padding: 10px;
+            text-align: center;
+            .mdui-btn-icon {
+                line-height: 48px;
+                margin: auto;
+                margin: 5px;
+                font-family: 'iconfont';
+                width: 48px;
+                height: 48px;
+            }
+            .info {
+                padding: 30px;
+                text-align: center;
+                line-height: 1.5;
+            }
+        }
+    @media screen and (max-width: 1024px) {
+        .footer .info {
+            padding: 30px 0;
+        }
     }
     .mdui-btn-icon {
         line-height: 48px;

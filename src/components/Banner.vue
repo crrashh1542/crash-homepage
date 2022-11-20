@@ -10,7 +10,7 @@
                 <img src="https://res.crrashh.cn/img/avatars/crrashh1542.jpg">
             </div>
             <div class="info mdui-col-lg-9 mdui-col-md-8">
-                <div class="title">云萧的小破站ヾ(ﾟ∀ﾟゞ)</div>
+                <div class="title">云萧的咕咕窝ヾ(ﾟ∀ﾟゞ)</div>
                 <div class="subtitle">KOTSUKI CRRASHH</div>
                 <br><p>" Creating makes miracles. "</p>
             </div>

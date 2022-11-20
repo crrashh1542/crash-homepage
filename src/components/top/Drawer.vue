@@ -1,14 +1,15 @@
-<script>
-    export default {
-        name: 'Drawer',
-        methods: {
-            drawerOpen(){ // 咕了，放个TODO
-                let drawerEl = document.getElementById("drawer")
-                let drawerTrigger = new Mdui.Drawer(drawerEl)
-                drawerTrigger.open()
-            }
-        }
+<script setup>
+    import Mdui from 'mdui'
+    import { ref } from 'vue'
+
+    // 处理抽屉栏打开
+    const drawerEl = document.getElementById("drawer")
+    let drawerOpen = () => {
+        let drawerTrigger = new Mdui.Drawer(drawerEl)
+        drawerTrigger.open()
+        console.log("Hello, world!");
     }
+    defineExpose({ drawerOpen })
 </script>
 
 <template>

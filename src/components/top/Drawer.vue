@@ -1,15 +1,8 @@
-<script setup>
+<script>
     import Mdui from 'mdui'
-    import { ref } from 'vue'
-
-    // 处理抽屉栏打开
-    const drawerEl = document.getElementById("drawer")
-    let drawerOpen = () => {
-        let drawerTrigger = new Mdui.Drawer(drawerEl)
-        drawerTrigger.open()
-        console.log("Hello, world!");
+    export default {
+        name: 'Drawer'
     }
-    defineExpose({ drawerOpen })
 </script>
 
 <template>
@@ -26,7 +19,7 @@
                 <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
                 <div class="mdui-list-item-content">博客</div>
             </li></a>
-            <a href="https://blogs.crrashh.cn/msgboard" target="_blank"><li class="mdui-list-item mdui-ripple">
+            <a href="https://blogs.crrashh.cn/friends" target="_blank"><li class="mdui-list-item mdui-ripple">
                 <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
                 <div class="mdui-list-item-content">友链</div>
             </li></a>

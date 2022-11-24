@@ -6,9 +6,9 @@ import 'mdui/dist/css/mdui.css'
 import App from './App.vue'
 
 // 控制台显示奇奇怪怪的东西
-import showInfo from './functions/showInfo.js'
+import showInfo from './functions/showInfo.ts'
 showInfo()
-import sayAge from './functions/birthday.js'
+import sayAge from './functions/birthday.ts'
 sayAge("2007-03-18")
 
 // 样式表

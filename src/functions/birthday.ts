@@ -1,5 +1,5 @@
 // birthday.js 查看生日时间
-// Author: Gaoice / Version: 1.0.1
+// Author: Gaoice & crrashh1542 / Version: 1.0.2
 
 /**
  * 计算实际年龄，精确到天
@@ -7,7 +7,7 @@
  * @return array
  */
 
- function getAge(birthday) {
+ function getAge(birthday:Array<number>) {
     let date = new Date();
     let today = [date.getFullYear(), date.getMonth() + 1, date.getDate()];
     let age = today.map((value, index) => {
@@ -26,6 +26,6 @@
 }
 export default function sayAge(birthday){
     let age_all = getAge (birthday.split('-'));
-    console.log("[birthday.js] 云萧的实际年龄：" + age_all[0] + "岁" + age_all[1] + "月" + age_all[2] + "天");
+    console.log("[birthdayCalc] 云萧的实际年龄：" + age_all[0] + "岁" + age_all[1] + "月" + age_all[2] + "天");
     console.log()
 }

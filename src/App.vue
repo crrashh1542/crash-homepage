@@ -11,6 +11,9 @@ export default {
     name: 'App',
     components: { Appbar, Banner, Content }
 }
+
+// 引入样式
+import './assets/styles/index.less'
 </script>
 
 <template>

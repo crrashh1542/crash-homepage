@@ -1,5 +1,5 @@
 <script>
-    import Mdui from 'mdui'
+    // import Mdui from 'mdui'
     import Drawer from './Drawer.vue'
     export default {
         name: 'Appbar',
@@ -54,5 +54,11 @@
 }
 @media screen and (min-width: 1366px) {
     .appbar {padding: 0 15%;}
+}
+
+/* 修复顶部链接点击时 ripple 过小的问题 */
+.mdui-toolbar > * {
+    margin: 0;
+    padding: 0 16px;
 }
 </style>

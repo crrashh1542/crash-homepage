@@ -1,13 +1,19 @@
 <script>
+    import avatar from '../assets/images/crrashh1542.jpg'
     export default {
-        name: 'Banner'
+        name: 'Banner',
+        data() {
+            return {
+                avatar: avatar
+            }
+        }
     }
 </script>
 
 <template>
     <div class="introduction mdui-row">
             <div class="avatar mdui-col-lg-3 mdui-col-md-4">
-                <img src="https://res.crrashh.cn/img/avatars/crrashh1542.jpg">
+                <img :src=avatar>
             </div>
             <div class="info mdui-col-lg-9 mdui-col-md-8">
                 <div class="title">云萧的咕咕窝ヾ(ﾟ∀ﾟゞ)</div>

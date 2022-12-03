@@ -1,4 +1,6 @@
 <script>
+import c1img from '../../assets/images/1.jpg'
+import c2img from '../../assets/images/2.jpg'
 export default {
     name: 'Cards',
     data(){
@@ -7,13 +9,13 @@ export default {
             {
                 title: "云萧的咕咕盘",
                 subTitle: "基于 Alist 的网盘服务",
-                imageUrl: "https://www.crrashh.cn/assets/1.bf3ab909.jpg",
+                imageUrl: c1img,
                 link: "https://disk.crrashh.cn:2333"
             },
             {
                 title: "云萧的咕咕屋",
                 subTitle: "本咕乱写的啊喂！",
-                imageUrl: "https://www.crrashh.cn/assets/2.f2f3b4ec.jpg",
+                imageUrl: c2img,
                 link: "https://blogs.crrashh.cn"
             }
         ]}

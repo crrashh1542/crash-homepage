@@ -7,9 +7,13 @@ export default {
 <template>
     <div class="ghchart">
         <img src="https://www.crrashh.cn/api/ghchart" alt="">
+        
+        <!-- LazyLoad TODO -->
     </div>
 </template>
 
 <style>
-
+    .ghchart {
+        height: 103px;
+    }
 </style>

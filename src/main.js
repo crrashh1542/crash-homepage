@@ -1,7 +1,7 @@
 // 引入各种各样的库
 import { createApp } from 'vue'
-import 'mdui/dist/js/mdui.js'
-import 'mdui/dist/css/mdui.css'
+import 'mdui/dist/js/mdui.min.js'
+import 'mdui/dist/css/mdui.min.css'
 import VueLazyLoad from 'vue-lazyload'
 
 // 引入 App 组件

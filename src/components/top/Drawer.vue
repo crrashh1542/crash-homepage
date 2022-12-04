@@ -1,32 +1,36 @@
 <script>
+    // import libraries
     import Mdui from 'mdui'
+    // import files
+    import avatar from '../../assets/images/crrashh1542.jpg'
+    import links from './links.json'
     export default {
-        name: 'Drawer'
+        name: 'Drawer',
+        data() {
+            return {
+                avatar: avatar,
+                links: links
+            }
+        }
     }
 </script>
 
 <template>
     <div class="mdui-drawer" id="drawer">
         <ul class="mdui-list">
-            <div class="info">
-                <div class="avatar">
-                    <img src="https://res.crrashh.cn/img/avatars/crrashh1542.jpg" alt="">
+            <div class="c-info">
+                <div class="c-avatar">
+                    <img :src=avatar alt="">
                 </div><br>
-                <div class="title">云萧只会咕咕咕</div>
-                <div class="subtitle mdui-text-color-grey-700">高一狗，前端废物一个</div>
+                <div class="c-title">云萧只会咕咕咕</div>
+                <div class="c-subtitle mdui-text-color-grey-700">高一狗，前端废物一个</div>
             </div>
-            <a href="https://blogs.crrashh.cn/" target="_blank"><li class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
-                <div class="mdui-list-item-content">博客</div>
-            </li></a>
-            <a href="https://blogs.crrashh.cn/friends" target="_blank"><li class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-                <div class="mdui-list-item-content">友链</div>
-            </li></a>
-            <a href="https://blogs.crrashh.cn/archives/12" target="_blank"><li class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">info_outline</i>
-                <div class="mdui-list-item-content">关于</div>
-            </li></a>
+            <a v-for="i in links" :key="i.name" :href=i.link target="_blank">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">{{i.icon}}</i>
+                    <div class="mdui-list-item-content">{{i.name}}</div>
+                </li>
+            </a>
         </ul>
     </div>
 </template>

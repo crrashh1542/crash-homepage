@@ -1,31 +1,27 @@
 <script>
-    // import Mdui from 'mdui'
-    import Drawer from './Drawer.vue'
+    import links from './links.json'
     export default {
         name: 'Appbar',
-        components: { Drawer },
-        methods: {
-            trigger ()  {
-                
+        data() {
+            return {
+                links: links
             }
         }
     }
 </script>
 
 <template>
-    <div>
-        <drawer></drawer>
-        <div class="appbar mdui-appbar mdui-color-blue-grey mdui-color-text-white">
-            <div class="mdui-toolbar">
-                <a class="mdui-btn mdui-btn-icon mdui-ripple" @click="trigger">
-                    <i class="mdui-icon material-icons">menu</i>
-                </a>
-                <a href="/" class="mdui-typo-headline">云萧的咕咕窝</a>
-                <div class="mdui-toolbar-spacer"></div>
-                <a href="https://blogs.crrashh.cn/" class="btn mdui-ripple" target="_blank">博客</a>
-                <a href="https://blogs.crrashh.cn/archives/12" class="btn mdui-ripple" target="_blank">关于</a>
-                <a href="https://blogs.crrashh.cn/friends" class="btn mdui-ripple" target="_blank">友链</a>
-            </div>
+    <div class="c-appbar mdui-appbar mdui-color-blue-grey mdui-color-text-white">
+        <div class="mdui-toolbar">
+            <!-- 左侧 icon & 标题 -->
+            <a class="mdui-btn mdui-btn-icon mdui-ripple" @click="trigger">
+                <i class="mdui-icon material-icons">menu</i>
+            </a>
+            <a href="/" class="mdui-typo-headline">云萧的咕咕窝</a>
+            <!-- 左右分隔 -->
+            <div class="mdui-toolbar-spacer"></div>
+            <!-- 右侧链接 -->
+            <a v-for="i in links" :key="i.name" :href="i.link" class="c-btn mdui-ripple" target="_blank">{{i.name}}</a>
         </div>
     </div>
 </template>
@@ -36,24 +32,24 @@
     line-height: 64px;
 }
 @media screen and (max-width: 800px){
-    .appbar .btn {
+    .c-appbar .c-btn {
         display: none;
     }
 }
 @media screen and (min-width: 800px) {
     body.mdui-drawer-body-left {padding-left: 0;}
     #drawer {display: none;}
-    .appbar {
-        .mdui-btn-icon {
+    .c-appbar {
+        .c-mdui-btn-icon {
             display: none;
         }
     }
 }
 @media screen and (min-width: 1024px) {
-    .appbar {padding: 0 10%;}
+    .c-appbar {padding: 0 10%;}
 }
 @media screen and (min-width: 1366px) {
-    .appbar {padding: 0 15%;}
+    .c-appbar {padding: 0 15%;}
 }
 
 /* 修复顶部链接点击时 ripple 过小的问题 */

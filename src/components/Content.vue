@@ -9,16 +9,16 @@
 </script>
 
 <template>
-    <div class="content">
-        <div class="title">高一狗，搞笑人，2.75次元，平时不怎么正常</div>
+    <div class="c-content">
+        <div class="c-title">高一狗，搞笑人，2.75次元，平时不怎么正常</div>
         <!-- Github contributions -->
-        <p class="menu">
+        <p class="c-menu">
             <i class="mdui-icon material-icons">code</i>&nbsp;&nbsp;今天咕了没！<i class="mdui-icon material-icons">arrow_downward</i>
         </p>
         <gh-chart></gh-chart>
 
         <!-- Functions -->
-        <p class="menu">
+        <p class="c-menu">
             <i class="mdui-icon material-icons">widgets</i>&nbsp;&nbsp;本咕的好东西<i class="mdui-icon material-icons">arrow_downward</i>
         </p>
         <cards></cards>
@@ -34,7 +34,7 @@
 
 <style lang="less">
     // Universal stylesheet
-    .content {
+    .c-content {
         /* backdrop-filter: blur(3px); 达咩，会导致页面卡顿 */
         background-color: rgba(255, 255, 255, .7);
 
@@ -54,28 +54,28 @@
     }
     /* 对于不同的设备设置不同的 .content */
     @media screen and (max-width: 800px){
-        .content { padding: 20px; }
+        .c-content { padding: 20px; }
     }
     @media screen and (min-width: 800px) {
-        .content {padding: 10px 10%;}
+        .c-content {padding: 10px 10%;}
     }
     @media screen and (min-width: 1366px) {
-        .content {padding: 10px 15%;}
+        .c-content {padding: 10px 15%;}
     }
 
     // Specific stylesheet
-    .content {
-        .title {
+    .c-content {
+        .c-title {
             padding: 50px 0;
             text-align: center;
             font-size: 24px;
             font-weight: 500;
         }
-        .menu {
+        .c-menu {
             color: #444;
             font-size: 24px;
         }
-        .ghchart {
+        .c-ghchart {
             width: 100%;
             background-color: rgba(255, 255, 255, 0.4);
             text-align: center;

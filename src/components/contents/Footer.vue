@@ -27,20 +27,24 @@
 </script>
 
 <template>
-    <div class="footer">
+    <div class="c-footer">
         <a :href="links[0]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple">&#xe882;</a>
         <a :href="links[1]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple">&#xe918;</a>
         <a :href="links[2]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple">&#xe712;</a>
         <a :href="links[3]" @click="about" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple"><i class="mdui-icon material-icons">info</i></a>
-        <div class="info">
+        <div class="c-info">
             <p>&copy; Copyright 2019-2022 Kotsuki Crrashh. All Rights Reserved.</p>
-            <p><a href="https://icp.gov.moe/?keyword=20220551">萌 ICP 备 20220551 号</a></p>
+            <p>
+                <a href="https://beian.miit.gov.cn/">蜀 ICP 备？？？号</a> | 
+                <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=">蜀公网安备？？？号</a> | 
+                <a href="https://icp.gov.moe/?keyword=20220551">萌 ICP 备 20220551 号</a>
+            </p>
         </div>
     </div>
 </template>
 
 <style lang="less">
-    .footer { /* 底部按钮 */
+    .c-footer { /* 底部按钮 */
             padding: 10px;
             text-align: center;
             .mdui-btn-icon {
@@ -51,14 +55,14 @@
                 width: 48px;
                 height: 48px;
             }
-            .info {
+            .c-info {
                 padding: 30px;
                 text-align: center;
                 line-height: 1.5;
             }
         }
     @media screen and (max-width: 1024px) {
-        .footer .info {
+        .c-footer .c-info {
             padding: 30px 0;
         }
     }

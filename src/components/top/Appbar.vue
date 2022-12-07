@@ -40,7 +40,7 @@
     body.mdui-drawer-body-left {padding-left: 0;}
     #drawer {display: none;}
     .c-appbar {
-        .c-mdui-btn-icon {
+        .mdui-btn-icon {
             display: none;
         }
     }

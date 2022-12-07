@@ -9,10 +9,10 @@
 
 #### 启动方式（不用说也知道）
 开发环境
-```
+```shell
 npm run dev
 ```
 生产环境
-```
+```shell
 npm run build
 ```

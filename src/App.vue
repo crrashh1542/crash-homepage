@@ -13,7 +13,7 @@ export default {
 }
 
 // 引入样式
-import './assets/styles/index.less'
+import './assets/styles/global.less'
 </script>
 
 <template>

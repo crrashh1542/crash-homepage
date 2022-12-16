@@ -26,7 +26,7 @@
     </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .mdui-appbar .mdui-toolbar {
     height: 64px;
     line-height: 64px;

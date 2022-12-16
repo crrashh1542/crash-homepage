@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-    <div class="mdui-row card-list">
+    <div class="mdui-row c-card-list">
         <div class="mdui-col-lg-5 mdui-col-md-6 mdui-col-xs-12" v-for="(c, index) in card" :key="index">
             <div class="mdui-card">
                 <div class="mdui-card-media">
@@ -44,6 +44,8 @@ export default {
     </div>
 </template>
 
-<style>
-
+<style scoped>
+    .mdui-card {
+        margin: 20px 10px;
+    }
 </style>

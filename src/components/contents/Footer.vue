@@ -43,8 +43,9 @@
     </div>
 </template>
 
-<style lang="less">
-    .c-footer { /* 底部按钮 */
+<style lang="less" scoped>
+    /* 底部按钮 */
+    .c-footer {
             padding: 10px;
             text-align: center;
             .mdui-btn-icon {
@@ -73,5 +74,19 @@
         font-family: 'iconfont';
         width: 48px;
         height: 48px;
+    }
+    
+    /* 备案信息 */
+    p a {
+        color: #607dbb;
+    }
+    p a:visited {
+        color: #607dbb;
+    }
+    p a:hover {
+        color: #78909c;
+    }
+    a {
+        text-decoration: none;
     }
 </style>

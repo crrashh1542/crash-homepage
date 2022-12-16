@@ -32,25 +32,11 @@
 
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
     // Universal stylesheet
     .c-content {
         /* backdrop-filter: blur(3px); 达咩，会导致页面卡顿 */
         background-color: rgba(255, 255, 255, .7);
-
-        p a {
-            color: #607dbb;
-        }
-        p a:visited {
-            color: #607dbb;
-        }
-        p a:hover {
-            color: #78909c;
-        }
-
-        a {
-            text-decoration: none;
-        }
     }
     /* 对于不同的设备设置不同的 .content */
     @media screen and (max-width: 800px){
@@ -74,19 +60,6 @@
         .c-menu {
             color: #444;
             font-size: 24px;
-        }
-        .c-ghchart {
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.4);
-            text-align: center;
-            margin: 20px 0;
-            overflow: scroll;
-            img {
-                margin: 20px auto;
-            }
-        }
-        .mdui-card {
-            margin: 20px 10px;
         }
     }
 </style>

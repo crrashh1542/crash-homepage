@@ -1,5 +1,5 @@
 <script>
-    import links from './links.json'
+    import links from '../../data/links.json'
     export default {
         name: 'Appbar',
         data() {

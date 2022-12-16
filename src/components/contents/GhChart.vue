@@ -19,7 +19,7 @@ export default {
         height: 103px;
         position: relative;
         .c-load-anim {
-            position: relative;
+            position: absolute;
         }
     }
 </style>

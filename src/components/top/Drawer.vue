@@ -2,13 +2,12 @@
     // import libraries
     import Mdui from 'mdui'
     // import files
-    import avatar from '../../assets/images/crrashh1542.jpg'
-    import links from './links.json'
+    import links from '../../data/links.json'
     export default {
         name: 'Drawer',
         data() {
             return {
-                avatar: avatar,
+                avatar: "https://res.crrashh.cn/img/avatars/crrashh1542.jpg",
                 links: links
             }
         }

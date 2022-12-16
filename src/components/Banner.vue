@@ -1,10 +1,9 @@
 <script>
-    import avatar from '../assets/images/crrashh1542.jpg'
     export default {
         name: 'Banner',
         data() {
             return {
-                avatar: avatar
+                avatar: 'https://res.crrashh.cn/img/avatars/crrashh1542.jpg'
             }
         }
     }

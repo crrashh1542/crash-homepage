@@ -10,7 +10,7 @@ export default {
                 title: "云萧的咕咕盘",
                 subTitle: "基于 Alist 的网盘服务",
                 imageUrl: c1img,
-                link: "https://disk.crrashh.cn:2333"
+                link: "https://disk.crrashh.cn"
             },
             {
                 title: "云萧的咕咕屋",

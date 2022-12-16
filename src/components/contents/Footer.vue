@@ -35,9 +35,9 @@
         <div class="c-info">
             <p>&copy; Copyright 2019-2022 Kotsuki Crrashh. All Rights Reserved.</p>
             <p>
-                <a href="https://beian.miit.gov.cn/">蜀 ICP 备？？？号</a> | 
+                <a href="https://beian.miit.gov.cn/">蜀ICP备2022029657号-1</a> | 
                 <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=">蜀公网安备？？？号</a> | 
-                <a href="https://icp.gov.moe/?keyword=20220551">萌 ICP 备 20220551 号</a>
+                <a href="https://icp.gov.moe/?keyword=20220551">萌ICP备20220551号</a>
             </p>
         </div>
     </div>

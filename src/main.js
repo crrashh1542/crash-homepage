@@ -14,7 +14,7 @@ import App from './App.vue'
 createApp(App).mount('#app')
 
 // 控制台显示奇奇怪怪的东西
-import showInfo from './functions/showInfo.ts'
+import showInfo from './functions/showInfo.js'
 showInfo()
-import sayAge from './functions/birthday.ts'
+import sayAge from './functions/birthday.js'
 sayAge("2007-03-18")

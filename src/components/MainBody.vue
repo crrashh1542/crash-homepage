@@ -3,7 +3,7 @@
     import Cards from './contents/Cards.vue'
     import Foo from './contents/Footer.vue'
     export default {
-        name: 'content',
+        name: 'MainBody',
         components: { GhChart, Cards, Foo }
     }
 </script>

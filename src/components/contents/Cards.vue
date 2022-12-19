@@ -2,7 +2,7 @@
 import c1img from '../../assets/images/1.jpg'
 import c2img from '../../assets/images/2.jpg'
 export default {
-    name: 'Cards',
+    name: 'BodyCards',
     data(){
         return {
             card: [

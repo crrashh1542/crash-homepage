@@ -1,10 +1,10 @@
 <script>
     // import libraries
-    import Mdui from 'mdui'
+    // import Mdui from 'mdui'
     // import files
     import links from '../../data/links.json'
     export default {
-        name: 'Drawer',
+        name: 'TopDrawer',
         data() {
             return {
                 avatar: "https://res.crrashh.cn/img/avatars/crrashh1542.jpg",

@@ -1,7 +1,7 @@
 <script>
     import links from '../../data/links.json'
     export default {
-        name: 'Appbar',
+        name: 'TopAppbar',
         data() {
             return {
                 links: links

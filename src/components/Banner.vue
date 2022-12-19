@@ -1,6 +1,6 @@
 <script>
     export default {
-        name: 'Banner',
+        name: 'MainBanner',
         data() {
             return {
                 avatar: 'https://res.crrashh.cn/img/avatars/crrashh1542.jpg'

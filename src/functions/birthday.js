@@ -7,7 +7,7 @@
  * @return array
  */
 
- function getAge(birthday:Array<number>) {
+ function getAge(birthday) {
     let date = new Date();
     let today = [date.getFullYear(), date.getMonth() + 1, date.getDate()];
     let age = today.map((value, index) => {

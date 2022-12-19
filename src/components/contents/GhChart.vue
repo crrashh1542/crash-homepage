@@ -1,7 +1,7 @@
 <script>
 // import 'mdui/dist/css/mdui.min.css'
 export default {
-    name: 'GhChart'
+    name: 'BodyGhChart'
 }
 </script>
 

@@ -11,7 +11,7 @@
 </script>
 
 <template>
-    <div class="c-appbar mdui-appbar mdui-color-blue-grey mdui-color-text-white">
+    <div class="c-appbar mdui-appbar mdui-color-theme mdui-color-text-white">
         <div class="mdui-toolbar">
             <!-- 左侧 icon & 标题 -->
             <a class="mdui-btn mdui-btn-icon mdui-ripple" @click="trigger">

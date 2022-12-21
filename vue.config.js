@@ -26,13 +26,8 @@ module.exports = defineConfig({
         }
     },
     devServer: {
-        overlay: {
-          warnings: true,
-          errors: true
-        },
         host: "localhost",
         port: 8080,
-        open: false,
-        hotOnly: true
+        open: false
     }
 })

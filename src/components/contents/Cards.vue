@@ -46,6 +46,6 @@ export default {
 
 <style scoped>
     .mdui-card {
-        margin: 20px 10px;
+        margin: 0 10px 20px;
     }
 </style>

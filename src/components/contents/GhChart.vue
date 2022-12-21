@@ -19,7 +19,6 @@ export default {
         width: 100%;
         background-color: rgba(255, 255, 255, 0.4);
         text-align: center;
-        margin: 20px 0;
         overflow: scroll;
         img {
             margin: 20px auto;

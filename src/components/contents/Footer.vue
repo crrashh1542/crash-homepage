@@ -28,15 +28,15 @@
 
 <template>
     <div class="c-footer">
-        <a :href="links[0]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple">&#xe882;</a>
-        <a :href="links[1]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple">&#xe918;</a>
-        <a :href="links[2]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple">&#xe712;</a>
-        <a :href="links[3]" @click="about" class="mdui-btn mdui-btn-raised mdui-color-blue-grey-200 mdui-btn-icon mdui-ripple"><i class="mdui-icon material-icons">info</i></a>
+        <a :href="links[0]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe882;</a>
+        <a :href="links[1]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe918;</a>
+        <a :href="links[2]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe712;</a>
+        <a :href="links[3]" @click="about" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple"><i class="mdui-icon material-icons">info</i></a>
         <div class="c-info">
             <p>&copy; Copyright 2019-2022 Kotsuki Crrashh. All Rights Reserved.</p>
             <p>
-                <a href="https://beian.miit.gov.cn/">蜀ICP备2022029657号-1</a> | 
-                <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=">蜀公网安备？？？号</a> | 
+                <a href="https://beian.miit.gov.cn/"><img src="../../../public/images/miit.png">&nbsp;&nbsp;蜀ICP备2022029657号-1</a> | 
+                <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode="><img src="../../../public/images/police.png">&nbsp;&nbsp;蜀公网安备？？？号</a> | 
                 <a href="https://icp.gov.moe/?keyword=20220551">萌ICP备20220551号</a>
             </p>
         </div>
@@ -46,34 +46,29 @@
 <style lang="less" scoped>
     /* 底部按钮 */
     .c-footer {
-            padding: 10px;
+            margin: 20px 0 10px;
             text-align: center;
             .mdui-btn-icon {
                 line-height: 48px;
-                margin: auto;
                 margin: 5px;
                 font-family: 'iconfont';
                 width: 48px;
                 height: 48px;
             }
             .c-info {
-                padding: 30px;
+                padding: 10px;
                 text-align: center;
                 line-height: 1.5;
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
             }
         }
     @media screen and (max-width: 1024px) {
         .c-footer .c-info {
             padding: 30px 0;
         }
-    }
-    .mdui-btn-icon {
-        line-height: 48px;
-        margin: auto;
-        margin: 5px;
-        font-family: 'iconfont';
-        width: 48px;
-        height: 48px;
     }
     
     /* 备案信息 */

@@ -33,7 +33,7 @@
         <a :href="links[2]" target="_blank" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe712;</a>
         <a :href="links[3]" @click="about" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple"><i class="mdui-icon material-icons">info</i></a>
         <div class="c-info">
-            <p>&copy; Copyright 2019-2022 Kotsuki Crrashh. All Rights Reserved.</p>
+            <p>&copy; Copyright 2019-2023 Kotsuki Crrashh. All Rights Reserved.</p>
             <p>
                 <a href="https://beian.miit.gov.cn/"><img src="../../../public/images/miit.png">&nbsp;&nbsp;蜀ICP备2022029657号-1</a> | 
                 <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode="><img src="../../../public/images/police.png">&nbsp;&nbsp;蜀公网安备？？？号</a> | 

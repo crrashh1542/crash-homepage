@@ -14,9 +14,9 @@ export default {
             },
             {
                 title: "云萧的咕咕屋",
-                subTitle: "本咕乱写的啊喂！",
+                subTitle: "咕咕乱写的啊喂！",
                 imageUrl: c2img,
-                link: "https://blogs.crrashh.cn"
+                link: "https://blog.crrashh.cn"
             }
         ]}
     }

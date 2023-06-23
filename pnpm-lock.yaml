@@ -42,8 +42,11 @@ devDependencies:
   compression-webpack-plugin:
     specifier: ^10.0.0
     version: 10.0.0(webpack@5.88.0)
+  eslint:
+    specifier: ^8.43.0
+    version: 8.43.0
   eslint-plugin-vue:
-    specifier: ^9.8.0
+    specifier: ^9.15.0
     version: 9.15.0(eslint@8.43.0)
   moment:
     specifier: ^2.29.4

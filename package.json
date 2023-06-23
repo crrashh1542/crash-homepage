@@ -1,6 +1,6 @@
 {
    "name": "crash-homepage",
-   "version": "2.2.0-alpha.3",
+   "version": "2.2.0-alpha.4",
    "private": true,
    "scripts": {
       "serve": "vue-cli-service serve",
@@ -23,7 +23,8 @@
       "@vue/cli-plugin-eslint": "~5.0.0",
       "@vue/cli-service": "~5.0.0",
       "compression-webpack-plugin": "^10.0.0",
-      "eslint-plugin-vue": "^9.8.0",
+      "eslint": "^8.43.0",
+      "eslint-plugin-vue": "^9.15.0",
       "moment": "^2.29.4"
    },
    "eslintConfig": {

@@ -4,9 +4,10 @@
  * @version 1.0.1
  */
 
-import { version } from "../../package.json"
+import v from "../../package.json"
 import moment from "moment"
 
+const version = v.version
 const date =  moment(Date.now()).format("YYYYMMDD")
 const time =  moment(Date.now()).format("HHmmss")
 const output = "Version: " + version + "@" + date + "-GMT+8-" + time

@@ -1,14 +1,13 @@
 <script>
-// import libraries
-// import Mdui from 'mdui'
-// import files
-import links from '../../data/links.json'
+import info from '../../data/siteInfo.json'
+const site = info.site
+const link = info.headLink
+
 export default {
    name: 'TopDrawer',
    data() {
       return {
-         avatar: "https://res.crrashh.cn/img/avatars/crrashh1542.jpg",
-         links: links
+         site, link
       }
    }
 }
@@ -19,7 +18,7 @@ export default {
       <ul class="mdui-list">
          <div class="c-info">
             <div class="c-avatar">
-               <img :src=avatar alt="">
+               <img :src=site.avatar alt="">
             </div><br>
             <div class="c-title">云萧只会咕咕咕</div>
             <div class="c-subtitle mdui-text-color-grey-700">高一狗，前端废物一个</div>

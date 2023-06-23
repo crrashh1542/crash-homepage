@@ -1,9 +1,12 @@
 <script>
+import info from '../data/siteInfo.json'
+const site = info.site
+
 export default {
    name: 'MainBanner',
    data() {
       return {
-         avatar: 'https://res.crrashh.cn/img/avatars/crrashh1542.jpg'
+         site
       }
    }
 }
@@ -12,13 +15,13 @@ export default {
 <template>
    <div class="c-introduction mdui-row">
       <div class="c-avatar mdui-col-lg-3 mdui-col-md-4">
-         <img :src=avatar>
+         <img :src=site.avatar>
       </div>
       <div class="c-info mdui-col-lg-9 mdui-col-md-8">
-         <div class="c-title">云萧的咕咕窝<span class="c-live-word">ヾ(ﾟ∀ﾟゞ)</span></div>
-         <div class="c-subtitle">KOTSUKI CRRASHH</div>
+         <div class="c-title">{{ site.title }}</div>
+         <div class="c-subtitle">{{ site.subtitle }}</div>
          <br>
-         <p>" Creating makes miracles. "</p>
+         <p>{{ site.subheading }}</p>
       </div>
    </div>
 </template>

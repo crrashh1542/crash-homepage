@@ -1,10 +1,13 @@
 <script>
-import links from '../../data/links.json'
+import info from '../../data/siteInfo.json'
+const site = info.site
+const link = info.headLink
+
 export default {
    name: 'TopAppbar',
    data() {
       return {
-         links: links
+         site, link
       }
    }
 }
@@ -17,11 +20,11 @@ export default {
          <a class="mdui-btn mdui-btn-icon mdui-ripple" @click="trigger">
             <i class="mdui-icon material-icons">menu</i>
          </a>
-         <a href="/" class="mdui-typo-headline">云萧的咕咕窝</a>
+         <a href="/" class="mdui-typo-headline">{{ site.title }}</a>
          <!-- 左右分隔 -->
          <div class="mdui-toolbar-spacer"></div>
          <!-- 右侧链接 -->
-         <a v-for="i in links" :key="i.name" :href="i.link" class="c-btn mdui-ripple" target="_blank">{{ i.name }}</a>
+         <a v-for="i in link" :key="i.name" :href="i.link" class="c-btn mdui-ripple" target="_blank">{{ i.name }}</a>
       </div>
    </div>
 </template>

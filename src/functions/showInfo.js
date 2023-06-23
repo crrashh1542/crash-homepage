@@ -4,10 +4,17 @@
  * @version 1.0.1
  */
 
+import { version } from "../../package.json"
+import moment from "moment"
+
+const date =  moment(Date.now()).format("YYYYMMDD")
+const time =  moment(Date.now()).format("HHmmss")
+const output = "Version: " + version + "@" + date + "-GMT+8-" + time
+
 export default function showInfo(){
-    console.log("%c%s","font-size: 14px; margin: 5px","Frontend Version: 2.1.1@20230120-GMT+8-15:46:20");
+    console.log("%c%s", "font-size: 14px; margin: 5px", output)
     
     console.log("%c%s",
         "color: #fff; background: #42b883; padding: 5px 10px; border-radius: 4px; font-size: 14px;",
-        "Built with Vue 3 framework!");
+        "Built with Vue 3 framework!")
 }

@@ -2,8 +2,7 @@
 import info from "../../data/siteInfo.json"
 import Mdui from 'mdui'
 
-const extLink = info.extLink
-const beian = info.beian
+const [beian, link] = [info.beian, info.extLink]
 export default {
    name: 'BodyFooter',
    data() {

@@ -1,7 +1,6 @@
 <script>
 import info from '../../data/siteInfo.json'
-const site = info.site
-const link = info.headLink
+const [site, link] = [info.site, info.headLink]
 
 export default {
    name: 'TopAppbar',

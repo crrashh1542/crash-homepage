@@ -10,7 +10,7 @@ import moment from "moment"
 const version = v.version
 const date =  moment(Date.now()).format("YYYYMMDD")
 const time =  moment(Date.now()).format("HHmmss")
-const output = "Version: " + version + "@" + date + "-GMT+8-" + time
+const output = "Version: " + version + "@" + date + "T" + time + "+0800"
 
 export default function showInfo(){
     console.log("%c%s", "font-size: 14px; margin: 5px", output)

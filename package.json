@@ -1,6 +1,6 @@
 {
    "name": "crash-homepage",
-   "version": "2.2.0-alpha.6",
+   "version": "2.2.0-alpha.7",
    "private": true,
    "scripts": {
       "serve": "vue-cli-service serve",

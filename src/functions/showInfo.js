@@ -13,7 +13,7 @@ const frameVer = info.dependencies.vue.split("^")[1]
 // 获取时间和日期
 const date =  moment(Date.now()).format("YYYYMMDD")
 const time =  moment(Date.now()).format("HHmmss")
-let build = "Version: " + version + "@" + date + "T" + time + "+0800"
+let build = "Version: " + repoVer + "@" + date + "T" + time + "+0800"
 
 export default function showInfo(){
     console.log("%c%s", "font-size: 14px; margin: 5px", build)

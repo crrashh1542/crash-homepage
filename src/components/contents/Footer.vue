@@ -7,14 +7,14 @@ export default {
    name: 'BodyFooter',
    data() {
       return {
-         extLink, beian
+         link, beian
       }
    },
    methods: {
       about() {
          Mdui.dialog({
             title: "关于本站",
-            content: "本站由云萧（@crrashh1542）自己搭建。<br>部分使用 MDUI 进行 Material 化设计<br>本站由 Vue 3 构建，代码详见 Github@crrashh1542",
+            content: "本站由云萧（@crrashh1542）自己搭建。<br>部分使用 MDUI 进行 Material 化设计<br>本站由 Vue 3 构建，代码详见 Github@crrashh1542/crash-homepage",
             buttons: [{
                text: "了解"
             }]
@@ -28,11 +28,11 @@ export default {
    <div class="c-footer">
       <a :href="extLink[0]" target="_blank"
          class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe882;</a>
-      <a :href="extLink[1]" target="_blank"
+      <a :href="link[1]" target="_blank"
          class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe918;</a>
-      <a :href="extLink[2]" target="_blank"
+      <a :href="link[2]" target="_blank"
          class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe712;</a>
-      <a :href="extLink[3]" @click="about" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple"><i
+      <a :href="link[3]" @click="about" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple"><i
             class="mdui-icon material-icons">info</i></a>
       <div class="c-info">
          <p>&copy; Copyright 2019-2023 Kotsuki Crrashh. All Rights Reserved.</p>

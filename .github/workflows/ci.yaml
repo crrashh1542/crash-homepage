@@ -23,7 +23,7 @@ jobs:
      - name: 🚧 Setup dependencies
        id: setup_deps
        run: |
-         apt-get install zip
+         sudo apt-get install zip
          pnpm install @vue/cli -g
          pnpm install
 

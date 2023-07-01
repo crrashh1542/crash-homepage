@@ -26,11 +26,10 @@ jobs:
      - name: 📙 Get Package Suffix
        id: get-suffix
        run: |
-         ls
-         TAG_NAME=$(git describe --abbrev=0 --tag)
+         TAG_NAME=$(git describe --abbrev=0 --tags)
          BUILD_DATE=$(date "+%Y%m%d")
          HEAD_SHA=$(git rev-parse --short HEAD)
-         echo "::set-output name=DIST_SUFFIX::${TAG_NAME}-${BUILD_DATE}-{HEAD_SHA_SHORT}"
+         echo "::set-output name=DIST_SUFFIX::${TAG_NAME}-${BUILD_DATE}-${HEAD_SHA}"
 
 
   build: 
@@ -66,7 +65,6 @@ jobs:
        run: |
          sudo apt-get install zip
          zip -r ${{ env.DIST_NAME }}.zip dist
-         ls
  
      - name: 🌐 Upload the build
        id: upload
@@ -74,4 +72,4 @@ jobs:
        with: 
          name: ${{ env.DIST_NAME }}
          path: ${{ env.DIST_NAME }}.zip
-         retention-days: 7
+

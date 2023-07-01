@@ -3,11 +3,17 @@ name: CI
 on: 
   push: 
     branches: [ canary, dev-v2 ]
+    paths-ignore: 
+      - '**.md'
+      - '**.txt'
+      - '.github/**'
+      - '!.github/workflows/**'
   pull_request: 
     branches: [ dev-v2, v2 ]
 
 jobs:
   build: 
+    name: Build Production Pages
     runs-on: ubuntu-latest
     steps: 
      - name: 🧐 Checkout
@@ -31,11 +37,17 @@ jobs:
        id: build
        run: |
          pnpm build
-         zip -r dist.zip dist
+         zip -r dist.${{ github.event.head_commit.id }}.zip dist
 
+  upload: 
+    needs: build
+    name: Upload to Artifact
+    runs-on: ubuntu-latest
+    steps: 
      - name: 🌐 Upload builds
        id: upload
        uses: actions/upload-artifact@v3
        with: 
-         name: builds
-         path: dist.zip
+         name: dist.${{ github.event.head_commit.id }}
+         path: dist.${{ github.event.head_commit.id }}.zip
+         retention-days: 7

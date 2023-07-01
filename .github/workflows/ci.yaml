@@ -39,10 +39,6 @@ jobs:
       DIST_NAME: dist-${{ needs.setup.outputs.DIST_SUFFIX }}
     runs-on: ubuntu-latest
     steps: 
-     - name: 🧐 Checkout
-       id: checkout
-       uses: actions/checkout@v3
-
      - name: 🔧 Setup pnpm
        id: setup_pnpm
        uses: pnpm/action-setup@v2

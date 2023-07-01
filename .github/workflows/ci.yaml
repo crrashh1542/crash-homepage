@@ -26,9 +26,11 @@ jobs:
      - name: 📙 Get Package Suffix
        id: get-suffix
        run: |
+         ls
          TAG_NAME=$(git describe --abbrev=0 --tag)
-         HEAD_SHA_SHORT=$(git rev-parse --short HEAD)
-         echo "::set-output name=DIST_SUFFIX::${TAG_NAME}-${HEAD_SHA_SHORT}"
+         BUILD_DATE=$(date "+%Y%m%d")
+         HEAD_SHA=$(git rev-parse --short HEAD)
+         echo "::set-output name=DIST_SUFFIX::${TAG_NAME}-${BUILD_DATE}-{HEAD_SHA_SHORT}"
 
 
   build: 

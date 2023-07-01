@@ -1,0 +1,41 @@
+name: ci
+on: push
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  main:
+    name: ci
+    runs-on: ubuntu-latest
+    steps:
+     - name: 🧐 Checkout
+       id: checkout
+       uses: actions/checkout@v3
+
+     - name: 🔧 Setup pnpm
+       id: setup_pnpm
+       uses: pnpm/action-setup@v2
+       with:
+         version: latest
+
+     - name: 🚧 Setup dependencies
+       id: setup_deps
+       run: |
+         apt-get install zip
+         pnpm install @vue/cli -g
+         pnpm install
+
+     - name: 📦 Build production pages
+       id: build
+       run: |
+         pnpm build
+         zip -r dist.zip dist
+         
+    - name: 🌐 Upload builds
+      id: upload
+      uses: actions/upload-artifact@v3
+        with:
+          name: building
+          path: dist.zip

@@ -1,13 +1,12 @@
 name: ci
-on: push
-on:
+on: 
+  push:
+    branches: [ canary, dev-v2 ]
   pull_request:
-    branches:
-      - main
+    branches: [ dev-v2, v2 ]
 
 jobs:
-  main:
-    name: ci
+  build:
     runs-on: ubuntu-latest
     steps:
      - name: 🧐 Checkout

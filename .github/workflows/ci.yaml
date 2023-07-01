@@ -30,7 +30,7 @@ jobs:
          TAG_NAME=$(git describe --abbrev=0 --tags)
          BUILD_DATE=$(date "+%Y%m%d")
          HEAD_SHA=$(git rev-parse --short HEAD)
-         echo "::set-output name=DIST_SUFFIX::${TAG_NAME}-${BUILD_DATE}-${HEAD_SHA}"
+         echo "DIST_SUFFIX=${TAG_NAME}-${BUILD_DATE}-${HEAD_SHA}" >> $GITHUB_OUTPUT
 
 
   build: 

@@ -36,6 +36,6 @@ jobs:
      - name: 🌐 Upload builds
        id: upload
        uses: actions/upload-artifact@v3
-         with: 
-           name: build
-           path: dist.zip
+       with: 
+         name: builds
+         path: dist.zip

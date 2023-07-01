@@ -36,12 +36,7 @@ jobs:
        id: build
        run: |
          pnpm build
-
-  upload: 
-    needs: build
-    name: Upload to Artifact
-    runs-on: ubuntu-latest
-    steps: 
+ 
      - name: 📦 Pack the build
        id: pack
        run: |

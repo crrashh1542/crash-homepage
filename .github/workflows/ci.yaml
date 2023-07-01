@@ -29,22 +29,27 @@ jobs:
      - name: 🚧 Setup dependencies
        id: setup_deps
        run: |
-         sudo apt-get install zip
          pnpm install @vue/cli -g
          pnpm install
 
-     - name: 📦 Build production pages
+     - name: ⚙️ Build production pages
        id: build
        run: |
          pnpm build
-         zip -r dist.${{ github.event.head_commit.id }}.zip dist
 
   upload: 
     needs: build
     name: Upload to Artifact
     runs-on: ubuntu-latest
     steps: 
-     - name: 🌐 Upload builds
+     - name: 📦 Pack the build
+       id: pack
+       run: |
+         sudo apt-get install zip
+         zip -r dist.${{ github.event.head_commit.id }}.zip dist
+         ls
+ 
+     - name: 🌐 Upload the build
        id: upload
        uses: actions/upload-artifact@v3
        with: 

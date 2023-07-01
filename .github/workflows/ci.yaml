@@ -1,14 +1,14 @@
 name: ci
 on: 
-  push:
+  push: 
     branches: [ canary, dev-v2 ]
-  pull_request:
+  pull_request: 
     branches: [ dev-v2, v2 ]
 
-jobs:
-  build:
+jobs: 
+  build: 
     runs-on: ubuntu-latest
-    steps:
+    steps: 
      - name: 🧐 Checkout
        id: checkout
        uses: actions/checkout@v3
@@ -16,7 +16,7 @@ jobs:
      - name: 🔧 Setup pnpm
        id: setup_pnpm
        uses: pnpm/action-setup@v2
-       with:
+       with: 
          version: latest
 
      - name: 🚧 Setup dependencies
@@ -35,6 +35,6 @@ jobs:
     - name: 🌐 Upload builds
       id: upload
       uses: actions/upload-artifact@v3
-        with:
+        with: 
           name: building
           path: dist.zip

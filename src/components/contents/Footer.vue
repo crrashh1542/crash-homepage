@@ -26,7 +26,7 @@ export default {
 
 <template>
    <div class="c-footer">
-      <a :href="extLink[0]" target="_blank"
+      <a :href="link[0]" target="_blank"
          class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe882;</a>
       <a :href="link[1]" target="_blank"
          class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe918;</a>

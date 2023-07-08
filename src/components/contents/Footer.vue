@@ -1,13 +1,13 @@
 <script>
-import info from "../../data/siteInfo.json"
+import config from "../../config/config"
 import Mdui from 'mdui'
 
-const [beian, link] = [info.beian, info.extLink]
+const [beian, link, copyright] = [config.footer.beian, config.footer.link, config.footer.copyright]
 export default {
    name: 'BodyFooter',
    data() {
       return {
-         link, beian
+         link, beian, copyright
       }
    },
    methods: {
@@ -35,7 +35,7 @@ export default {
       <a :href="link[3]" @click="about" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple"><i
             class="mdui-icon material-icons">info</i></a>
       <div class="c-info">
-         <p>&copy; Copyright 2019-2023 Kotsuki Crrashh. All Rights Reserved.</p>
+         <p>&copy; {{ copyright }}</p>
          <p>
             <a href="https://beian.miit.gov.cn/"><img
                   src="../../../public/images/miit.png">&nbsp;&nbsp;{{ beian.miit }}</a> |

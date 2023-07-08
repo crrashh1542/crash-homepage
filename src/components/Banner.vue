@@ -1,6 +1,6 @@
 <script>
-import info from '../data/siteInfo.json'
-const site = info.site
+import config from "../config/config"
+const site = config.site
 
 export default {
    name: 'MainBanner',

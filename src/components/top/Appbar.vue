@@ -1,6 +1,6 @@
 <script>
-import info from '../../data/siteInfo.json'
-const [site, link] = [info.site, info.headLink]
+import config from "../../config/config"
+const [site, link] = [config.site, config.header.link]
 
 export default {
    name: 'TopAppbar',

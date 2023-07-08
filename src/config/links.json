@@ -18,8 +18,17 @@
    ],
 
    "extLink": [
-      "https://wpa.qq.com/msgrd?v=3&uin=3247380086&site=qq&menu=yes",
-      "mailto:kotsuki@crrashh.com",
-      "https://github.com/crrashh1542"
+      {
+         "icon": "&#xe882;",
+         "link": "https://wpa.qq.com/msgrd?v=3&uin=3247380086&site=qq&menu=yes"
+      },
+      {
+         "icon": "&#xe918;",
+         "link": "mailto:kotsuki@crrashh.com"
+      },
+      {
+         "icon": "&#xe712;",
+         "link": "https://github.com/crrashh1542"
+      }
    ]
 }

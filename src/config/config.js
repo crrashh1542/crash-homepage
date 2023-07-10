@@ -1,4 +1,6 @@
 import links from './links.json'
+import avatar from '../assets/images/avatar.jpg'
+import background from '../assets/images/bg.jpg'
 
 export default {
    configVersion: 1,
@@ -8,7 +10,8 @@ export default {
       suffix: ' / in building...',
       subtitle: 'KOTSUKI CRRASHH',
       subheading: '" Creating makes miracles. "',
-      avatar: 'https://i.cdn.crrashh.com/avatar.jpg'
+      avatar,
+      background
    },
 
    header: {
@@ -16,7 +19,20 @@ export default {
    },
 
    content: {
-      // To be added
+      
+      title: '高二狗，搞笑人，2.75次元，可能不怎么正常',
+
+      ghChart: {
+         username: 'crrashh1542',
+         color: '409ba5'
+      },
+
+      proterties: {
+
+      },
+
+      links: null
+
    },
 
    footer: {

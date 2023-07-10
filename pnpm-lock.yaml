@@ -4,9 +4,6 @@ dependencies:
   core-js:
     specifier: ^3.31.0
     version: 3.31.0
-  less:
-    specifier: ^4.1.3
-    version: 4.1.3
   mdui:
     specifier: ^1.0.2
     version: 1.0.2
@@ -45,6 +42,9 @@ devDependencies:
   eslint-plugin-vue:
     specifier: ^9.15.0
     version: 9.15.0(eslint@8.43.0)
+  less:
+    specifier: ^4.1.3
+    version: 4.1.3
   less-loader:
     specifier: ^11.1.3
     version: 11.1.3(less@4.1.3)(webpack@5.88.0)

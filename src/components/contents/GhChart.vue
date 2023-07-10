@@ -1,13 +1,24 @@
 <script>
-// import 'mdui/dist/css/mdui.min.css'
+import config from "../../config/config"
+const gh = config.content.ghChart
+
 export default {
-   name: 'BodyGhChart'
+   name: 'BodyGhChart',
+   computed: {
+      reqUrl() {
+         if(gh.color === null) {
+            return gh.apiUrl + '/' + gh.username
+         } else {
+            return gh.apiUrl + '/' + gh.username + '/' + gh.color
+         }
+      }
+   }
 }
 </script>
 
 <template>
    <div class="c-ghchart">
-      <img src="https://www.crrashh.cn/api/ghchart" alt="">
+      <img :src=reqUrl alt="">
       <!-- <div class="c-load-anim">
             <div class="mdui-spinner mdui-spinner-colorful"></div>
         </div> -->

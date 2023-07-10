@@ -1,0 +1,34 @@
+{
+   "headLink": [
+      {
+         "icon": "book",
+         "name": "博客",
+         "link": "https://blog.crrashh.com/"
+      },
+      {
+         "icon": "info_outline",
+         "name": "关于",
+         "link": "https://blog.crrashh.com/archives/12"
+      },
+      {
+         "icon": "link",
+         "name": "友链",
+         "link": "https://blog.crrashh.com/friends"
+      }
+   ],
+
+   "extLink": [
+      {
+         "icon": "&#xe882;",
+         "link": "https://wpa.qq.com/msgrd?v=3&uin=3247380086&site=qq&menu=yes"
+      },
+      {
+         "icon": "&#xe918;",
+         "link": "mailto:kotsuki@crrashh.com"
+      },
+      {
+         "icon": "&#xe712;",
+         "link": "https://github.com/crrashh1542"
+      }
+   ]
+}

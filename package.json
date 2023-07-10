@@ -1,6 +1,6 @@
 {
    "name": "crash-homepage",
-   "version": "2.2.0-alpha.9",
+   "version": "2.2.0-beta.1",
    "private": true,
    "scripts": {
       "serve": "vue-cli-service serve",
@@ -9,8 +9,6 @@
    },
    "dependencies": {
       "core-js": "^3.31.0",
-      "less": "^4.1.3",
-      "less-loader": "^11.1.3",
       "mdui": "^1.0.2",
       "vue": "^3.3.4"
    },
@@ -25,7 +23,10 @@
       "compression-webpack-plugin": "^10.0.0",
       "eslint": "^8.43.0",
       "eslint-plugin-vue": "^9.15.0",
-      "moment": "^2.29.4"
+      "less": "^4.1.3",
+      "less-loader": "^11.1.3",
+      "moment": "^2.29.4",
+      "speed-measure-webpack-plugin": "^1.5.0"
    },
    "eslintConfig": {
       "root": true,

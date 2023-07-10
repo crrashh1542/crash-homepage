@@ -1,24 +1,12 @@
 <script>
-import info from "../../data/siteInfo.json"
-import Mdui from 'mdui'
+import config from "../../config/config"
 
-const [beian, link] = [info.beian, info.extLink]
+const [beian, link, copyright] = [config.footer.beian, config.footer.link, config.footer.copyright]
 export default {
    name: 'BodyFooter',
    data() {
       return {
-         link, beian
-      }
-   },
-   methods: {
-      about() {
-         Mdui.dialog({
-            title: "关于本站",
-            content: "本站由云萧（@crrashh1542）自己搭建。<br>部分使用 MDUI 进行 Material 化设计<br>本站由 Vue 3 构建，代码详见 Github@crrashh1542/crash-homepage",
-            buttons: [{
-               text: "了解"
-            }]
-         })
+         link, beian, copyright
       }
    }
 }
@@ -26,22 +14,20 @@ export default {
 
 <template>
    <div class="c-footer">
-      <a :href="extLink[0]" target="_blank"
-         class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe882;</a>
-      <a :href="link[1]" target="_blank"
-         class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe918;</a>
-      <a :href="link[2]" target="_blank"
-         class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">&#xe712;</a>
-      <a :href="link[3]" @click="about" class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple"><i
-            class="mdui-icon material-icons">info</i></a>
+      <a :href=l.link v-for="(l, index) in link" :key=index target="_blank"
+         class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple"><i>{{ l.icon }}</i></a>
       <div class="c-info">
-         <p>&copy; Copyright 2019-2023 Kotsuki Crrashh. All Rights Reserved.</p>
+         <p>&copy; {{ copyright }}</p>
          <p>
-            <a href="https://beian.miit.gov.cn/"><img
-                  src="../../../public/images/miit.png">&nbsp;&nbsp;{{ beian.miit }}</a> |
-            <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode="><img
-                  src="../../../public/images/police.png">&nbsp;&nbsp;{{ beian.gongan }}</a> |
-            <a href="https://icp.gov.moe/?keyword=20220551">{{ beian.moe }}</a>
+            <span v-if="beian.miit !== null">
+               <a href="https://beian.miit.gov.cn/"><img src="../../../public/images/miit.png">&nbsp;&nbsp;{{ beian.miit }}</a> |
+            </span>
+            <span v-if="beian.gongan !== null">
+               <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode="><img src="../../../public/images/police.png">&nbsp;&nbsp;{{ beian.gongan }}</a> |
+            </span>
+            <span v-if="beian.moe !== null">
+               <a href="https://icp.gov.moe/?keyword=20220551">{{ beian.moe }}</a>
+            </span>
          </p>
       </div>
    </div>
@@ -94,4 +80,5 @@ p a:hover {
 
 a {
    text-decoration: none;
-}</style>
+}
+</style>

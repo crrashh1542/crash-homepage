@@ -1,24 +1,12 @@
 <script>
-import c1img from '../../assets/images/1.jpg'
-import c2img from '../../assets/images/2.jpg'
+import config from '../../config/config'
+const card = config.content.links
+
 export default {
    name: 'BodyCards',
    data() {
       return {
-         card: [
-            {
-               title: "云萧的咕咕盘",
-               subTitle: "基于 Alist 的网盘服务",
-               imageUrl: c1img,
-               link: "https://disk.crrashh.com"
-            },
-            {
-               title: "云萧的咕咕屋",
-               subTitle: "咕咕乱写的啊喂！",
-               imageUrl: c2img,
-               link: "https://blog.crrashh.com"
-            }
-         ]
+         card
       }
    }
 }

@@ -1,36 +1,40 @@
 # Crrashh Homepage
-这是一个基于 Vue 3 （以后可能会改为 React）且可自定义的个人主页，如果喜欢记得点上一个 star。:D  
+This is a customizable personal homepage template based on Vue 3.  
+Get it starred if you like it! :D  
+[箄1�7体中文](./README.zh.md)  
 
-![开源协议](https://img.shields.io/github/license/crrashh1542/crash-homepage)
-![当前版本](https://img.shields.io/github/package-json/v/crrashh1542/crash-homepage)
-![Release 版本](https://img.shields.io/github/v/release/crrashh1542/crash-homepage?include_prereleases)
-![框架](https://img.shields.io/badge/framework-Vue%203-3fb984)
+![License](https://img.shields.io/github/license/crrashh1542/crash-homepage)
+![Version](https://img.shields.io/github/package-json/v/crrashh1542/crash-homepage)
+![Release](https://img.shields.io/github/v/release/crrashh1542/crash-homepage?include_prereleases)
+![Framework](https://img.shields.io/badge/framework-Vue%203-3fb984)
 
-此分支用于**公众可配置化**（暂定 v2.2）以及 **UI 升级**（暂定 v2.3）期间开发工作。主分支在 [crash-homepage@v2](https://github.com/crrashh1542/crash-homepage/tree/v2)。  
+This branch is set to handle the work on **making the page publically customizable**(provisionally finished during v2.2) and **upgrading UI**(prov. finished during v2.3). Main branch is at [crash-homepage@v2](https://github.com/crrashh1542/crash-homepage/tree/v2). 
   
-## 💻 自定义 & 网页生成
-1. 确保你的电脑上安装了 NodeJS（版本为 16+）和 git。
-2. 安装 pnpm
+## 💻 Customize & Build
+1. Make sure NodeJS(Version 16+) and Git are installed on your computer.
+2. Install pnpm.
 ```shell
 npm install pnpm -g
 ```
-3. 安装依赖库
+3. Install dependencies.
 ```shell
 pnpm install @vue/cli -g
 pnpm install
 ```
-1. 修改 `/src/config/config.js` 中的站点数据为你网站的数据。你可以直接像写对象一样写在大括号里边，亦可使用 import 引入。
-2. 启动开发环境，在开发服务器中查看站点效果。
+4. Change the data in `/src/config/config.js` to yours. You can either write properties in it as objects or import data from external JSON files.
+5. Start the dev env. and have a preview on the devServer.
 ```shell
 pnpm serve
 ```
-6. 启动生产环境，生成静态页面。
+6. Start the prod env. and build static pages.
 ```shell
 pnpm build
 ```
-1. 在 `/dist` 中查收打包好的页面，并在**遵守 Apache 2.0 开源协议的前提下**将网页部署至你的服务器/网页空间。
+7. Get built pages at `/dist` and deploy them **under the PERMISSION of Apache 2.0 License**.
 
-## 🐛 问题反馈
-遇到有使用/代码逻辑上的 bug，或欢迎在 [Issues](https://github.com/crrashh1542/crash-homepage/issues) 中提出问题，或者[提交 PR](https://github.com/crrashh1542/crash-homepage/pulls)。作为一个初出茅庐的新手，我对你的贡献和指导感激不尽。
+## 🐛 Feedback
+Suggestions and bug reports are welcome at [issues](https://github.com/crrashh1542/crash-homepage/issues).  
+You can also give me your resolutions on such or newly found issues through [creating PRs](https://github.com/crrashh1542/crash-homepage/pulls).   
+As a freshman in front-end, I will be of great thanks to you for your instructions.
 
-预告：下一大版本（v3）将由 Vite + React 构建，整体完工可能在 2023 年第一至第二季度。
+~~Next big version(v3) will be built with React and completed someday in 2024.~~

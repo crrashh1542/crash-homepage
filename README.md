@@ -1,7 +1,7 @@
 # Crrashh Homepage
 This is a customizable personal homepage template based on Vue 3.  
 Get it starred if you like it! :D  
-[绠�浣撲腑鏂嘳(./README.zh.md)  
+[绠�浣撲腑鏂嘳(./README.zh.md)  
 
 ![License](https://img.shields.io/github/license/crrashh1542/crash-homepage)
 ![Version](https://img.shields.io/github/package-json/v/crrashh1542/crash-homepage)

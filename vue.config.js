@@ -37,6 +37,7 @@ module.exports = defineConfig({
    transpileDependencies: true,
    indexPath: 'index.html',
    outputDir: process.env.outputDir || 'dist',
+   productionSourceMap: false,
    assetsDir: 'assets',
 
    configureWebpack: config => {

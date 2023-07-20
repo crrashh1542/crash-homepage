@@ -16,6 +16,13 @@ const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
 const date = moment(Date.now()).format('YYYYMMDD')
 const time = moment(Date.now()).format('HHmmss')
 const timeData = '{"t": "' + date + 'T' + time + '+0800"}'
+fs.mkdir('temp', err => {
+   if(err === null) {
+      console.log('[buildTimer] temp 文件夹创建成功！')
+   } else {
+      console.log('[buildTimer] temp 文件夹创建失败，详情请参阅：\n' + err)
+   }
+})
 fs.writeFile('./temp/build-time.json', timeData, err => {
    // 如果 build 时间写入成功，返回 null
    if(err === null) {
@@ -30,6 +37,7 @@ module.exports = defineConfig({
    transpileDependencies: true,
    indexPath: 'index.html',
    outputDir: process.env.outputDir || 'dist',
+   productionSourceMap: false,
    assetsDir: 'assets',
 
    configureWebpack: config => {

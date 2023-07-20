@@ -1,6 +1,6 @@
 # Crrashh Homepage
 这是一个基于 Vue 3 （以后可能会改为 React）且可自定义的个人主页，如果喜欢记得点上一个 star。:D  
-[English](./README.md)  
+Also see in: [English](./README.md)  
 
 ![开源协议](https://img.shields.io/github/license/crrashh1542/crash-homepage)
 ![当前版本](https://img.shields.io/github/package-json/v/crrashh1542/crash-homepage)

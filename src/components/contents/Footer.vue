@@ -15,7 +15,7 @@ export default {
 <template>
    <div class="c-footer">
       <a :href=l.link v-for="(l, index) in link" :key=index target="_blank"
-         class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple"><i>{{ l.icon }}</i></a>
+         class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">{{ l.icon }}</a>
       <div class="c-info">
          <p>&copy; {{ copyright }}</p>
          <p>

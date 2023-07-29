@@ -1,6 +1,6 @@
 {
    "name": "crash-homepage",
-   "version": "2.2.0-beta.1",
+   "version": "2.2.0-beta.2",
    "private": true,
    "scripts": {
       "serve": "vue-cli-service serve",
@@ -47,5 +47,6 @@
       "last 2 versions",
       "not dead",
       "not ie 11"
-   ]
+   ],
+   "packageManager": "yarn@3.6.1"
 }

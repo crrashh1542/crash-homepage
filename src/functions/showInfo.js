@@ -5,7 +5,7 @@
  */
 
 import info from '../../package.json'
-import time from '../../temp/build-time.json'
+import time from '../../temp/buildTime.json'
 
 // 获取项目和框架版本
 const repoVer = info.version

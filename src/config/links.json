@@ -19,15 +19,15 @@
 
    "extLink": [
       {
-         "icon": "&#xe882;",
+         "icon": "\ue882",
          "link": "https://wpa.qq.com/msgrd?v=3&uin=3247380086&site=qq&menu=yes"
       },
       {
-         "icon": "&#xe918;",
+         "icon": "\ue918",
          "link": "mailto:kotsuki@crrashh.com"
       },
       {
-         "icon": "&#xe712;",
+         "icon": "\ue712",
          "link": "https://github.com/crrashh1542"
       }
    ]

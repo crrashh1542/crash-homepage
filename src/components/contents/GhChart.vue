@@ -9,7 +9,7 @@ export default {
          if(gh.color === null) {
             return gh.apiUrl + '/' + gh.username
          } else {
-            return gh.apiUrl + '/' + gh.username + '/' + gh.color
+            return gh.apiUrl + '/' + gh.color + '/' + gh.username
          }
       }
    }

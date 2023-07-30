@@ -1,7 +1,7 @@
 /**
- * birthday.js: 查看生日时间
+ * birthdayCalc.js: 计算生日时间
  * @author Gaoice, crrashh1542
- * @version 1.0.2
+ * @version 1.1.0
  */
 
 /**
@@ -10,6 +10,12 @@
  * @return array
  */
 
+// 判断是否启用生日计算器
+import config from '../config/config'
+let isEnable = config.console.birthdayCalc.isEnable
+if (isEnable === undefined) { isEnable = false }
+
+// 计算生日时间
 function getAge(birthday) {
    let date = new Date();
    let today = [date.getFullYear(), date.getMonth() + 1, date.getDate()];
@@ -27,8 +33,14 @@ function getAge(birthday) {
    }
    return age;
 }
+
 export default function sayAge(birthday) {
-   let age_all = getAge(birthday.split('-'));
-   console.log("[birthdayCalc] 云萧的实际年龄：" + age_all[0] + "岁" + age_all[1] + "月" + age_all[2] + "天");
-   console.log()
+   // 如果启用，返回可调用的 sayAge 函数
+   if (isEnable) {
+      let age_all = getAge(birthday.split('-'));
+      console.log("[birthdayCalc] 云萧的实际年龄：" + age_all[0] + "岁" + age_all[1] + "月" + age_all[2] + "天");
+      console.log()
+   } else {
+      return undefined
+   }
 }

@@ -26,7 +26,7 @@ export default {
       title: '高二狗，搞笑人，2.75次元，可能不怎么正常',
 
       ghChart: {
-         apiUrl: 'https://ghchart.api.crrashh.com',
+         apiUrl: 'https://ghc.api.crrashh.com',
          username: 'crrashh1542',
          color: '409ba5'
       },

@@ -12,23 +12,25 @@ This branch is set to handle the work on **making the page publically customizab
   
 ## 💻 Customize & Build
 1. Make sure NodeJS(Version 16+) and Git are installed on your computer.
-2. Install pnpm.
+2. Install Yarn.
 ```shell
-npm install pnpm -g
+npm install yarn -g
 ```
 3. Install dependencies.
 ```shell
-pnpm install @vue/cli -g
-pnpm install
+yarn add @vue/cli -g
+cd /path/to/crash-homepage
+yarn set version berry
+yarn install
 ```
 4. Change the data in `/src/config/config.js` to yours. You can either write properties in it as objects or import data from external JSON files.
-5. Start the dev env. and have a preview on the devServer.
+5. Start the dev env. and do some preview and edits on the devServer.
 ```shell
-pnpm serve
+yarn serve
 ```
-6. Start the prod env. and build static pages.
+6. Exit the dev env. and start the prod env. to build static pages.
 ```shell
-pnpm build
+yarn build
 ```
 7. Get built pages at `/dist` and deploy them **under the PERMISSION of Apache 2.0 License**.
 

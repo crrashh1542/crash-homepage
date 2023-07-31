@@ -59,7 +59,7 @@ jobs:
      - name: 🚧 Setup dependencies
        id: setup_deps
        run: |
-         yarn global add @vue/cli
+         yarn add @vue/cli
          yarn install
 
      - name: ⚙️ Build production pages

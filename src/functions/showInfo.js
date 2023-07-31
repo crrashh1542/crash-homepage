@@ -4,24 +4,20 @@
  * @version 1.2.0
  */
 
-import info from '../../package.json'
-import time from '../../temp/buildInfo.json'
+import repoInfo from '../../package.json'
+import buildInfo from '../../temp/buildInfo.json'
 
 // 获取项目和框架版本
-const repoVer = info.version
-const frameVer = info.dependencies.vue.split('^')[1]
-// 获取时间和日期
-
-// let build = 'Version: ' + repoVer + '@' + time.t
+const repoVer = repoInfo.version
+const frameVer = repoInfo.dependencies.vue.split('^')[1]
+// 获取构建信息
+const buildTime = buildInfo.time
+const buildHash = buildInfo.hash
 
 export default function showInfo(){
     let styleName = 'font-size: 14px; color: #fff; background-color: #607d8b; padding: 8px 5px 8px 10px'
-    let styleVer = 'font-size: 14px; color: #607d8b; background-color: #fff; border: 4px solid #607d8b; padding: 4px 8px'
+    let styleVer = 'font-size: 14px; color: #111; background-color: #fff; border: 4px solid #607d8b; padding: 4px 8px'
 
-    console.log('%c%s%c%s', styleName, 'crash-homepage', styleVer, repoVer)
-    console.log('[buildInfo] Built at ' + time.t + ' with Vue ' + frameVer + '.')
-
-    // console.log('%c%s',
-    //     'color: #fff; background: #42b883; padding: 5px 10px; border-radius: 4px; font-size: 14px;',
-    //     'Built with Vue ' + frameVer + '.')
+    console.log('%c%s%c%s', styleName, 'crash-homepage', styleVer, repoVer + '@' + buildHash)
+    console.log('[buildInfo] Built at ' + buildTime + ' with Vue ' + frameVer + '.')
 }

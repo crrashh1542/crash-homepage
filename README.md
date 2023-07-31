@@ -12,27 +12,31 @@ This branch is set to handle the work on **making the page publically customizab
   
 ## 💻 Customize & Build
 1. Make sure NodeJS(Version 16+) and Git are installed on your computer.
-2. Install Yarn.
+2. `Clone` this repo. **(Do not download ZIP only or it will fail to build!)**
+```shell
+git clone https://github.com/crrashh1542/crash-homepage
+```
+3. Install Yarn.
 ```shell
 npm install yarn -g
 ```
-3. Install dependencies.
+4. Install dependencies.
 ```shell
 yarn add @vue/cli -g
 cd /path/to/crash-homepage
 yarn set version berry
 yarn install
 ```
-4. Change the data in `/src/config/config.js` to yours. You can either write properties in it as objects or import data from external JSON files.
-5. Start the dev env. and do some preview and edits on the devServer.
+5. Change the data in `/src/config/config.js` to yours. You can either write properties in it as objects or import data from external JSON files.
+6. Start the dev env. and do some preview and edits on the devServer.
 ```shell
 yarn serve
 ```
-6. Exit the dev env. and start the prod env. to build static pages.
+7. Exit the dev env. and start the prod env. to build static pages.
 ```shell
 yarn build
 ```
-7. Get built pages at `/dist` and deploy them **under the PERMISSION of Apache 2.0 License**.
+8. Get built pages at `/dist` and deploy them **under the PERMISSION of Apache 2.0 License**.
 
 ## 🐛 Feedback
 Suggestions and bug reports are welcome at [issues](https://github.com/crrashh1542/crash-homepage/issues).  

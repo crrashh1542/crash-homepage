@@ -11,27 +11,31 @@ Also see in: [English](./README.md)
   
 ## 💻 自定义 & 网页生成
 1. 确保你的电脑上安装了 NodeJS（版本为 16+）和 git。
-2. 安装 Yarn
+2. 将本库 `clone` 到本地。**（一定不要下载 zip，否则会导致无法构建！）**
+```shell
+git clone https://github.com/crrashh1542/crash-homepage
+```
+3. 安装 Yarn
 ```shell
 npm install yarn -g
 ```
-3. 安装依赖库
+4. 安装依赖库
 ```shell
 yarn add @vue/cli -g
 cd /path/to/crash-homepage
 yarn set version berry
 yarn install
 ```
-4. 修改 `/src/config/config.js` 中的站点数据为你网站的数据。你可以直接像写对象一样写在大括号里边，亦可使用 import 引入。
-5. 启动开发环境，在开发服务器中预览并编辑站点。
+5. 修改 `/src/config/config.js` 中的站点数据为你网站的数据。你可以直接像写对象一样写在大括号里边，亦可使用 import 引入。
+6. 启动开发环境，在开发服务器中预览并编辑站点。
 ```shell
 yarn serve
 ```
-6. 推出开发环境并启动生产环境，生成静态页面。
+7. 推出开发环境并启动生产环境，生成静态页面。
 ```shell
-pnpm build
+yarn build
 ```
-7. 在 `/dist` 中查收打包好的页面，并在**遵守 Apache 2.0 开源协议的前提下**将网页部署至你的服务器/网页空间。
+8. 在 `/dist` 中查收打包好的页面，并在**遵守 Apache 2.0 开源协议的前提下**将网页部署至你的服务器/网页空间。
 
 ## 🐛 问题反馈
 遇到有使用/代码逻辑上的 bug，或欢迎在 [Issues](https://github.com/crrashh1542/crash-homepage/issues) 中提出问题，或者[提交 PR](https://github.com/crrashh1542/crash-homepage/pulls)。作为一个初出茅庐的新手，我对你的贡献和指导感激不尽。

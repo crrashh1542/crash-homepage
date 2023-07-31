@@ -1,7 +1,7 @@
 name: CI
 on: 
   push: 
-    branches: [ canary, dev-v2 ]
+    branches: [ canary ]
     paths-ignore: 
       - '**.md'
       - '**.txt'
@@ -44,22 +44,28 @@ jobs:
        id: checkout
        uses: actions/checkout@v3
 
-     - name: 🔧 Setup pnpm
-       id: setup_pnpm
-       uses: pnpm/action-setup@v2
+     - name: 🔧 Setup NodeJS
+       id: setup_node
+       uses: actions/setup-node@v3
        with: 
-         version: latest
+         node-version: latest
 
+     - name: 🔧 Setup Yarn
+       id: setup_yarn
+       run: |
+         npm install yarn -g
+         yarn set version berry
+     
      - name: 🚧 Setup dependencies
        id: setup_deps
        run: |
-         pnpm install @vue/cli -g
-         pnpm install
+         yarn add @vue/cli
+         yarn install
 
      - name: ⚙️ Build production pages
        id: build
        run: |
-         pnpm build
+         yarn build
  
      - name: 📦 Pack the build
        id: pack

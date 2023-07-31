@@ -54,18 +54,18 @@ jobs:
        id: setup_yarn
        run: |
          npm install yarn -g
-         npx yarn set version berry
+         yarn set version berry
      
      - name: 🚧 Setup dependencies
        id: setup_deps
        run: |
-         npx yarn add @vue/cli -g
-         npx yarn install
+         yarn global add @vue/cli
+         yarn install
 
      - name: ⚙️ Build production pages
        id: build
        run: |
-         npx yarn build
+         yarn build
  
      - name: 📦 Pack the build
        id: pack

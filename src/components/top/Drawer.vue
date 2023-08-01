@@ -1,5 +1,5 @@
 <script>
-import config from "../../../config/config"
+import config from "/config/config"
 const [site, link] = [config.site, config.header.link]
 
 export default {

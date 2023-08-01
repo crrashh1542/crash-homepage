@@ -1,5 +1,5 @@
 <script>
-import config from "../../config/config"
+import config from "/config/config"
 
 const [beian, link, copyright] = [config.footer.beian, config.footer.link, config.footer.copyright]
 export default {

@@ -1,0 +1,82 @@
+name: CI
+on: 
+  push: 
+    branches: [ canary ]
+    paths-ignore: 
+      - '**.md'
+      - '**.txt'
+      - '.github/**'
+      - '!.github/workflows/**'
+  pull_request: 
+    branches: [ dev-v2, v2 ]
+
+jobs:
+  setup:
+    name: Setup Project Info
+    runs-on: ubuntu-latest
+    outputs: 
+      DIST_SUFFIX: ${{ steps.get-suffix.outputs.DIST_SUFFIX }}
+
+    steps: 
+     - name: 🧐 Checkout
+       id: checkout
+       uses: actions/checkout@v3
+       with: 
+         fetch-depth: '0'
+
+     - name: 📙 Get Package Suffix
+       id: get-suffix
+       run: |
+         TAG_NAME=$(git describe --abbrev=0 --tags)
+         BUILD_DATE=$(date "+%Y%m%d")
+         HEAD_SHA=$(git rev-parse --short HEAD)
+         echo "DIST_SUFFIX=${TAG_NAME}-${BUILD_DATE}-${HEAD_SHA}" >> $GITHUB_OUTPUT
+
+
+  build: 
+    name: Build Production Pages
+    needs: setup
+    env: 
+      DIST_NAME: dist-${{ needs.setup.outputs.DIST_SUFFIX }}
+    runs-on: ubuntu-latest
+    steps: 
+     - name: 🧐 Checkout
+       id: checkout
+       uses: actions/checkout@v3
+
+     - name: 🔧 Setup NodeJS
+       id: setup_node
+       uses: actions/setup-node@v3
+       with: 
+         node-version: latest
+
+     - name: 🔧 Setup Yarn
+       id: setup_yarn
+       run: |
+         npm install yarn -g
+         yarn set version berry
+     
+     - name: 🚧 Setup dependencies
+       id: setup_deps
+       run: |
+         yarn add @vue/cli
+         yarn install
+
+     - name: ⚙️ Build production pages
+       id: build
+       run: |
+         yarn build
+ 
+     - name: 📦 Pack the build
+       id: pack
+       run: |
+         sudo apt-get install zip
+         zip -r ${{ env.DIST_NAME }}.zip dist
+ 
+     - name: 🌐 Upload the build
+       id: upload
+       uses: actions/upload-artifact@v3
+       with: 
+         name: ${{ env.DIST_NAME }}
+         path: ${{ env.DIST_NAME }}.zip
+

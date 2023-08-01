@@ -4,7 +4,7 @@ import 'mdui/dist/js/mdui.min.js'
 import 'mdui/dist/css/mdui.min.css'
 
 // 引入配置文件
-import config from './config/config'
+import config from '../config/config'
 const birthday = config.console.birthdayCalc.birthday
 
 // 引入 App 组件

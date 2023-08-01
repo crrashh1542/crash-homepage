@@ -11,7 +11,7 @@
  */
 
 // 判断是否启用生日计算器
-import config from '../config/config'
+import config from '/config/config'
 let isEnable = config.console.birthdayCalc.isEnable
 if (isEnable === undefined) { isEnable = false }
 

@@ -26,7 +26,7 @@ cd /path/to/crash-homepage
 yarn set version berry
 yarn install
 ```
-5. 修改 `/src/config/config.js` 中的站点数据为你网站的数据。你可以直接像写对象一样写在大括号里边，亦可使用 import 引入。
+5. 修改 `/config/config.js` 中的站点数据为你网站的数据。你可以直接像写对象一样写在大括号里边，亦可使用 import 引入。
 6. 启动开发环境，在开发服务器中预览并编辑站点。
 ```shell
 yarn serve

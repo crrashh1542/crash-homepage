@@ -27,7 +27,7 @@ cd /path/to/crash-homepage
 yarn set version berry
 yarn install
 ```
-5. Change the data in `/src/config/config.js` to yours. You can either write properties in it as objects or import data from external JSON files.
+5. Change the data in `/config/config.js` to yours. You can either write properties in it as objects or import data from external JSON files.
 6. Start the dev env. and do some preview and edits on the devServer.
 ```shell
 yarn serve

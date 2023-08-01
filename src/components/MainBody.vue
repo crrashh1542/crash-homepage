@@ -6,7 +6,7 @@ import Foo from './contents/Footer.vue'
 import Proterties from './contents/Proterties.vue'
 
 // 配置
-import config from "../config/config"
+import config from "/config/config"
 const content = config.content
 
 export default {

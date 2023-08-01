@@ -1,9 +1,9 @@
 import links from './links.json'
-import avatar from '../assets/images/avatar.jpg'
-import background from '../assets/images/bg.jpg'
+import avatar from './images/avatar.jpg'
+import background from './images/bg.jpg'
 
-import imgBlog from '../assets/images/1.jpg'
-import imgDisk from '../assets/images/2.jpg'
+import imgBlog from './images/1.jpg'
+import imgDisk from './images/2.jpg'
 
 export default {
    configVersion: 1,
@@ -22,7 +22,7 @@ export default {
    },
 
    content: {
-      title: '高二狗，搞笑人，2.75次元，可能不怎么正常',
+      title: '高二狗，搞笑人，2.5次元，可能不怎么正常',
       ghChart: {
          apiUrl: 'https://ghc.api.crrashh.com',
          username: 'crrashh1542',

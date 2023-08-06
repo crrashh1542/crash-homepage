@@ -1,7 +1,7 @@
 /**
  * 此脚本用于在控制台中显示本项目相关信息
  * @author crrashh1542
- * @version 1.2.0
+ * @version 1.2.1
  */
 
 import repoInfo from '../../package.json'
@@ -15,8 +15,18 @@ const buildTime = buildInfo.time
 const buildHash = buildInfo.hash
 
 export default function showInfo(){
-    let styleName = 'font-size: 14px; color: #fff; background-color: #607d8b; padding: 8px 5px 8px 10px'
-    let styleVer = 'font-size: 14px; color: #111; background-color: #fff; border: 4px solid #607d8b; padding: 4px 8px'
+    let styleName = `font-size: 14px;
+                     color: #000; 
+                     background-color: #8ad5b3; 
+                     padding: 5px 9px;
+                     border-radius: 3px 0 0 3px;
+                     `
+    let styleVer = `font-size: 14px; 
+                    color: #fff; 
+                    background-color: #607d8b; 
+                    padding: 5px 9px;
+                    border-radius: 0 3px 3px 0;
+                    `
 
     console.log('%c%s%c%s', styleName, 'crash-homepage', styleVer, repoVer + '@' + buildHash)
     console.log('[buildInfo] Built at ' + buildTime + ' with Vue ' + frameVer + '.')

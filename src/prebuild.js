@@ -41,7 +41,7 @@ function writeInfo() {
    const content = '{"time": "' + getTime() + '", "hash": "' + getHash() + '", "env": "' + getEnv() + '"}'
 
    // 创建 temp 文件夹
-   fs.mkdir('../temp', err => {
+   fs.mkdir('./temp', err => {
       if (err === null) {
          console.log('[buildInfo] temp 文件夹创建成功！')
       } else {
@@ -54,7 +54,7 @@ function writeInfo() {
    })
 
    // 将 buildInfo 内容写入文件
-   fs.writeFileSync('../temp/buildInfo.json', content, err => {
+   fs.writeFileSync('./temp/buildInfo.json', content, err => {
       if (err === null) {
          console.log('[buildInfo] 构建信息写入成功！')
       } else {

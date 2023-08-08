@@ -5,6 +5,8 @@ import 'mdui/dist/css/mdui.min.css'
 
 // 引入配置文件
 import config from '../config/config'
+import buildInfo from '../temp/buildInfo.json'
+const env = buildInfo.env
 const birthday = config.console.birthdayCalc.birthday
 
 // 引入 App 组件
@@ -19,6 +21,6 @@ createApp(App).mount('#app')
 
 // 控制台显示奇奇怪怪的东西
 import showInfo from './functions/showInfo.js'
-showInfo()
+showInfo(env)
 import sayAge from './functions/birthdayCalc.js'
 sayAge(birthday)

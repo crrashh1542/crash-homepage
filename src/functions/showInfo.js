@@ -1,7 +1,7 @@
 /**
  * 此脚本用于在控制台中显示本项目相关信息
  * @author crrashh1542
- * @version 1.2.1
+ * @version 1.3.0
  */
 
 import repoInfo from '../../package.json'
@@ -10,11 +10,12 @@ import buildInfo from '../../temp/buildInfo.json'
 // 获取项目和框架版本
 const repoVer = repoInfo.version
 const frameVer = repoInfo.dependencies.vue.split('^')[1]
+const packVer = repoInfo.devDependencies.webpack.split('^')[1]
 // 获取构建信息
 const buildTime = buildInfo.time
 const buildHash = buildInfo.hash
 
-export default function showInfo(){
+export default function showInfo(env){
     let styleName = `font-size: 14px;
                      color: #000; 
                      background-color: #8ad5b3; 
@@ -29,5 +30,5 @@ export default function showInfo(){
                     `
 
     console.log('%c%s%c%s', styleName, 'crash-homepage', styleVer, repoVer + '@' + buildHash)
-    console.log('[buildInfo] Built at ' + buildTime + ' with Vue ' + frameVer + '.')
+    console.log('[buildInfo] Built at ' + buildTime + ' with Vue ' + frameVer + ' and Webpack ' + packVer + ' at ' + env + ' mode.')
 }

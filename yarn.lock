@@ -3798,6 +3798,7 @@ __metadata:
     moment: ^2.29.4
     speed-measure-webpack-plugin: ^1.5.0
     vue: ^3.3.4
+    webpack: ^5.88.2
   languageName: unknown
   linkType: soft
 
@@ -9145,7 +9146,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.54.0":
+"webpack@npm:^5.54.0, webpack@npm:^5.88.2":
   version: 5.88.2
   resolution: "webpack@npm:5.88.2"
   dependencies:

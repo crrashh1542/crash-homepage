@@ -13,7 +13,7 @@ on:
 jobs:
   setup:
     name: Setup Project Info
-    runs-on: windows-latest
+    runs-on: ubuuntu-latest
     outputs: 
       DIST_SUFFIX: ${{ steps.get-suffix.outputs.DIST_SUFFIX }}
 

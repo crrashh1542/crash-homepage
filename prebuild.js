@@ -40,8 +40,20 @@ function writeInfo() {
    // 组装要输出的内容
    const content = '{"time": "' + getTime() + '", "hash": "' + getHash() + '", "env": "' + getEnv() + '"}'
 
+   // 新建 temp 文件夹
+   fs.mkdir('./temp', err => {
+      if (err === null) {
+         console.log('\n[buildInfo] temp 文件夹创建成功！')
+      } else {
+         if (fs.existsSync('temp')) {
+            console.log('\n[buildInfo] temp 文件夹已存在！')
+         } else {
+            console.warn('\n[buildInfo] 构建信息写入失败，详情请参阅：\n' + err)
+         }
+      }
+   })
    // 将 buildInfo 内容写入文件
-   fs.writeFileSync('./temp/buildInfo.json', content, err => {
+   fs.writeFile('./temp/buildInfo.json', content, err => {
       if (err === null) {
          console.log('[buildInfo] 构建信息写入成功！')
       } else {

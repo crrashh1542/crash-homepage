@@ -11,18 +11,6 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
 
-// 创建 temp 文件夹
-fs.mkdir('./temp', err => {
-   if (err === null) {
-      console.log('[buildInfo] temp 文件夹创建成功！')
-   } else {
-      if (fs.existsSync('temp')) {
-         console.log('[buildInfo] temp 文件夹已存在！')
-      } else {
-         console.warn('[buildInfo] 构建信息写入失败，详情请参阅：\n' + err)
-      }
-   }
-})
 // 获取 build 信息并写入
 const buildInfo = require('./prebuild.js')
 buildInfo()

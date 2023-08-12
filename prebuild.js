@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * 此脚本用于在开始打包前处理配置信息
  * @author crrashh1542

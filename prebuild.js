@@ -29,8 +29,10 @@ function getEnv() {
    let buildEnv
    if (process.env.NODE_ENV === "development") {
       buildEnv = 'dev'
-   } else {
+   } else if (process.env.NODE_ENV === "production") {
       buildEnv = 'prod'
+   } else {
+      buildEnv = process.env.NODE_ENV
    }
    console.log('[buildInfo] 已获取构建环境：' + buildEnv)
    return buildEnv

@@ -24,12 +24,14 @@ export default function showInfo() {
                      background-color: #8ad5b3; 
                      padding: 5px 9px;
                      border-radius: 3px 0 0 3px;
+                     margin: 10px 0;
                      `
     let styleVer = `font-size: 14px; 
                     color: #fff; 
                     background-color: #607d8b; 
                     padding: 5px 9px;
                     border-radius: 0 3px 3px 0;
+                    margin: 6px 0;
                     `
     let detailedVer = repoVer + '.' + shortHash + '.' + buildBranch + '.' + shownTime
 

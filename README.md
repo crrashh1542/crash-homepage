@@ -37,11 +37,3 @@ yarn serve
 yarn build
 ```
 8. Get built pages at `/dist` and deploy them **under the PERMISSION of Apache 2.0 License**.
-
-## 🐛 Feedback
-Suggestions and bug reports are welcome at [issues](https://github.com/crrashh1542/crash-homepage/issues).  
-You can also give me your resolutions on such or newly found issues through [creating PRs](https://github.com/crrashh1542/crash-homepage/pulls).   
-As a freshman in front-end, I will be of great thanks to you for your instructions.
-
-~~Next big version(v3) will be built with React and completed someday in 2024.~~
-

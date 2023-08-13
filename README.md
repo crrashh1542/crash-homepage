@@ -37,3 +37,19 @@ yarn serve
 yarn build
 ```
 8. Get built pages at `/dist` and deploy them **under the PERMISSION of Apache 2.0 License**.
+
+## 🪄 About branches
+| main branch | codename  | description |
+|-------------|-----------|-------------|
+| `main`      | main      | The branch with stable and complete contents. |
+| `th`        | threshold | The branch with small changes on codebase v2.2.x. |
+| `gk`        | gingko    | The branch with changes on UI designing. |
+
+| sub-branch   | description |
+|--------------|-------------|
+| `release`    | The branch for general release. |
+| `prerelease` | The branch which is ready to be merged into `release` branch. |
+| `flt`        | The branch containing bug fixes for main branches with tasks finished. |
+| `refresh`    | The branch containing the latest changes on new feature(s). |
+| `dev`        | The branch containing development work with unknown purpose. |
+| `prod`       | The branch which is okay to run in production mode, but not complete enough to be merged into `prerelease` branch. |

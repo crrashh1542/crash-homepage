@@ -2,7 +2,7 @@
 /**
  * 此脚本用于在开始打包前处理配置信息
  * @author crrashh1542
- * @version 1.4.0
+ * @version 1.4.1
  */
 
 // STEP1 -------- 导入依赖
@@ -38,10 +38,22 @@ function getEnv() {
    return buildEnv
 }
 
-// STEP5 -------- 组装并输出到文件
+// STEP5 -------- 获取构建分支
+function getBranch() {
+   const buildBranch = childProcess.execSync('git symbolic-ref --short -q HEAD', { 'encoding': 'utf8' }).split('\n')[0]
+   console.log('[buildInfo] 已获取构建分支：' + buildBranch)
+   return buildBranch
+}
+
+// STEP6 -------- 组装并输出到文件
 function writeInfo() {
    // 组装要输出的内容
-   const content = '{"time": "' + getTime() + '", "hash": "' + getHash() + '", "env": "' + getEnv() + '"}'
+   const content = `   {
+      "time": "` + getTime() + `",
+      "hash": "` + getHash() + `", 
+      "env": "` + getEnv() + `",
+      "branch": "` + getBranch() + `"
+   }`
 
    // 新建 temp 文件夹
    fs.mkdir('./temp', err => {

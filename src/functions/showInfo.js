@@ -1,21 +1,23 @@
+"use strict"
 /**
  * 此脚本用于在控制台中显示本项目相关信息
  * @author crrashh1542
- * @version 1.3.0
+ * @version 2.0.0
  */
 
 import repoInfo from '../../package.json'
 import buildInfo from '../../temp/buildInfo.json'
+import moment from 'moment/moment'
 
 // 获取项目和框架版本
-const repoVer = repoInfo.version
-const frameVer = repoInfo.dependencies.vue.split('^')[1]
-const packVer = repoInfo.devDependencies.webpack.split('^')[1]
+const [repoVer, frameVer] = 
+    [repoInfo.version, repoInfo.dependencies.vue.split('^')[1]]
 // 获取构建信息
-const buildTime = buildInfo.time
-const buildHash = buildInfo.hash
+const [buildTime, buildHash, buildEnv, buildBranch] = 
+    [buildInfo.time, buildInfo.hash, buildInfo.env, buildInfo.branch]
+const shownTime = moment(buildTime).format('YYMMDD-HHMM')
 
-export default function showInfo(env){
+export default function showInfo() {
     let styleName = `font-size: 14px;
                      color: #000; 
                      background-color: #8ad5b3; 
@@ -28,7 +30,8 @@ export default function showInfo(env){
                     padding: 5px 9px;
                     border-radius: 0 3px 3px 0;
                     `
+    let detailedVer = repoVer + '.' + buildBranch + '.' + shownTime
 
     console.log('%c%s%c%s', styleName, 'crash-homepage', styleVer, repoVer + '@' + buildHash)
-    console.log('[buildInfo] Built at ' + buildTime + ' with Vue ' + frameVer + ' and Webpack ' + packVer + ' at ' + env + ' mode.')
+    console.log('[buildInfo] Built at ' + buildEnv + ' mode on detailed version ' + detailedVer + ' with Vue ' + frameVer + '.')
 }

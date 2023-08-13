@@ -2,7 +2,7 @@
 /**
  * 此脚本用于在控制台中显示本项目相关信息
  * @author crrashh1542
- * @version 2.0.0
+ * @version 2.0.1
  */
 
 import repoInfo from '../../package.json'
@@ -15,7 +15,9 @@ const [repoVer, frameVer] =
 // 获取构建信息
 const [buildTime, buildHash, buildEnv, buildBranch] = 
     [buildInfo.time, buildInfo.hash, buildInfo.env, buildInfo.branch]
-const shownTime = moment(buildTime).format('YYMMDD-HHMM')
+const shortHash = buildHash.substring(0, 4)
+let shownTime = moment(buildTime).format('YYMMDD-HHmm')
+console.log(shownTime);
 
 export default function showInfo() {
     let styleName = `font-size: 14px;
@@ -30,8 +32,8 @@ export default function showInfo() {
                     padding: 5px 9px;
                     border-radius: 0 3px 3px 0;
                     `
-    let detailedVer = repoVer + '.' + buildBranch + '.' + shownTime
+    let detailedVer = repoVer + '.' + shortHash + '.' + buildBranch + '.' + shownTime
 
     console.log('%c%s%c%s', styleName, 'crash-homepage', styleVer, repoVer + '@' + buildHash)
-    console.log('[buildInfo] Built at ' + buildEnv + ' mode on detailed version ' + detailedVer + ' with Vue ' + frameVer + '.')
+    console.log('[buildInfo] Built at ' + buildEnv + ' mode with Vue ' + frameVer + ' on detailed version ' + detailedVer + '.')
 }

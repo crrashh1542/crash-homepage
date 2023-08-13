@@ -2,7 +2,7 @@
 /**
  * 此脚本用于在控制台中显示本项目相关信息
  * @author crrashh1542
- * @version 2.0.1
+ * @version 2.0.2
  */
 
 import repoInfo from '../../package.json'
@@ -17,7 +17,6 @@ const [buildTime, buildHash, buildEnv, buildBranch] =
     [buildInfo.time, buildInfo.hash, buildInfo.env, buildInfo.branch]
 const shortHash = buildHash.substring(0, 4)
 let shownTime = moment(buildTime).format('YYMMDD-HHmm')
-console.log(shownTime);
 
 export default function showInfo() {
     let styleName = `font-size: 14px;

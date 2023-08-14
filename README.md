@@ -7,8 +7,6 @@ Get it starred if you like it! :D
 ![Version](https://img.shields.io/github/package-json/v/crrashh1542/crash-homepage)
 ![Release](https://img.shields.io/github/v/release/crrashh1542/crash-homepage?include_prereleases)
 ![Framework](https://img.shields.io/badge/framework-Vue%203-3fb984)
-
-This branch is set to handle the work on **making the page publically customizable**(provisionally finished during v2.2) and **upgrading UI**(prov. finished during v2.3). Main branch is at [crash-homepage@v2](https://github.com/crrashh1542/crash-homepage/tree/v2). 
   
 ## 💻 Customize & Build
 1. Make sure NodeJS(Version 16+) and Git are installed on your computer.
@@ -42,8 +40,8 @@ yarn build
 | main branch | codename  | description |
 |-------------|-----------|-------------|
 | `main`      | main      | The branch with stable and complete contents. |
-| `th`        | threshold | The branch with small changes on codebase v2.2.x. |
-| `gk`        | gingko    | The branch with changes on UI designing. |
+| `th`        | threshold | [Task Finished] The branch with changes on customizing during v2.2.x. |
+| `gk`        | gingko    | The branch with changes on UI designing during v3. |
 
 | sub-branch   | description |
 |--------------|-------------|

@@ -1,13 +1,11 @@
 # Crrashh Homepage
-这是一个基于 Vue 3 （以后可能会改为 React）且可自定义的个人主页，如果喜欢记得点上一个 star。:D  
+这是一个基于 Vue 3 且可自定义的个人主页，如果喜欢记得点上一个 star。:D  
 Also see in: [English](./README.md)  
 
 ![开源协议](https://img.shields.io/github/license/crrashh1542/crash-homepage)
 ![当前版本](https://img.shields.io/github/package-json/v/crrashh1542/crash-homepage)
 ![Release 版本](https://img.shields.io/github/v/release/crrashh1542/crash-homepage?include_prereleases)
 ![框架](https://img.shields.io/badge/framework-Vue%203-3fb984)
-
-此分支用于**公众可配置化**（暂定 v2.2）以及 **UI 升级**（暂定 v2.3）期间开发工作。主分支在 [crash-homepage@v2](https://github.com/crrashh1542/crash-homepage/tree/v2)。  
   
 ## 💻 自定义 & 网页生成
 1. 确保你的电脑上安装了 NodeJS（版本为 16+）和 git。
@@ -41,7 +39,7 @@ yarn build
 | 主分支  | 开发代号  | 描述            |
 |--------|-----------|-----------------|
 | `main` | main      | 该分支包含稳定完备的内容。 |
-| `th`   | threshold | 该分支不会有任何新的大改动，仅用作 v2.2.x 修修补补。 |
+| `th`   | threshold | [任务已完成] 该分支用于内容可自定义化，仅用作 v2.2.x 修修补补。 |
 | `gk`   | gingko    | 该分支用于 UI 翻新。 |
 
 | 子分支        | 描述            |

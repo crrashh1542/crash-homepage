@@ -1,14 +1,14 @@
 name: CI
 on: 
   push: 
-    branches: [ canary ]
+    push: [ *refresh ]
     paths-ignore: 
       - '**.md'
       - '**.txt'
       - '.github/**'
       - '!.github/workflows/**'
   pull_request: 
-    branches: [ dev-v2, v2 ]
+    branches: [ main*, *prerelease, *prod ]
 
 jobs:
   setup:
@@ -28,9 +28,11 @@ jobs:
        id: get-suffix
        run: |
          TAG_NAME=$(git describe --abbrev=0 --tags)
-         BUILD_DATE=$(date "+%Y%m%d")
+         BUILD_TIME=$(date "+%y%m%d-%H%M")
+         HEAD_BRANCH=$(git symbolic-ref --short -q HEAD)
          HEAD_SHA=$(git rev-parse --short HEAD)
-         echo "DIST_SUFFIX=${TAG_NAME}-${BUILD_DATE}-${HEAD_SHA}" >> $GITHUB_OUTPUT
+         HEAD_SHA_SHORT=${HEAD_SHA:0:4}
+         echo "DIST_SUFFIX=${TAG_NAME}.${HEAD_SHA_SHORT}.${HEAD_BRANCH}.${BUILD_TIME}" >> $GITHUB_OUTPUT
 
 
   build: 

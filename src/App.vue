@@ -22,6 +22,7 @@ export default {
 }
 
 // 引入样式
+import './assets/styles/reset.less'
 import './assets/styles/global.less'
 </script>
 

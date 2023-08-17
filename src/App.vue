@@ -22,8 +22,8 @@ export default {
 }
 
 // 引入样式
-import './assets/styles/reset.less'
 import './assets/styles/global.less'
+import './assets/styles/reset.less'
 </script>
 
 <template>

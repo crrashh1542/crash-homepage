@@ -42,6 +42,7 @@ export default {
    height: var(--ch-layout-nav-height);
    line-height: var(--ch-layout-nav-height);
    padding: 20px;
+   border-bottom: 1px solid #e2e2e2;
    backdrop-filter: blur(3px);
    display: flex;
    align-items: center;
@@ -90,7 +91,7 @@ export default {
    }
 
    .link:hover {
-      color: var(--ch-color-theme);
+      color: var(--ch-color-theme-dark);
    }
 
    .link:hover::after {
@@ -103,7 +104,7 @@ export default {
 /* 亮色 -------- BEGIN */
 @media screen and (prefers-color-scheme: light) {
    .appbar {
-      background-color: rgba(255, 255, 255, .8);
+      background-color: var(--ch-color-nav);
    }
 }
 

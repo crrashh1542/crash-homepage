@@ -16,14 +16,14 @@ export default {
    <div class="appbar">
       <!-- 左侧 icon & 标题 -->
       <a class="icon" @click="trigger">
-         <i class="mdui-icon material-icons">menu</i>
+         <i class="material-icons">menu</i>
       </a>
       <a href="" class="title">{{ site.title }}</a>
       <!-- 左右分隔 -->
       <div class="spacer"></div>
       <!-- 右侧链接 -->
-      <div class="links">
-         <a v-for="i in link" :key="i.name" :href="i.link" class="btn" target="_blank">{{ i.name }}</a>
+      <div>
+         <a v-for="i in link" :key="i.name" :href="i.link" class="link" target="_blank">{{ i.name }}</a>
       </div>
    </div>
 </template>
@@ -48,12 +48,17 @@ export default {
       color: inherit;
    }
 
-   .icon {
+   .icon { /* 抽屉栏打开图标 */
       width: 36px;
       height: 36px;
       line-height: 36px;
       margin: 0 5px 0 0;
       cursor: pointer;
+
+      .material-icons {
+         vertical-align: middle;
+         text-align: center;
+      }
    }
 
    .title { /* 左侧标题栏 */
@@ -61,44 +66,49 @@ export default {
       font-size: 24px;
    }
 
-   .spacer { /* 中间占位 */
+   .spacer { /* 左右分隔 */
       flex-grow: 1;
    }
 
-   .btn {
+   .link { /* 链接 */
       margin: 0 15px;
       font-size: 17px;
       color: #888;
    }
 
-   .btn::after {
+   .btn::after { /* 链接图标 */
       color: #bbb;
    }
 }
 
 /* 初始化 -------- END */
 
-/* 默认模式 (亮色) -------- BEGIN */
-/* Appbar 基础部分 */
-.appbar {
-   background-color: rgba(255, 255, 255, .8);
+/* 亮色 -------- BEGIN */
+@media screen and (prefers-color-scheme: light) {
+   .appbar {
+      background-color: rgba(255, 255, 255, .8);
+   }
 }
 
-@media screen and (max-width: 800px) {
-   .appbar .btn {
+/* 亮色 -------- END */
+
+/* 暗色 -------- BEGIN */
+@media screen and (prefers-color-scheme: dark) {
+   .appbar {
+      background-color: rgba(0, 0, 0, .8);
+   }
+}
+
+/* 暗色 -------- END */
+
+/* 不同设备适配 -------- BEGIN */
+@media screen and (max-width: 800px) { /* <=800px */
+   .appbar .link {
       display: none;
    }
 }
 
-@media screen and (min-width: 800px) {
-   body.mdui-drawer-body-left {
-      padding-left: 0;
-   }
-
-   #drawer {
-      display: none;
-   }
-
+@media screen and (min-width: 800px) { /* <=1024px && >800px */
    .appbar {
       .icon {
          display: none;
@@ -106,15 +116,17 @@ export default {
    }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) { /* >1024px && <=1366px */
    .appbar {
       padding: 0 10%;
    }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1366px) { /* >1366px */
    .appbar {
       padding: 0 15%;
    }
 }
+
+/* 不同设备适配 -------- END */
 </style>

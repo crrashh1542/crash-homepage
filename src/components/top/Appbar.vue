@@ -1,5 +1,5 @@
 <script>
-import config from "/config/config"
+import config from '/config/config'
 const [site, link] = [config.site, config.header.link]
 
 export default {
@@ -13,29 +13,79 @@ export default {
 </script>
 
 <template>
-   <div class="c-appbar mdui-appbar mdui-color-theme mdui-color-text-white">
-      <div class="mdui-toolbar">
-         <!-- 左侧 icon & 标题 -->
-         <a class="mdui-btn mdui-btn-icon mdui-ripple" @click="trigger">
-            <i class="mdui-icon material-icons">menu</i>
-         </a>
-         <a href="/" class="mdui-typo-headline">{{ site.title }}</a>
-         <!-- 左右分隔 -->
-         <div class="mdui-toolbar-spacer"></div>
-         <!-- 右侧链接 -->
-         <a v-for="i in link" :key="i.name" :href="i.link" class="c-btn mdui-ripple" target="_blank">{{ i.name }}</a>
+   <div class="appbar">
+      <!-- 左侧 icon & 标题 -->
+      <a class="icon" @click="trigger">
+         <i class="mdui-icon material-icons">menu</i>
+      </a>
+      <a href="" class="title">{{ site.title }}</a>
+      <!-- 左右分隔 -->
+      <div class="spacer"></div>
+      <!-- 右侧链接 -->
+      <div class="links">
+         <a v-for="i in link" :key="i.name" :href="i.link" class="btn" target="_blank">{{ i.name }}</a>
       </div>
    </div>
 </template>
 
 <style lang="less" scoped>
-.mdui-appbar .mdui-toolbar {
+/* 初始化 -------- BEGIN */
+.appbar {
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 999;
+   width: 100%;
    height: 64px;
    line-height: 64px;
+   padding: 20px;
+   backdrop-filter: blur(6px);
+   display: flex;
+   align-items: center;
+   box-sizing: border-box;
+
+   a {
+      color: inherit;
+   }
+
+   .icon {
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      margin: 0 5px 0 0;
+      cursor: pointer;
+   }
+
+   .title { /* 左侧标题栏 */
+      font-weight: 500;
+      font-size: 24px;
+   }
+
+   .spacer { /* 中间占位 */
+      flex-grow: 1;
+   }
+
+   .btn {
+      margin: 0 15px;
+      font-size: 17px;
+      color: #888;
+   }
+
+   .btn::after {
+      color: #bbb;
+   }
+}
+
+/* 初始化 -------- END */
+
+/* 默认模式 (亮色) -------- BEGIN */
+/* Appbar 基础部分 */
+.appbar {
+   background-color: rgba(255, 255, 255, .8);
 }
 
 @media screen and (max-width: 800px) {
-   .c-appbar .c-btn {
+   .appbar .btn {
       display: none;
    }
 }
@@ -49,27 +99,22 @@ export default {
       display: none;
    }
 
-   .c-appbar {
-      .mdui-btn-icon {
+   .appbar {
+      .icon {
          display: none;
       }
    }
 }
 
 @media screen and (min-width: 1024px) {
-   .c-appbar {
+   .appbar {
       padding: 0 10%;
    }
 }
 
 @media screen and (min-width: 1366px) {
-   .c-appbar {
+   .appbar {
       padding: 0 15%;
    }
 }
-
-/* 修复顶部链接点击时 ripple 过小的问题 */
-.mdui-toolbar>* {
-   margin: 0;
-   padding: 0 16px;
-}</style>
+</style>

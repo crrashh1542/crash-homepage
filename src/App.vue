@@ -1,8 +1,12 @@
 <script>
 // Crrashh1542 does not exist at all!
 
+// 引入库
 import 'mdui'
-import Background from './components/Background.vue'
+import './assets/styles/tailwind.less'
+
+// 引入组件
+import Background from './components/Background.vue' // 背景
 import Appbar from './components/top/Appbar.vue' // 抽屉+顶栏
 import Banner from './components/Banner.vue' // 横幅信息栏
 import MainBody from './components/MainBody.vue' // 内容

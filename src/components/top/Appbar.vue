@@ -76,8 +76,14 @@ export default {
       color: #888;
    }
 
-   .btn::after { /* 链接图标 */
-      color: #bbb;
+   .link::after { /* 链接图标 */
+      color: #ccc;
+      font-size: 15px;
+      vertical-align: middle;
+      text-align: center;
+      margin-left: .4em;
+      display: inline-block;
+      content: '\e605';
    }
 }
 

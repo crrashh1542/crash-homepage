@@ -62,10 +62,6 @@ export default {
 
 <style lang="less" scoped>
 // Universal stylesheet
-.c-content {
-   // backdrop-filter: blur(1px); // 打咩，会导致页面卡顿
-   background-color: rgba(255, 255, 255, .3);
-}
 
 /* 对于不同的设备设置不同的 .content */
 @media screen and (max-width: 800px) {

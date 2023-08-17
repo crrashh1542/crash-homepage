@@ -23,7 +23,7 @@ export default {
 
       <!-- 左右分隔 -->
       <div class="spacer"></div>
-      
+
       <!-- 右侧链接 -->
       <div>
          <a v-for="i in link" :key="i.name" :href="i.link" class="link" target="_blank">{{ i.name }}</a>
@@ -42,7 +42,7 @@ export default {
    height: var(--ch-layout-nav-height);
    line-height: var(--ch-layout-nav-height);
    padding: 20px;
-   backdrop-filter: blur(6px);
+   backdrop-filter: blur(3px);
    display: flex;
    align-items: center;
    box-sizing: border-box;

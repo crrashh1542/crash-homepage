@@ -1,8 +1,8 @@
 {
    "name": "crash-homepage",
-   "version": "2.2.2",
+   "version": "3.0.0-alpha",
    "private": true,
-   "build": 189,
+   "build": 406,
    "scripts": {
       "serve": "vue-cli-service serve",
       "build": "vue-cli-service build",
@@ -11,6 +11,7 @@
    "dependencies": {
       "core-js": "^3.31.0",
       "mdui": "^1.0.2",
+      "tailwind": "^4.0.0",
       "vue": "^3.3.4"
    },
    "devDependencies": {

@@ -14,13 +14,16 @@ export default {
 
 <template>
    <div class="appbar">
+
       <!-- 左侧 icon & 标题 -->
       <a class="icon" @click="trigger">
          <i class="material-icons">menu</i>
       </a>
       <a href="" class="title">{{ site.title }}</a>
+
       <!-- 左右分隔 -->
       <div class="spacer"></div>
+      
       <!-- 右侧链接 -->
       <div>
          <a v-for="i in link" :key="i.name" :href="i.link" class="link" target="_blank">{{ i.name }}</a>
@@ -36,8 +39,8 @@ export default {
    top: 0;
    z-index: 999;
    width: 100%;
-   height: 64px;
-   line-height: 64px;
+   height: var(--ch-layout-nav-height);
+   line-height: var(--ch-layout-nav-height);
    padding: 20px;
    backdrop-filter: blur(6px);
    display: flex;
@@ -49,9 +52,9 @@ export default {
    }
 
    .icon { /* 抽屉栏打开图标 */
-      width: 36px;
-      height: 36px;
-      line-height: 36px;
+      width: var(--ch-layout-icon-size);
+      height: var(--ch-layout-icon-size);
+      line-height: var(--ch-layout-icon-size);
       margin: 0 5px 0 0;
       cursor: pointer;
 
@@ -73,17 +76,25 @@ export default {
    .link { /* 链接 */
       margin: 0 15px;
       font-size: 17px;
-      color: #888;
+      color: var(--ch-color-link-nav);
    }
 
    .link::after { /* 链接图标 */
-      color: #ccc;
+      color: var(--ch-color-link-nav);
       font-size: 15px;
       vertical-align: middle;
       text-align: center;
       margin-left: .4em;
       display: inline-block;
       content: '\e605';
+   }
+
+   .link:hover {
+      color: var(--ch-color-theme);
+   }
+
+   .link:hover::after {
+      color: var(--ch-color-theme-light);
    }
 }
 

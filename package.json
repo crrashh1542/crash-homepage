@@ -1,8 +1,8 @@
 {
    "name": "crash-homepage",
-   "version": "3.0.0-alpha.0",
+   "version": "3.0.0-alpha",
    "private": true,
-   "build": 403,
+   "build": 407,
    "scripts": {
       "serve": "vue-cli-service serve",
       "build": "vue-cli-service build",

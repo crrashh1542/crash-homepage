@@ -13,13 +13,13 @@ export default {
 </script>
 
 <template>
-   <div class="c-introduction mdui-row">
-      <div class="c-avatar mdui-col-lg-3 mdui-col-md-4">
+   <div class="banner mdui-row">
+      <div class="avatar mdui-col-lg-3 mdui-col-md-4">
          <img :src=site.avatar>
       </div>
-      <div class="c-info mdui-col-lg-9 mdui-col-md-8">
-         <div class="c-title">{{ site.title }}</div>
-         <div class="c-subtitle">{{ site.subtitle }}</div>
+      <div class="info mdui-col-lg-9 mdui-col-md-8">
+         <div class="title">{{ site.title }}</div>
+         <div class="subtitle">{{ site.subtitle }}</div>
          <br>
          <p>{{ site.subheading }}</p>
       </div>
@@ -27,22 +27,16 @@ export default {
 </template>
 
 <style lang="less" scoped>
-.c-introduction {
+.banner {
    margin-right: 0;
-}
-
-@media screen and (max-width: 550px) {
-   .c-live-word {
-      display: none;
-   }
 }
 
 /* --800px */
 @media screen and (max-width: 800px) {
-   .c-introduction {
+   .banner {
       padding: 120px 7.5%;
 
-      .c-avatar {
+      .avatar {
          margin: auto;
 
          img {
@@ -52,15 +46,15 @@ export default {
          }
       }
 
-      .c-info {
+      .info {
          margin: auto;
 
-         .c-title {
+         .title {
             font-size: 36px;
             margin: 20px auto;
          }
 
-         .c-subtitle {
+         .subtitle {
             font-size: 24px;
             font-weight: 300;
             margin: 0 auto;
@@ -68,17 +62,17 @@ export default {
       }
    }
 
-   .c-content {
+   .content {
       padding: 0 10%;
    }
 }
 
 /* 800--1024px */
 @media screen and (min-width: 800px) {
-   .c-introduction {
+   .banner {
       padding: 120px 7.5%;
 
-      .c-avatar {
+      .avatar {
          margin: auto;
 
          img {
@@ -88,15 +82,15 @@ export default {
          }
       }
 
-      .c-info {
+      .info {
          margin: auto;
 
-         .c-title {
+         .title {
             font-size: 32px;
             margin: 20px auto;
          }
 
-         .c-subtitle {
+         .subtitle {
             font-size: 24px;
             font-weight: 300;
             margin: 0 auto;
@@ -107,10 +101,10 @@ export default {
 
 /* 1024--1366px */
 @media screen and (min-width: 1024px) {
-   .c-introduction {
+   .banner {
       padding: 120px 10%;
 
-      .c-avatar {
+      .avatar {
          img {
             width: 180px;
             height: 180px;
@@ -118,29 +112,29 @@ export default {
          }
       }
 
-      .c-info {
-         .c-title {
+      .info {
+         .title {
             font-size: 42px;
          }
 
-         .c-subtitle {
+         .subtitle {
             font-size: 24px;
             font-weight: 300;
          }
       }
    }
 
-   .c-content {
+   .content {
       padding: 0 10%;
    }
 }
 
-/* 1366px--1600px */
+/* 1366px-- */
 @media screen and (min-width: 1366px) {
-   .c-introduction {
+   .banner {
       padding: 120px 15%;
 
-      .c-avatar {
+      .avatar {
          img {
             width: 200px;
             height: 200px;
@@ -148,13 +142,13 @@ export default {
          }
       }
 
-      .c-info {
-         .c-title {
+      .info {
+         .title {
             font-size: 42px;
             margin: 20px 0;
          }
 
-         .c-subtitle {
+         .subtitle {
             font-size: 28px;
             font-weight: 300;
          }

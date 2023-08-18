@@ -32,6 +32,8 @@ export default {
 </template>
 
 <style lang="less" scoped>
+@import url('../../assets/styles/global.less');
+
 /* 初始化 -------- BEGIN */
 .appbar {
    position: fixed;
@@ -39,8 +41,8 @@ export default {
    top: 0;
    z-index: 999;
    width: 100%;
-   height: var(--ch-layout-nav-height);
-   line-height: var(--ch-layout-nav-height);
+   height: @ch-layout-nav-height;
+   line-height: @ch-layout-nav-height;
    padding: 20px;
    border-bottom: 1px solid #e2e2e2;
    backdrop-filter: blur(3px);
@@ -53,9 +55,9 @@ export default {
    }
 
    .icon { /* 抽屉栏打开图标 */
-      width: var(--ch-layout-icon-size);
-      height: var(--ch-layout-icon-size);
-      line-height: var(--ch-layout-icon-size);
+      width: @ch-layout-icon-size;
+      height: @ch-layout-icon-size;
+      line-height: @ch-layout-icon-size;
       margin: 0 5px 0 0;
       cursor: pointer;
    }
@@ -72,11 +74,11 @@ export default {
    .link { /* 链接 */
       margin: 0 15px;
       font-size: 17px;
-      color: var(--ch-color-link-nav);
+      color: @ch-color-link-nav;
    }
 
    .link::after { /* 链接图标 */
-      color: var(--ch-color-link-nav);
+      color: @ch-color-link-nav;
       font-size: 15px;
       vertical-align: middle;
       text-align: center;
@@ -86,11 +88,11 @@ export default {
    }
 
    .link:hover {
-      color: var(--ch-color-theme-dark);
+      color: @ch-color-theme-dark;
    }
 
    .link:hover::after {
-      color: var(--ch-color-theme-light);
+      color: @ch-color-theme-light;
    }
 }
 
@@ -99,7 +101,7 @@ export default {
 /* 亮色 -------- BEGIN */
 @media screen and (prefers-color-scheme: light) {
    .appbar {
-      background-color: var(--ch-color-nav);
+      background-color: @ch-color-nav;
    }
 }
 

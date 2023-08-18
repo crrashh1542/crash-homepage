@@ -3,7 +3,6 @@
 
 // 引入库
 import 'mdui'
-import './assets/styles/tailwind.less'
 
 // 引入组件
 import Background from './components/Background.vue' // 背景

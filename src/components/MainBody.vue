@@ -68,12 +68,12 @@ export default {
    }
 
    .note {
-      font-size: 26px;
+      font-size: var(--note-font-size);
       background-color: @ch-color-theme-light;
-      padding: 25px 5px;
+      padding: var(--note-padding);
+      margin: var(--note-margin);
       border-radius: @ch-layout-card-radius;
       text-align: center;
-      margin-bottom: 30px;
       box-shadow: 0 1.5px 4px 0 @ch-color-theme;
    }
 
@@ -100,9 +100,21 @@ export default {
 }
 
 /* 设备适配 */
+@media screen and (max-width: 800px) {
+   .content {
+      --content-padding-align: 5%;
+      --note-padding: 20px;
+      --note-margin: 0 0 50px;
+      --note-font-size: 22px;
+   }
+}
+
 @media screen and (min-width: 800px) {
    .content {
       --content-padding-align: 10%;
+      --note-padding: 25px 5px;
+      --note-margin: 0 0 30px;
+      --note-font-size: 26px;
    }
 }
 

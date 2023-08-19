@@ -1,16 +1,28 @@
 @charset 'utf-8';
 /* 此样式表用于全局的变量设定
- * Date: 2023-08-17 / Version: 0.1.0 / Author: crrashh1542
+ * Date: 2023-08-19 / Version: 0.4.0 / Author: crrashh1542
  */
 
-:root {
-   // 字体
-   --ch-font-family: 'PingFang SC', 'iconfont';
+// 字体
+@ch-font-family: 'Google Sans', 'PingFang SC', 'iconfont';
+@ch-font-banner-title-weight: 600;
 
-   // 颜色
-   --ch-theme-color: #7986cb;
-   --ch-theme-color-dark: #5c6bc0;
-   --ch-theme-color-darker: #5c6bc0;
-   --ch-theme-color-light: #747bff;
-   --ch-theme-color-lighter: #747bff;
-}
+// 主题颜色
+@ch-color-theme: #7986cb;
+@ch-color-theme-dark: #5c6bc0;
+@ch-color-theme-darker: #434a71;
+@ch-color-theme-light: #b5bce2;
+@ch-color-theme-lighter: #e9eaf6;
+
+// 其它颜色
+@ch-color-bg-shade: rgba(255, 255, 255, .75);
+@ch-color-nav: rgba(233, 234, 246, .8); // 从 --ch-color-theme-lighter 转化而来
+@ch-color-nav-link: #666;
+@ch-color-link-icon: #bbb;
+
+// 布局
+@ch-layout-card-radius: 25px;
+@ch-layout-nav-height: 64px;
+@ch-layout-icon-size: 48px;
+@ch-layout-menu-height: 28px;
+@ch-layout-menu-label-width: 10px;

@@ -13,151 +13,95 @@ export default {
 </script>
 
 <template>
-   <div class="c-introduction mdui-row">
-      <div class="c-avatar mdui-col-lg-3 mdui-col-md-4">
+   <div class="banner mdui-row">
+      <div class="avatar mdui-col-lg-3 mdui-col-md-4 mdui-col-sm-4">
          <img :src=site.avatar>
       </div>
-      <div class="c-info mdui-col-lg-9 mdui-col-md-8">
-         <div class="c-title">{{ site.title }}</div>
-         <div class="c-subtitle">{{ site.subtitle }}</div>
+      <div class="info mdui-col-lg-9 mdui-col-md-8 mdui-col-sm-8">
+         <div class="title">{{ site.title }}</div>
+         <div class="subtitle">{{ site.subtitle }}</div>
          <br>
-         <p>{{ site.subheading }}</p>
+         <div class="slogan">{{ site.subheading }}</div>
       </div>
    </div>
 </template>
 
 <style lang="less" scoped>
-.c-introduction {
+@import url('../assets/styles/global.less');
+/* 主样式 */
+.banner {
    margin-right: 0;
-}
+   padding: calc(var(--banner-padding-valign) + @ch-layout-nav-height)
+                 var(--banner-padding-align) var(--banner-padding-valign);
+   text-align: var(--banner-align);
 
-@media screen and (max-width: 550px) {
-   .c-live-word {
-      display: none;
-   }
-}
+   .avatar {
+      margin: auto;
 
-/* --800px */
-@media screen and (max-width: 800px) {
-   .c-introduction {
-      padding: 120px 7.5%;
-
-      .c-avatar {
-         margin: auto;
-
-         img {
-            width: 120px;
-            height: 120px;
-            border-radius: 60px;
-         }
-      }
-
-      .c-info {
-         margin: auto;
-
-         .c-title {
-            font-size: 36px;
-            margin: 20px auto;
-         }
-
-         .c-subtitle {
-            font-size: 24px;
-            font-weight: 300;
-            margin: 0 auto;
-         }
+      img {
+         width: var(--banner-avatar-size);
+         height: var(--banner-avatar-size);
+         border-radius: 50%;
       }
    }
 
-   .c-content {
-      padding: 0 10%;
-   }
-}
-
-/* 800--1024px */
-@media screen and (min-width: 800px) {
-   .c-introduction {
-      padding: 120px 7.5%;
-
-      .c-avatar {
-         margin: auto;
-
-         img {
-            width: 150px;
-            height: 150px;
-            border-radius: 75px;
-         }
+   .info {
+      .title {
+         font-size: var(--banner-title-size);
+         font-weight: @ch-font-banner-title-weight;
+         color: @ch-color-theme;
+         margin: var(--banner-title-margin) auto;
+      }
+      
+      .subtitle {
+         font-size: var(--banner-subtitle-size);
+         color: @ch-color-theme-darker;
+         font-weight: 300;
+         margin: 20px auto;
       }
 
-      .c-info {
-         margin: auto;
-
-         .c-title {
-            font-size: 32px;
-            margin: 20px auto;
-         }
-
-         .c-subtitle {
-            font-size: 24px;
-            font-weight: 300;
-            margin: 0 auto;
-         }
+      .slogan {
+         font-size: var(--banner-slogan-size);
+         color: #666;
       }
    }
 }
 
-/* 1024--1366px */
-@media screen and (min-width: 1024px) {
-   .c-introduction {
-      padding: 120px 10%;
-
-      .c-avatar {
-         img {
-            width: 180px;
-            height: 180px;
-            border-radius: 90px;
-         }
-      }
-
-      .c-info {
-         .c-title {
-            font-size: 42px;
-         }
-
-         .c-subtitle {
-            font-size: 24px;
-            font-weight: 300;
-         }
-      }
-   }
-
-   .c-content {
-      padding: 0 10%;
+/* 设备适配 */
+@media all and (max-width: 870px) { /* ~870px */
+   .banner {
+      --banner-align: center;
+      --banner-padding-valign: 130px;
+      --banner-padding-align: 7.5%;
+      --banner-avatar-size: 150px;
+      --banner-title-size: 40px;
+      --banner-title-margin: 20px;
+      --banner-subtitle-size: 24px;
+      --banner-slogan-size: 20px;
    }
 }
 
-/* 1366px--1600px */
-@media screen and (min-width: 1366px) {
-   .c-introduction {
-      padding: 120px 15%;
-
-      .c-avatar {
-         img {
-            width: 200px;
-            height: 200px;
-            border-radius: 100px;
-         }
-      }
-
-      .c-info {
-         .c-title {
-            font-size: 42px;
-            margin: 20px 0;
-         }
-
-         .c-subtitle {
-            font-size: 28px;
-            font-weight: 300;
-         }
-      }
+@media all and (min-width: 870px) { /* 870~1024px */
+   .banner {
+      --banner-align: left;
+      --banner-padding-valign: 130px;
+      --banner-padding-align: 7.5%;
+      --banner-avatar-size: 180px;
+      --banner-title-size: 42px;
+      --banner-title-margin: 20px;
+      --banner-subtitle-size: 24px;
+      --banner-slogan-size: 20px;
    }
-}</style>
+}
+
+@media all and (min-width: 1024px) { /* 1024~px */
+   .banner {
+      --banner-padding-align: 15%;
+      --banner-avatar-size: 200px;
+      --banner-title-size: 52px;
+      --banner-title-margin: 0;
+      --banner-subtitle-size: 28px;
+      --banner-slogan-size: 20px;
+   }
+}
+</style>

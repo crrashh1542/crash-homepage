@@ -96,7 +96,6 @@ export default {
 
 @media all and (min-width: 1024px) { /* 1024~px */
    .banner {
-      --banner-padding-valign: 150px;
       --banner-padding-align: 15%;
       --banner-avatar-size: 200px;
       --banner-title-size: 52px;

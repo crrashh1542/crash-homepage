@@ -19,33 +19,30 @@ export default {
 </script>
 
 <template>
-   <div class="c-content">
-      <div class="c-title" v-if="content.title !== null">{{ content.title }}</div>
+   <div class="content">
+      <div class="note" v-if="content.title !== null">{{ content.title }}</div>
 
       <!-- 贡献 | Github contributions -->
-      <div v-if="content.ghChart !== null">
-         <p class="c-menu">
-            <i class="mdui-icon material-icons">code</i>&nbsp;&nbsp;今天咕了没！<i
-               class="mdui-icon material-icons">arrow_downward</i>
+      <div class="block" v-if="content.ghChart !== null">
+         <p class="menu">
+            <i class="mdui-icon material-icons">code</i>&nbsp;&nbsp;今天咕了没！
          </p>
          <gh-chart></gh-chart>
       </div>
 
 
       <!-- 属性 | Proterties -->
-      <div v-if="content.proterties !== null">
-         <p class="c-menu">
-            <i class="mdui-icon material-icons">assignment_ind</i>&nbsp;&nbsp;我的属性<i
-               class="mdui-icon material-icons">arrow_downward</i>
+      <div class="block" v-if="content.proterties !== null">
+         <p class="menu">
+            <i class="mdui-icon material-icons">assignment_ind</i>&nbsp;&nbsp;我的属性
          </p>
          <proterties></proterties>
       </div>
 
       <!-- 外站链接 | Links -->
-      <div v-if="content.links !== null">
-         <p class="c-menu">
-            <i class="mdui-icon material-icons">widgets</i>&nbsp;&nbsp;本咕的好东西<i
-               class="mdui-icon material-icons">arrow_downward</i>
+      <div class="block" v-if="content.links !== null">
+         <p class="menu">
+            <i class="mdui-icon material-icons">widgets</i>&nbsp;&nbsp;咕咕的好东西
          </p>
          <cards></cards>
       </div>
@@ -61,39 +58,56 @@ export default {
 </script>
 
 <style lang="less" scoped>
-// Universal stylesheet
+@import url('../assets/styles/global.less');
 
-/* 对于不同的设备设置不同的 .content */
-@media screen and (max-width: 800px) {
-   .c-content {
-      padding: 20px;
+.content {
+   padding: 10px var(--content-padding-align);
+
+   .block {
+      margin: 40px 0 0;
+   }
+
+   .note {
+      font-size: 26px;
+      background-color: @ch-color-theme-light;
+      padding: 25px 5px;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 1.5px 4px 0 @ch-color-theme;
+   }
+
+   .menu {
+      position: relative;
+      height: @ch-layout-menu-height;
+      line-height: @ch-layout-menu-height;
+      padding-left: calc(@ch-layout-menu-label-width * 2.5);
+      margin: 20px 0;
+      color: @ch-color-theme-darker;
+      font-size: 24px;
+   }
+
+   .menu::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: @ch-layout-menu-label-width;
+      height: 100%;
+      border-radius: calc(@ch-layout-menu-label-width / 2);
+      background-color: @ch-color-theme;
    }
 }
 
+/* 设备适配 */
 @media screen and (min-width: 800px) {
-   .c-content {
-      padding: 10px 10%;
+   .content {
+      --content-padding-align: 10%;
    }
 }
 
 @media screen and (min-width: 1366px) {
-   .c-content {
-      padding: 10px 15%;
-   }
-}
-
-// Specific stylesheet
-.c-content {
-   .c-title {
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: 500;
-   }
-
-   .c-menu {
-      margin: 20px 0;
-      color: #444;
-      font-size: 24px;
+   .content {
+      --content-padding-align: 15%;
    }
 }</style>

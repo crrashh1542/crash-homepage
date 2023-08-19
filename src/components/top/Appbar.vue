@@ -74,11 +74,11 @@ export default {
    .link { /* 链接 */
       margin: 0 15px;
       font-size: 17px;
-      color: @ch-color-link-nav;
+      color: @ch-color-nav-link;
    }
 
    .link::after { /* 链接图标 */
-      color: @ch-color-link-nav;
+      color: @ch-color-nav-link;
       font-size: 15px;
       vertical-align: middle;
       text-align: center;
@@ -92,7 +92,7 @@ export default {
    }
 
    .link:hover::after {
-      color: @ch-color-theme-light;
+      color: @ch-color-theme;
    }
 }
 

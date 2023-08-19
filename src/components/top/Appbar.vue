@@ -17,7 +17,7 @@ export default {
 
       <!-- 左侧 icon & 标题 -->
       <a class="icon" @click="trigger">
-         <i class="material-icons text-center align-middle">menu</i>
+         <i class="material-icons">menu</i>
       </a>
       <a href="" class="title">{{ site.title }}</a>
 
@@ -60,6 +60,11 @@ export default {
       line-height: @ch-layout-icon-size;
       margin: 0 5px 0 0;
       cursor: pointer;
+
+      i {
+         text-align: center;
+         vertical-align: middle;
+      }
    }
 
    .title { /* 左侧标题栏 */

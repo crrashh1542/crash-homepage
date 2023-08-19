@@ -6,7 +6,7 @@ import imgBlog from './images/1.jpg'
 import imgDisk from './images/2.jpg'
 
 export default {
-   configVersion: 1,
+   configVersion: 2,
 
    site: {
       title: '云萧的咕咕客栈',
@@ -26,7 +26,7 @@ export default {
       ghChart: {
          apiUrl: 'https://ghc.api.crrashh.com',
          username: 'crrashh1542',
-         color: '409ba5'
+         color: '7986cb'
       },
       proterties: {
 

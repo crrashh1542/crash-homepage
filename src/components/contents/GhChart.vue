@@ -17,18 +17,19 @@ export default {
 </script>
 
 <template>
-   <div class="c-ghchart">
+   <div class="ghchart">
       <img :src=reqUrl alt="">
-      <!-- <div class="c-load-anim">
-            <div class="mdui-spinner mdui-spinner-colorful"></div>
-        </div> -->
    </div>
 </template>
 
 <style lang="less" scoped>
-.c-ghchart {
+@import url('../../assets/styles/global.less');
+
+.ghchart {
    width: 100%;
-   background-color: rgba(255, 255, 255, 0.4);
+   background-color: @ch-color-theme-lighter;
+   border: 1px solid @ch-color-theme-light;
+   border-radius: @ch-layout-card-radius;
    text-align: center;
    overflow: scroll;
 

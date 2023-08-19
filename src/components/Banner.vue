@@ -27,10 +27,11 @@ export default {
 </template>
 
 <style lang="less" scoped>
+@import url('../assets/styles/global.less');
 /* 主样式 */
 .banner {
    margin-right: 0;
-   padding: calc(var(--banner-padding-valign) + var(--ch-layout-nav-height))
+   padding: calc(var(--banner-padding-valign) + @ch-layout-nav-height)
                  var(--banner-padding-align) var(--banner-padding-valign);
    text-align: var(--banner-align);
 
@@ -47,14 +48,14 @@ export default {
    .info {
       .title {
          font-size: var(--banner-title-size);
-         font-weight: var(--ch-font-banner-title-weight);
-         color: var(--ch-color-theme);
+         font-weight: @ch-font-banner-title-weight;
+         color: @ch-color-theme;
          margin: var(--banner-title-margin) auto;
       }
       
       .subtitle {
          font-size: var(--banner-subtitle-size);
-         color: var(--ch-color-theme-darker);
+         color: @ch-color-theme-darker;
          font-weight: 300;
          margin: 20px auto;
       }
@@ -95,7 +96,6 @@ export default {
 
 @media all and (min-width: 1024px) { /* 1024~px */
    .banner {
-      --banner-padding-valign: 150px;
       --banner-padding-align: 15%;
       --banner-avatar-size: 200px;
       --banner-title-size: 52px;

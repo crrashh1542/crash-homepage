@@ -16,6 +16,7 @@ export default {
 </template>
 
 <style lang="less" scoped>
+@import url('../assets/styles/global.less');
 .bg {
     position: fixed;
     width: 100%;
@@ -33,7 +34,7 @@ export default {
 
 .shade {
     z-index: -98;
-    background-color: var(--ch-color-bg-shade);
+    background-color: @ch-color-bg-shade;
     backdrop-filter: blur(3px);
 }
 </style>

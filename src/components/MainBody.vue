@@ -71,7 +71,7 @@ export default {
       font-size: 26px;
       background-color: @ch-color-theme-light;
       padding: 25px 5px;
-      border-radius: 20px;
+      border-radius: @ch-layout-card-radius;
       text-align: center;
       margin-bottom: 30px;
       box-shadow: 0 1.5px 4px 0 @ch-color-theme;

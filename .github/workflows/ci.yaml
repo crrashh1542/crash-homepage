@@ -1,14 +1,14 @@
 name: CI
 on: 
   push: 
-    push: [ *refresh ]
+    branches: [ dev ]
     paths-ignore: 
       - '**.md'
       - '**.txt'
       - '.github/**'
       - '!.github/workflows/**'
-  pull_request: 
-    branches: [ main*, *prerelease, *prod ]
+  pull_request:
+    branches: [ release ]
 
 jobs:
   setup:
@@ -28,18 +28,16 @@ jobs:
        id: get-suffix
        run: |
          TAG_NAME=$(git describe --abbrev=0 --tags)
-         BUILD_TIME=$(date "+%y%m%d-%H%M")
-         HEAD_BRANCH=$(git symbolic-ref --short -q HEAD)
+         BUILD_DATE=$(date "+%y%m%d")
          HEAD_SHA=$(git rev-parse --short HEAD)
-         HEAD_SHA_SHORT=${HEAD_SHA:0:4}
-         echo "DIST_SUFFIX=${TAG_NAME}.${HEAD_SHA_SHORT}.${HEAD_BRANCH}.${BUILD_TIME}" >> $GITHUB_OUTPUT
+         echo "DIST_SUFFIX=${TAG_NAME}-${BUILD_DATE}-${HEAD_SHA}" >> $GITHUB_OUTPUT
 
 
   build: 
     name: Build Production Pages
     needs: setup
     env: 
-      DIST_NAME: dist-${{ needs.setup.outputs.DIST_SUFFIX }}
+      DIST_NAME: dist-v${{ needs.setup.outputs.DIST_SUFFIX }}
     runs-on: ubuntu-latest
     steps: 
      - name: 🧐 Checkout

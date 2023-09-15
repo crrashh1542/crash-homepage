@@ -2,7 +2,6 @@
    "name": "crash-homepage",
    "version": "3.0.0-alpha.4",
    "private": true,
-   "build": 903,
    "scripts": {
       "serve": "vue-cli-service serve",
       "build": "vue-cli-service build",
@@ -52,5 +51,5 @@
       "not dead",
       "not ie 11"
    ],
-   "packageManager": "yarn@3.6.1"
+   "packageManager": "yarn@3.6.3"
 }

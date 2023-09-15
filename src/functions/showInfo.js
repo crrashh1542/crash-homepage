@@ -2,20 +2,16 @@
 /**
  * 此脚本用于在控制台中显示本项目相关信息
  * @author crrashh1542
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 import repoInfo from '../../package.json'
 import buildInfo from '../../temp/buildInfo.json'
-import moment from 'moment/moment'
 
 // 获取项目和框架版本
-const [repoVer, repoBuild, frameVer] = 
-    [repoInfo.version, repoInfo.build, repoInfo.dependencies.vue.split('^')[1]]
+const [repoName, repoVer] = [repoInfo.name, 'v' + repoInfo.version]
 // 获取构建信息
-const [buildTime, buildHash, buildEnv, buildBranch] = 
-    [buildInfo.time, buildInfo.hash, buildInfo.env, buildInfo.branch]
-let shownTime = moment(buildTime).format('YYMMDD-HHmm')
+const [buildTime, buildHash, buildNum] = [buildInfo.time, buildInfo.hash, buildInfo.build]
 
 export default function showInfo() {
     let styleName = `font-size: 14px;
@@ -32,8 +28,8 @@ export default function showInfo() {
                     border-radius: 0 3px 3px 0;
                     margin: 6px 0;
                     `
-    let detailedVer = repoBuild + '.' + buildBranch + '.' + shownTime
-
-    console.log('%c%s%c%s', styleName, 'crash-homepage', styleVer, repoVer + '@' + buildHash)
-    console.log('[buildInfo] Built at ' + buildEnv + ' mode with Vue ' + frameVer + ' on detailed version ' + detailedVer + '.')
+    let fullVer = repoVer + '.b' + buildNum + '@' + buildHash
+    console.log('%c%s%c%s', styleName, repoName, styleVer, repoVer)
+    console.log('[BuildInfo] 编译时间：' + buildTime)
+    console.log('[BuildInfo] 项目版本：' + fullVer)
 }

@@ -1780,6 +1780,70 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lit-labs/motion@npm:^1.0.3":
+  version: 1.0.5
+  resolution: "@lit-labs/motion@npm:1.0.5"
+  dependencies:
+    lit: ^3.0.0
+  checksum: ba53e1b41ad05be7cfe46cfd4da5ed9dfa84d76053a153f66234c0b0e878987c09f5f985313455b3b7b2aad0dd6b13474ba464abba3a64bdb1f3851726dd72a8
+  languageName: node
+  linkType: hard
+
+"@lit-labs/ssr-dom-shim@npm:^1.0.0, @lit-labs/ssr-dom-shim@npm:^1.1.0, @lit-labs/ssr-dom-shim@npm:^1.1.2-pre.0":
+  version: 1.1.2
+  resolution: "@lit-labs/ssr-dom-shim@npm:1.1.2"
+  checksum: 73fd787893851d4ec4aaa5c775405ed2aae4ca0891b2dd3c973b32c2f4bf70ada5481dd0224e52b786d037aa8a00052186ad1623c44551affd66f6409cca8da6
+  languageName: node
+  linkType: hard
+
+"@lit/reactive-element@npm:^1.3.0, @lit/reactive-element@npm:^1.6.0":
+  version: 1.6.3
+  resolution: "@lit/reactive-element@npm:1.6.3"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.0.0
+  checksum: 79b58631c38effeabad090070324431da8a22cf0ff665f5e4de35e4d791f984742b3d340c9c7fce996d1124a8da95febc582471b4c237236c770b1300b56ef6e
+  languageName: node
+  linkType: hard
+
+"@lit/reactive-element@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@lit/reactive-element@npm:2.0.0"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.1.2-pre.0
+  checksum: afa12f1cf72e8735cb7eaa51d428610785ee796882ca52108310e75ac54bbf5690da718c8bf85d042060f98c139ff0d5efd54f677a9d3fc4d794ad2e0f7a12c5
+  languageName: node
+  linkType: hard
+
+"@material/material-color-utilities@npm:^0.2.7":
+  version: 0.2.7
+  resolution: "@material/material-color-utilities@npm:0.2.7"
+  checksum: 445c17646488a0564b21d2949429c871963158a9636f6f2869ace614c35bbabeb6e68a51770ff7752586ecc928274db3e4345a332c94e3fc296e988b0a24d527
+  languageName: node
+  linkType: hard
+
+"@mdui/jq@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@mdui/jq@npm:3.0.0"
+  dependencies:
+    ssr-window: ^4.0.2
+    tslib: ^2.6.0
+  checksum: 75cadab57828ef6a43bd08951312f330ac1113ea3ec2730ae797d208715e992fae1a6a5dcad7355f7eaa9b710d701bc647ff9843fab9724038218acf0b698a22
+  languageName: node
+  linkType: hard
+
+"@mdui/shared@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@mdui/shared@npm:1.0.0"
+  dependencies:
+    "@mdui/jq": 3.0.0
+    "@open-wc/dedupe-mixin": ^1.3.1
+    lit: ^2.7.5
+    ssr-window: ^4.0.2
+    tslib: ^2.6.0
+  checksum: cfc75082e1e73b5509b2de839c45a6a507dec1fafe0695f0ce4adbcdebc935e59da8dbdcdbf211c86f51759855ca0c9120de5750698ca7a2065eab765d36f37e
+  languageName: node
+  linkType: hard
+
 "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1":
   version: 5.1.1-v1
   resolution: "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1"
@@ -1831,6 +1895,13 @@ __metadata:
   dependencies:
     semver: ^7.3.5
   checksum: a50a6818de5fc557d0b0e6f50ec780a7a02ab8ad07e5ac8b16bf519e0ad60a144ac64f97d05c443c3367235d337182e1d012bbac0eb8dbae8dc7b40b193efd0e
+  languageName: node
+  linkType: hard
+
+"@open-wc/dedupe-mixin@npm:^1.3.1":
+  version: 1.4.0
+  resolution: "@open-wc/dedupe-mixin@npm:1.4.0"
+  checksum: 25ae5d1c76ffecec74cb38948ee093e8b9fcfdde274ad176e288070370c4fe8182880d50e42b0403ac5449f12a9ebfa508df42772b15910c19177a0a63f47010
   languageName: node
   linkType: hard
 
@@ -2138,6 +2209,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: b9bbb2b5c5ead2fb884bb019f61a014e37410bddd295de28184e1b2e71ee6b04120c5ba7b9954617f0bdf962c13d06249ce65004490889c747c80d3f628ea842
+  languageName: node
+  linkType: hard
+
+"@types/trusted-types@npm:^2.0.2":
+  version: 2.0.4
+  resolution: "@types/trusted-types@npm:2.0.4"
+  checksum: 5256c4576cd1c90d33ddd9cc9cbd4f202b39c98cbe8b7f74963298f9eb2159c285ea5c25a6181b4c594d8d75641765bff85d72c2d251ad076e6529ce0eeedd1c
   languageName: node
   linkType: hard
 
@@ -3723,6 +3801,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"classcat@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "classcat@npm:5.0.4"
+  checksum: 77373c58fa15ad2d4494b5c73c7ed2f859e7126227c357a3931e3f2a28e45dd9d8e779c1c8d3a8ba9ece833b21f14cd79160a7999973e28888d7e47f56c83170
+  languageName: node
+  linkType: hard
+
 "clean-css@npm:^5.2.2":
   version: 5.3.2
   resolution: "clean-css@npm:5.3.2"
@@ -4099,7 +4184,7 @@ __metadata:
     eslint-plugin-vue: ^9.17.0
     less: ^4.2.0
     less-loader: ^11.1.3
-    mdui: ^1.0.2
+    mdui: ^2.0.0
     moment: ^2.29.4
     postcss: ^8.4.31
     speed-measure-webpack-plugin: ^1.5.0
@@ -5977,6 +6062,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-promise@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "is-promise@npm:4.0.0"
+  checksum: 0b46517ad47b00b6358fd6553c83ec1f6ba9acd7ffb3d30a0bf519c5c69e7147c132430452351b8a9fc198f8dd6c4f76f8e6f5a7f100f8c77d57d9e0f4261a8a
+  languageName: node
+  linkType: hard
+
 "is-stream@npm:^1.1.0":
   version: 1.1.0
   resolution: "is-stream@npm:1.1.0"
@@ -6303,6 +6395,68 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lit-element@npm:^3.3.0":
+  version: 3.3.3
+  resolution: "lit-element@npm:3.3.3"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.1.0
+    "@lit/reactive-element": ^1.3.0
+    lit-html: ^2.8.0
+  checksum: 29a596fa556e231cce7246ca3e5687ad238f299b0cb374a0934d5e6fe9adf1436e031d4fbd21b280aabfc0e21a66e6c4b52da558a908df2566d09d960f3ca93d
+  languageName: node
+  linkType: hard
+
+"lit-element@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "lit-element@npm:4.0.0"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.1.2-pre.0
+    "@lit/reactive-element": ^2.0.0
+    lit-html: ^3.0.0
+  checksum: 788ea8ed0883d656583843dc4bbdfcb698f3a4c442a529bf861131e5741239e1076e8809e29b7733dccf6baea72a827aa3cccd444aca2ebe1dd04409608753f9
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "lit-html@npm:2.8.0"
+  dependencies:
+    "@types/trusted-types": ^2.0.2
+  checksum: 2d70df07248bcb2f502a3afb1e91d260735024fa669669ffb1417575aa39c3092779725ac1b90f5f39e4ce78c63f431f51176bc67f532389f0285a6991573255
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "lit-html@npm:3.0.0"
+  dependencies:
+    "@types/trusted-types": ^2.0.2
+  checksum: 1df6bc84a30b9f848962483f456fe820ddac0f836476af8e2e01e4388def21afc129631acde2ad29c761df724b932ddd4d5be87146d8e98c25bc049076f3e4b8
+  languageName: node
+  linkType: hard
+
+"lit@npm:^2.7.5":
+  version: 2.8.0
+  resolution: "lit@npm:2.8.0"
+  dependencies:
+    "@lit/reactive-element": ^1.6.0
+    lit-element: ^3.3.0
+    lit-html: ^2.8.0
+  checksum: 2480e733f7d022d3ecba91abc58a20968f0ca8f5fa30b3341ecf4bcf4845e674ad27b721a5ae53529cafc6ca603c015b80d0979ceb7a711e268ef20bb6bc7527
+  languageName: node
+  linkType: hard
+
+"lit@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "lit@npm:3.0.0"
+  dependencies:
+    "@lit/reactive-element": ^2.0.0
+    lit-element: ^4.0.0
+    lit-html: ^3.0.0
+  checksum: 562e53d2902112f55949ff92244ab7a198abdd35455657e364f866954958b22f536f79c02f11a12f00f5b69799e28d4e27917fb120d7216491cb2a526b5ee718
+  languageName: node
+  linkType: hard
+
 "loader-runner@npm:^4.1.0, loader-runner@npm:^4.2.0":
   version: 4.3.0
   resolution: "loader-runner@npm:4.3.0"
@@ -6536,32 +6690,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdn-polyfills@npm:^5.20.0":
-  version: 5.20.0
-  resolution: "mdn-polyfills@npm:5.20.0"
-  checksum: 3c8395b8fa4c9cbf27f87079231a8c1845b5580627e4fd2ad6bcbc5c3381e2323a6033836e9dff39e140eab6041fbf2d7760c0824b6af52bf4a2743d0ac01af1
-  languageName: node
-  linkType: hard
-
-"mdui.jq@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "mdui.jq@npm:2.0.1"
+"mdui@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "mdui@npm:2.0.0"
   dependencies:
-    mdn-polyfills: ^5.20.0
-    promise-polyfill: ^8.2.0
-  checksum: e68e79eb55a28733fe355a6bfd5c7f6e0abd0cf63b8b38772aa62c9487c52770272bf83ded8466bc3548346c7d6ef20e65296c26af8f51883d9cf95efb18b1b6
-  languageName: node
-  linkType: hard
-
-"mdui@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "mdui@npm:1.0.2"
-  dependencies:
-    mdn-polyfills: ^5.20.0
-    mdui.jq: ^2.0.1
-    normalize.css: ^8.0.1
-    promise-polyfill: ^8.2.0
-  checksum: 209ec85826e7d72a28a16c5d3f7ad51516a2da5c54b6735690c85f606954c6ac14009df74c56e6be4ce52f59faf164b3d7449c9cc54be73030ad7fdcee6605ac
+    "@lit-labs/motion": ^1.0.3
+    "@material/material-color-utilities": ^0.2.7
+    "@mdui/jq": 3.0.0
+    "@mdui/shared": 1.0.0
+    "@open-wc/dedupe-mixin": ^1.3.1
+    classcat: ^5.0.4
+    is-promise: ^4.0.0
+    lit: ^2.7.5
+    ssr-window: ^4.0.2
+    tslib: ^2.6.0
+  checksum: c0ca9a44afc9e9bf7ecdd08538684addffab69b717e99e8494dae16d5ae2d15eadcdb5257a0c0bc837fb2aea7070ea9cf1540aee7426a70df5c07bcc5dcbcf51
   languageName: node
   linkType: hard
 
@@ -7036,13 +7179,6 @@ __metadata:
   version: 6.1.0
   resolution: "normalize-url@npm:6.1.0"
   checksum: 4a4944631173e7d521d6b80e4c85ccaeceb2870f315584fa30121f505a6dfd86439c5e3fdd8cd9e0e291290c41d0c3599f0cb12ab356722ed242584c30348e50
-  languageName: node
-  linkType: hard
-
-"normalize.css@npm:^8.0.1":
-  version: 8.0.1
-  resolution: "normalize.css@npm:8.0.1"
-  checksum: 4698cae88ec35e3f3e82f9f9402e6ffb906c27ccd6373cad88e6b3f5634fc7a043cb38702472299e5edb73825cf8b18d5fd9283f58829eddda79ea97453049a2
   languageName: node
   linkType: hard
 
@@ -7931,13 +8067,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"promise-polyfill@npm:^8.2.0":
-  version: 8.3.0
-  resolution: "promise-polyfill@npm:8.3.0"
-  checksum: 206373802076c77def0805758d0a8ece64120dfa6603f092404a1004211f8f2f67f33cadbc35953fc2a8ed0b0d38c774e88bdf01e20ce7a920723a60df84b7a5
-  languageName: node
-  linkType: hard
-
 "promise-retry@npm:^2.0.1":
   version: 2.0.1
   resolution: "promise-retry@npm:2.0.1"
@@ -8694,6 +8823,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ssr-window@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "ssr-window@npm:4.0.2"
+  checksum: df182600927f4f3225224cf8c02338ea637c9750519505bbfb9a9236741a2a7ec088386fb948bca7b447b8303d9109e7dc7672e3de041c79ac2a0e03665af7d2
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^10.0.0":
   version: 10.0.4
   resolution: "ssri@npm:10.0.4"
@@ -9069,6 +9205,13 @@ __metadata:
   version: 2.6.1
   resolution: "tslib@npm:2.6.1"
   checksum: b0d176d176487905b66ae4d5856647df50e37beea7571c53b8d10ba9222c074b81f1410fb91da13debaf2cbc970663609068bdebafa844ea9d69b146527c38fe
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.6.0":
+  version: 2.6.2
+  resolution: "tslib@npm:2.6.2"
+  checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
   languageName: node
   linkType: hard
 

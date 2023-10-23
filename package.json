@@ -12,7 +12,7 @@
       "core-js": "^3.33.1",
       "mdui": "^1.0.2",
       "postcss": "^8.4.31",
-      "vue": "^3.3.4"
+      "vue": "^3.3.6"
    },
    "devDependencies": {
       "@babel/core": "^7.23.2",

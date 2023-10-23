@@ -9,7 +9,7 @@
    },
    "dependencies": {
       "autoprefixer": "^10.4.16",
-      "core-js": "^3.33.0",
+      "core-js": "^3.33.1",
       "mdui": "^1.0.2",
       "postcss": "^8.4.31",
       "vue": "^3.3.4"

@@ -1,67 +1,59 @@
 import links from './links.json'
-import avatar from './images/avatar.jpg'
 import background from './images/bg.jpg'
-
 import imgBlog from './images/1.jpg'
 import imgDisk from './images/2.jpg'
 
 export default {
-   configVersion: 2,
+    configVersion: 2,
 
-   site: {
-      title: '云萧的咕咕客栈',
-      suffix: ' / in building...',
-      subtitle: 'KOTSUKI CRRASHH',
-      subheading: '" Creating makes miracles. "',
-      avatar,
-      background
-   },
+    site: {
+        title: '浅若夏沫的小破站',
+        suffix: '// in building...',
+        subtitle: 'AKAFUSU RAIN',
+        subheading: '"TECH OTAKUS SAVE THE WORLD"',
+        avatar: 'https://q1.qlogo.cn/g?b=qq&nk=2531738088&s=640',
+        background
+    },
 
-   header: {
-      link: links.headLink
-   },
+    header: {
+        link: links.headLink
+    },
 
-   content: {
-      title: '高二狗，搞笑人，2.5次元，可能不怎么正常',
-      ghChart: {
-         apiUrl: 'https://ghc.api.crrashh.com',
-         username: 'crrashh1542',
-         color: '7986cb'
-      },
-      proterties: {
+    content: {
+        title: '软件工程大专生，傻逼二次元科技宅，有时候精神不正常',
+        ghChart: {
+            apiUrl: 'https://ghc.api.crrashh.com',
+            username: 'summer-foam',
+            color: '7986cb'
+        },
+        proterties: {
 
-      },
-      links: [
-         {
-            title: "云萧的咕咕屋",
-            subTitle: "咕咕乱写的啊喂！",
-            imageUrl: imgBlog,
-            link: "https://blog.crrashh.com"
-         },
-         {
-            title: "云萧的咕咕盘",
-            subTitle: "基于 Alist 的网盘服务",
-            imageUrl: imgDisk,
-            link: "https://disk.crrashh.com"
-         },
-      ]
-   },
+        },
+        links: [
+            {
+                title: "博客堆放处",
+                subTitle: "乱写的啊喂！",
+                imageUrl: imgBlog,
+                link: "https://blog.exusiai.space"
+            },
+            {
+                title: "慢吞吞的网络硬盘",
+                subTitle: "基于 Alist 的网盘服务",
+                imageUrl: imgDisk,
+                link: "https://dl.exusiai.space"
+            },
+        ]
+    },
 
    footer: {
-      link: links.extLink,
-      beian: {
-         miit: '蜀ICP备2022029657号-2',
-         gongan: null,
-         moe: '萌ICP备20220551号'
-      },
-      copyright: 'Copyright 2022-2023 Kotsuki Crrashh. All Rights Reserved.'
+      copyright: 'Copyright 2022-2023 Kotsuki Crrashh & Akafusu Rain. All Rights Reserved.'
    },
 
-   console: {
-      birthdayCalc: {
-         isEnable: true,
-         owner: '云萧',
-         birthday: '2007-03-18'
-      }
-   }
+    console: {
+        birthdayCalc: {
+            isEnable: true,
+            owner: '浅若夏沫',
+            birthday: '2003-08-08'
+        }
+    }
 }

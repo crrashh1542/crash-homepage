@@ -8,6 +8,7 @@
       "lint": "vue-cli-service lint"
    },
    "dependencies": {
+      "@vue/cli": "^5.0.8",
       "autoprefixer": "^10.4.16",
       "core-js": "^3.33.1",
       "mdui": "^1.0.2",
@@ -51,5 +52,5 @@
       "not dead",
       "not ie 11"
    ],
-   "packageManager": "yarn@3.6.3"
+   "packageManager": "yarn@4.0.1"
 }

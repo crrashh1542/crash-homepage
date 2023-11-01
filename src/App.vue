@@ -1,5 +1,4 @@
-<script>
-// Crrashh1542 does not exist at all!
+*0<script>
 
 // 引入库
 import 'mdui'

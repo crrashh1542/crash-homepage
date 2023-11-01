@@ -18,17 +18,6 @@ export default {
          class="mdui-btn mdui-btn-raised mdui-color-theme-200 mdui-btn-icon mdui-ripple">{{ l.icon }}</a>
       <div class="c-info">
          <p>&copy; {{ copyright }}</p>
-         <p>
-            <span v-if="beian.miit !== null">
-               <a href="https://beian.miit.gov.cn/"><img src="../../../public/images/miit.png">&nbsp;&nbsp;{{ beian.miit }}</a> |
-            </span>
-            <span v-if="beian.gongan !== null">
-               <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode="><img src="../../../public/images/police.png">&nbsp;&nbsp;{{ beian.gongan }}</a> |
-            </span>
-            <span v-if="beian.moe !== null">
-               <a href="https://icp.gov.moe/?keyword=20220551">{{ beian.moe }}</a>
-            </span>
-         </p>
       </div>
    </div>
 </template>

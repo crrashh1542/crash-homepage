@@ -38,7 +38,7 @@ export default function sayAge(birthday) {
    // 如果启用，返回可调用的 sayAge 函数
    if (isEnable) {
       let age_all = getAge(birthday.split('-'));
-      console.log("[birthdayCalc] 云萧的实际年龄：" + age_all[0] + "岁" + age_all[1] + "月" + age_all[2] + "天");
+      console.log("[birthdayCalc] 雨的实际年龄：" + age_all[0] + "岁" + age_all[1] + "月" + age_all[2] + "天");
       console.log()
    } else {
       return undefined

@@ -25,7 +25,7 @@ export default {
       <!-- 贡献 | Github contributions -->
       <div class="block" v-if="content.ghChart !== null">
          <p class="menu">
-            <i class="mdui-icon material-icons">code</i>&nbsp;&nbsp;今天咕了没！
+            <i class="mdui-icon material-icons">code</i>&nbsp;&nbsp;今日鸽子时间
          </p>
          <gh-chart></gh-chart>
       </div>
@@ -36,13 +36,13 @@ export default {
          <p class="menu">
             <i class="mdui-icon material-icons">assignment_ind</i>&nbsp;&nbsp;我的属性
          </p>
-         <proterties></proterties>
+         <Proterties></Proterties>
       </div>
 
       <!-- 外站链接 | Links -->
       <div class="block" v-if="content.links !== null">
          <p class="menu">
-            <i class="mdui-icon material-icons">widgets</i>&nbsp;&nbsp;咕咕的好东西
+            <i class="mdui-icon material-icons">widgets</i>&nbsp;&nbsp;好东西
          </p>
          <cards></cards>
       </div>

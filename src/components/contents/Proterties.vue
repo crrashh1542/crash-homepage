@@ -6,22 +6,22 @@ export default {
          proterty: [
             {
                "item": "智商",
-               "value": "{width: 40%;}",
+               "value": { width: "40%" }, // 注意这里的 value 是一个对象
                "tip": "偶尔脑袋也会宕机"
             },
             {
                "item": "技术",
-               "value": "{width: 70%;}",
+               "value": { width: "60%" }, // 注意这里的 value 是一个对象
                "tip": "有，但是不多，会的比大部分人多一点点"
             },
             {
                "item": "社恐",
-               "value": "{width: 50%;}",
-               "tip": "多数时候有，也有时候无"
+               "value": { width: "50%" }, // 注意这里的 value 是一个对象
+               "tip": "多数时候变成波奇酱，也有时候无"
             },
             {
                "item": "心理状态",
-               "value": "{width: 60%;}",
+               "value": { width: "50%" }, // 注意这里的 value 是一个对象
                "tip": "抗压能力还是有的，但也有崩溃的时候"
             }
          ]
@@ -29,6 +29,7 @@ export default {
    }
 }
 </script>
+
 
 <template>
    <div class="c-proterty mdui-row">

@@ -7,5 +7,7 @@ export default {
         subtitle: 'Kotsuki Crrashh',
         suffix: ' / under building...',
         description: '以万象之不息，致不息之万象。'
-    }
+    },
+
+    // 顶栏导航
 }

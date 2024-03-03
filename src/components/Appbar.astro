@@ -1,7 +1,25 @@
-<header>
-    <!-- placeholder -->
+---
+interface Props {
+    title: string
+}
+
+const { title } = Astro.props
+---
+
+<header class="fixed flex p-4 w-full whitespace-nowrap">
+    <span class="text-xl font-semibold">{ title }</span>
+    <span class="grow"></span>
+    <span class="link">233</span>
 </header>
 
 <style lang="less">
+@import url("../assets/styles/global.less");
 
+header {
+    padding-left: @c-layout-c-padding;
+    padding-right: @c-layout-c-padding;
+    background-color: @c-color-appbar;
+    backdrop-filter: blur(2px);
+    border-bottom: 1px solid @c-color-bar-border;
+}
 </style>

@@ -10,7 +10,7 @@ const { title, nav } = Astro.props
 let navElement = ''
 for (let i = 0; i < nav.length; i++) {
     let currentLink = nav[i]
-    navElement += '<span class="item"><a href="' + currentLink.url + '">' + currentLink.name + '</a></span>'
+    navElement += '<span class="item"><a href="' + currentLink.url + '" target="_blank">' + currentLink.name + '</a></span>'
 }
 ---
 

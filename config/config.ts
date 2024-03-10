@@ -10,4 +10,12 @@ export default {
     },
 
     // 顶栏导航
+    nav: [{
+        name: '博客',
+        url: 'https://blog.crrashh.com'
+    },
+    {
+        name: '关于',
+        url: 'https://blog.crrashh.com/archives/5'
+    }]
 }

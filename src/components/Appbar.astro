@@ -1,25 +1,45 @@
 ---
 interface Props {
     title: string
+    nav: object[]
 }
 
-const { title } = Astro.props
+const { title, nav } = Astro.props
+
+// 将右侧导航栏输出为字符串，以方便传递
+let navElement = ''
+for (let i = 0; i < nav.length; i++) {
+    let currentLink = nav[i]
+    navElement += '<span class="item"><a href="' + currentLink.url + '">' + currentLink.name + '</a></span>'
+}
 ---
 
 <header class="fixed flex p-4 w-full whitespace-nowrap">
-    <span class="text-xl font-semibold">{ title }</span>
-    <span class="grow"></span>
-    <span class="link">233</span>
+    <div class="text-xl font-semibold">{title}</div>
+    <div class="grow"></div>
+    <div class="link h-4 leading-7" set:html={ navElement }></div>
 </header>
 
 <style lang="less">
-@import url("../assets/styles/global.less");
+    @import url("../assets/styles/global.less");
 
-header {
-    padding-left: @c-layout-c-padding;
-    padding-right: @c-layout-c-padding;
-    background-color: @c-color-appbar;
-    backdrop-filter: blur(2px);
-    border-bottom: 1px solid @c-color-bar-border;
-}
+    header {
+        padding-left: @c-layout-c-padding;
+        padding-right: @c-layout-c-padding;
+        background-color: @c-color-appbar;
+        backdrop-filter: blur(2px);
+        border-bottom: 1px solid @c-color-bar-border;
+
+        // 将 less 变量暴露为普通 CSS 变量，以供 .item 使用
+        --c-color-theme: @c-color-theme;
+    }
+</style>
+
+<style is:global>
+    header > .link > .item {
+        padding: 0 8px;
+    }
+    header > .link > .item:hover {
+        color: var(--c-color-theme);
+    }
 </style>

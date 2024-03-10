@@ -1,23 +1,37 @@
 ---
 // 导入数据 & 布局
+import 'normalize.css/normalize.css'
 import config from '../../config/config.ts'
 import Layout from '../layouts/Layout.astro'
 
 // 导入组件
 import Appbar from '../components/Appbar.astro'
+import Banner from '../components/Banner.astro'
+import Footer from '../components/Footer.astro'
 ---
 
 <Layout title={ config.site.name + config.site.suffix }>
 	<!-- Part 1 顶栏 -->
-	<Appbar></Appbar>
+	<Appbar title={ config.site.name } nav={ config.nav }></Appbar>
 
 	<!-- Part 2 主内容 -->
-	<main></main>
+	<main>
+		<Banner />
+		
+	</main>
 
 	<!-- Part 3 页脚 -->
-	<footer></footer>
+	<Footer></Footer>
 </Layout>
 
-<style lang="less">
+<style is:global lang="less">
+/** 此处样式表用于设定全局基础样式
+ *  Version: 1.0-dev / Date: 2024-03-04
+ */
+@import url('../assets/styles/global.less');
+
+* {
+	font-family: @c-font-family;
+}
 
 </style>

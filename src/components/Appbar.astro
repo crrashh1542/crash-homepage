@@ -14,32 +14,50 @@ for (let i = 0; i < nav.length; i++) {
 }
 ---
 
-<header class="fixed flex p-4 w-full whitespace-nowrap">
+<header class="fixed flex p-4 w-full whitespace-nowrap top">
     <div class="text-xl font-semibold">{title}</div>
     <div class="grow"></div>
     <div class="link h-4 leading-7" set:html={ navElement }></div>
 </header>
 
+
 <style lang="less">
     @import url("../assets/styles/global.less");
 
     header {
-        padding-left: @c-layout-c-padding;
-        padding-right: @c-layout-c-padding;
-        background-color: @c-color-appbar;
+        padding-left: calc(@c-layout-padding - 5%);
+        padding-right: calc(@c-layout-padding - 5%);
+        background-color: #fff;
         backdrop-filter: blur(2px);
-        border-bottom: 1px solid @c-color-bar-border;
 
         // 将 less 变量暴露为普通 CSS 变量，以供 .item 使用
         --c-color-theme: @c-color-theme;
+    }
+    header:not(.top) {
+        border-bottom: 1px solid @c-color-bar-border;
     }
 </style>
 
 <style is:global>
     header > .link > .item {
-        padding: 0 8px;
+        padding: 0 16px;
     }
     header > .link > .item:hover {
         color: var(--c-color-theme);
     }
 </style>
+
+<script lang="ts">
+    // 监听用户是否到顶
+    var barEle = document.getElementsByTagName('header')[0]
+    window.addEventListener('scroll', scroll)
+    function scroll() {
+        let mainPosition = document.getElementsByTagName('main')[0].getBoundingClientRect()
+        if (mainPosition.y == 0) {
+            barEle.classList.add('top')
+        } else {
+            barEle.classList.remove('top')
+        }
+    }
+    // window.removeEventListener('scroll', scroll)
+</script>

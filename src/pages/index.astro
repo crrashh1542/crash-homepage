@@ -12,16 +12,15 @@ import Footer from '../components/Footer.astro'
 
 <Layout title={ config.site.name + config.site.suffix }>
 	<!-- Part 1 顶栏 -->
-	<Appbar title={ config.site.name } nav={ config.nav }></Appbar>
+	<Appbar title={config.site.name} nav={config.nav}></Appbar>
 
-	<!-- Part 2 主内容 -->
+	<!-- Part 2 主体  -->
 	<main>
 		<Banner />
-		
 	</main>
 
 	<!-- Part 3 页脚 -->
-	<Footer></Footer>
+	<Footer />
 </Layout>
 
 <style is:global lang="less">
@@ -32,6 +31,10 @@ import Footer from '../components/Footer.astro'
 
 * {
 	font-family: @c-font-family;
+}
+
+main {
+	padding: 7.5em @c-layout-banner-padding 0;
 }
 
 </style>

@@ -3,21 +3,22 @@ interface Props {
     title: string
     nav: object[]
 }
-
 const { title, nav } = Astro.props
 
 // 将右侧导航栏输出为字符串，以方便传递
 let navElement = ''
 for (let i = 0; i < nav.length; i++) {
     let currentLink = nav[i]
-    navElement += '<span class="item"><a href="' + currentLink.url + '" target="_blank">' + currentLink.name + '</a></span>'
+    navElement += '<span class="item"><a href="' + currentLink.url +
+        '" target="_blank">' + currentLink.name + '</a></span>'
 }
 ---
 
 <header class="fixed flex p-4 w-full whitespace-nowrap top">
-    <div class="text-xl font-semibold">{title}</div>
-    <div class="grow"></div>
-    <div class="link h-4 leading-7" set:html={ navElement }></div>
+    <div class="title text-xl font-semibold">
+        <a href=".">{ title }</a></div>
+    <div class="grow" />
+    <div class="link h-4 leading-7" set:html={ navElement } />
 </header>
 
 
@@ -28,8 +29,7 @@ for (let i = 0; i < nav.length; i++) {
         padding-left: calc(@c-layout-padding - 5%);
         padding-right: calc(@c-layout-padding - 5%);
         background-color: #fff;
-        backdrop-filter: blur(2px);
-
+        // backdrop-filter: blur(2px);
         // 将 less 变量暴露为普通 CSS 变量，以供 .item 使用
         --c-color-theme: @c-color-theme;
     }
@@ -42,7 +42,7 @@ for (let i = 0; i < nav.length; i++) {
     header > .link > .item {
         padding: 0 16px;
     }
-    header > .link > .item:hover {
+    header > .link > .item:hover, header > .title:hover {
         color: var(--c-color-theme);
     }
 </style>

@@ -1,6 +1,18 @@
 ---
 // 引入数据
-import config from '../../config/config'
+interface Props {
+    info: customObject
+    social: customObject[]
+}
+const { info, social } = Astro.props
+
+// 将下侧社交栏输出为字符串，以方便传递
+let socialElement = ''
+for (let i = 0; i < social.length; i++) {
+    let currentLink = social[i]
+    socialElement += '<a href="' + currentLink.url + '" target="_blank"<span class='
+        + '"button p-3 mr-3 text-2xl rounded-md icon-' + currentLink.icon + '"></span></a>'
+}
 
 // 引入头像
 import { Image } from "astro:assets"
@@ -8,22 +20,36 @@ import avatar from '../assets/images/avatar.jpg'
 ---
 
 <div class="banner flex">
-    <Image src={avatar} class="rounded-full h-56 w-56" alt="" />
+    <!-- 左侧头像 -->
+    <Image src={ avatar } class="rounded-full h-56 w-56" alt="" />
+    <!-- 右侧信息 -->
     <div class="content pl-16">
-        <div class="title mt-2 py-3 font-semibold text-transparent">{ config.site.name }</div>
-        <div class="text-xl">{ config.site.description }</div>
+        <!-- L1 - 站点名称 -->
+        <div class="title mt-2 font-semibold text-transparent">{ info.name }</div>
+        <!-- L2 - 站点介绍 -->
+        <div class="text-xl mt-4">{ info.description }</div>
+        <!-- L3 - 社交链接 -->
+        <div class="social mt-10" set:html={ socialElement } />
     </div>
 </div>
 
 <style lang="less">
-    @import url('../assets/styles/global.less');
+    @import url('../styles/global.less');
 
     .banner {
         .title {
             font-size: 54px;
-            background: linear-gradient(120deg, #fae773, #fab664);
+            background: linear-gradient(120deg, #fbe65c, #fab664);
             // Tailwind 中使用 background-clip 会因优先级低被挤占
             background-clip: text;
         }
+    }
+</style>
+
+<style is:global>
+    .social .button {
+        background: rgba(250, 231, 115, .3);
+        box-shadow: 0 0 3px #fbe65c;
+        backdrop-filter: blur(5px);
     }
 </style>

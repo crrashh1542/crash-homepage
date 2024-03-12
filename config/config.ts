@@ -17,5 +17,31 @@ export default {
     {
         name: '关于',
         url: 'https://blog.crrashh.com/archives/5'
+    }],
+
+    // 横幅下侧社交媒体栏
+    social: [{
+        icon: 'blog',
+        url: 'https://blog.crrashh.com'
+    },
+    {
+        icon: 'github',
+        url: 'https://github.com/crrashh1542'
+    },
+    {
+        icon: 'bilibili',
+        url: 'https://space.bilibili.com/40683339'
+    },
+    {
+        icon: 'email',
+        url: 'mailto:kotsuki@crrashh.com'
+    },
+    {
+        icon: 'coolapk',
+        url: 'https://www.coolapk.com/u/21347742'
+    },
+    {
+        icon: 'qq',
+        url: 'https://wpa.qq.com/msgrd?uin=3247380086&site=qq&menu=yes'
     }]
 }

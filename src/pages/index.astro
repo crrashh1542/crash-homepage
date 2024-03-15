@@ -10,13 +10,13 @@ import Banner from '../components/Banner.astro'
 import Footer from '../components/Footer.astro'
 ---
 
-<Layout title={ config.site.name + config.site.suffix }>
+<Layout title={ config.site.name + config.site.suffix } description={ config.site.seoDescription }>
 	<!-- Part 1 顶栏 -->
-	<Appbar title={config.site.name} nav={config.nav}></Appbar>
+	<Appbar title={ config.site.name } nav={ config.nav } />
 
 	<!-- Part 2 主体  -->
 	<main>
-		<Banner info={config.site} social={config.social} />
+		<Banner info={ config.site } social={ config.social } />
 	</main>
 
 	<!-- Part 3 页脚 -->

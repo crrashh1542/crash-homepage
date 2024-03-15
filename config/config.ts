@@ -6,7 +6,8 @@ export default {
         name: '云萧的咕咕客栈',
         subtitle: 'Kotsuki Crrashh',
         suffix: ' / under building...',
-        description: '以万象之不息，致不息之万象。'
+        description: '以万象之不息，致不息之万象。',
+        seoDescription: '基于Astro构建的咕咕的个人主页！云萧的咕咕客栈 / Creating makes miracles. / 以万象之不息，致不息之万象。'
     },
 
     // 顶栏导航

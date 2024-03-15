@@ -21,7 +21,7 @@ import avatar from '../assets/images/avatar.jpg'
 
 <div class="banner flex">
     <!-- 左侧头像 -->
-    <Image src={ avatar } class="rounded-full h-56 w-56" alt="" />
+    <Image src={ avatar } class="rounded-full h-52 w-52" alt="" />
     <!-- 右侧信息 -->
     <div class="content pl-16">
         <!-- L1 - 站点名称 -->
@@ -35,8 +35,8 @@ import avatar from '../assets/images/avatar.jpg'
 
 <style lang="less">
     @import url('../styles/global.less');
-
     .banner {
+        margin-bottom: 2em;
         .title {
             font-size: 54px;
             background: linear-gradient(120deg, #fbe65c, #fab664);
@@ -48,8 +48,8 @@ import avatar from '../assets/images/avatar.jpg'
 
 <style is:global>
     .social .button {
-        background: rgba(250, 231, 115, .3);
-        box-shadow: 0 0 3px #fbe65c;
+        background: #fff8ca;
+        box-shadow: 0 0 3px #fcea78;
         backdrop-filter: blur(5px);
     }
 </style>

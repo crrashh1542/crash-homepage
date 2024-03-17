@@ -16,7 +16,7 @@ for (let i = 0; i < social.length; i++) {
 
 // 引入头像
 import { Image } from "astro:assets"
-import avatar from '../assets/images/avatar.jpg'
+import avatar from '@/assets/images/avatar.jpg'
 ---
 
 <div class="banner flex">
@@ -34,7 +34,7 @@ import avatar from '../assets/images/avatar.jpg'
 </div>
 
 <style lang="less">
-    @import url('../styles/global.less');
+    @import url('@/styles/global.less');
     .banner {
         margin-bottom: 2em;
         .title {

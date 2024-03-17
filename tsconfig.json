@@ -6,6 +6,12 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": false,
+
+        // 配置 alias @
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        },
     },
     "include": [
         "src/**/*", "src/custom-object.d.ts"

@@ -1,0 +1,55 @@
+---
+interface Props {
+    to: customObject[]
+}
+const { to } = Astro.props
+
+// // 将右侧导航栏输出为字符串，以方便传递
+let linkElement = ''
+for(let i = 0; i < to.length; i++) {
+    let currentLink = to[i]
+    linkElement += '<a href="' + currentLink.to + '" target="_blank" class=' + 
+        '"section block rounded-lg px-5 py-4 my-2 mr-4"><div class="title text-lg' + 
+        ' font-semibold">' + currentLink.title + '</div><div class="description ' + 
+        'text-base break-all">' + currentLink.description + '</div></a>'
+}
+
+---
+
+<div class="links flex flex-wrap my-3" set:html={ linkElement } />
+
+<style is:global>
+    /* 基础样式 ------ BEGIN */
+    .section {
+        background-color: #f7f7f7;
+        border: 1px solid #f2f2f2;
+        width: var( --c-link-section-width);
+    }
+
+    .section > .title {
+        line-height: 48px;
+    }
+
+    .section > .description {
+        height: calc(2.5 * 24px);
+    }
+
+    .section:hover {
+        border: 1px solid #fcea78;
+    }
+    /* 基础样式 -------- END */
+
+
+    /* 响应式适配 ------- BEGIN */
+    @media screen and (max-width: 1280px) { /* 移动端 */
+        :root {
+            --c-link-section-width: 96%;
+        }
+    }
+    @media screen and (min-width: 1280px) { /* 桌面端 */
+        :root {
+            --c-link-section-width: 46%;
+        }
+    }
+    /* 响应式适配 --------- END */
+</style>

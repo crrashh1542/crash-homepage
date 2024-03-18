@@ -20,7 +20,7 @@ export default {
         url: 'https://blog.crrashh.com/archives/5'
     }],
 
-    // 横幅下侧社交媒体栏
+    // 横幅内的下侧社交媒体栏
     social: [{
         icon: 'blog',
         url: 'https://blog.crrashh.com'
@@ -44,5 +44,12 @@ export default {
     {
         icon: 'qq',
         url: 'https://wpa.qq.com/msgrd?uin=3247380086&site=qq&menu=yes'
+    }],
+
+    // 横幅下方网站链接
+    links: [{
+        title: '云萧的咕咕屋',
+        description: '云萧的个人博客，<s>都是有空随便写写的啊喂！</s>',
+        to: 'https://blog.crrashh.com'
     }]
 }

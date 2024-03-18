@@ -1,0 +1,17 @@
+<div class="catalog text-2xl font-medium relative pl-5 mt-28">
+    <slot />
+</div>
+
+<style lang="less">
+.catalog::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 8px;
+    border-radius: 3px;
+    background-color: #fcea78;
+}
+</style>

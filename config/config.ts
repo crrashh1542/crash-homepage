@@ -51,5 +51,30 @@ export default {
         title: '云萧的咕咕屋',
         description: '云萧的个人博客，<s>都是有空随便写写的啊喂！</s>',
         to: 'https://blog.crrashh.com'
-    }]
+    },
+    {
+        title: 'Windows Up-to-Date',
+        description: '一个反映 Windows 实时更新状态的站点',
+        to: 'https://wutd.crrashh.com'
+    },
+    {
+        title: '云萧的咕咕盘',
+        description: '基于 Alist 的公开网盘服务',
+        to: 'https://disk.crrashh.com'
+    },
+    {
+        title: '咕咕的开放文档',
+        description: '大家都可以用的 API 和 CDN',
+        to: 'https://docs.crrashh.com'
+    }],
+
+    // 页脚
+    footer: {
+        'copyright': '© Copyright 2022-2024 Kotsuki Crrashh. All Rights Reserved.',
+        'beian': {
+            'miit': '蜀ICP备2022029657号-2',
+            'gongan': null,
+            'moe': '萌ICP备20220551号'
+        }
+    }
 }

@@ -3,22 +3,12 @@ interface Props {
     content: customObject
 }
 const { content } = Astro.props
-const { beian } = content
-
-// 将备案栏输出为字符串，以方便传递
-let [baElement, bridge] = ''
 // 
 ---
 
 <footer class="text-center mt-6 py-6 text-md leading-7">
     <p>{ content.copyright }</p>
-    <!-- <p set:html={ baElement } /> -->
-    <p>
-        <a href="https://beian.miit.gov.cn" target="_blank">
-            <img src="/miit.png" /> 蜀ICP备2022029657号-2</a> |
-        <a href="https://icp.gov.moe/?keyword=20220551" target="_blank">
-            <img src="/moeicp.png" /> 萌ICP备20220551号</a>
-    </p>
+    <p set:html={ content.beian } />
 </footer>
 
 <style lang="less">
@@ -27,6 +17,10 @@ let [baElement, bridge] = ''
     footer {
         border-top: 1px solid @c-color-bar-border;
         color: #666;
+
+        p > a:hover {
+            color: @c-color-theme;
+        }
     }
 </style>
 

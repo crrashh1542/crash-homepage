@@ -14,7 +14,7 @@ for (let i = 0; i < nav.length; i++) {
 }
 ---
 
-<header class="fixed flex p-4 w-full whitespace-nowrap top">
+<header class="fixed flex w-full whitespace-nowrap top">
     <div class="title text-xl font-semibold">
         <a href=".">{ title }</a></div>
     <div class="grow" />
@@ -22,28 +22,44 @@ for (let i = 0; i < nav.length; i++) {
 </header>
 
 
-<style lang="less">
-    @import url("@/styles/global.less");
+<style is:global lang="less">
+    @import url('@/styles/global.less');
 
+    // 基础样式
     header {
-        padding-left: calc(@c-layout-padding - 5%);
-        padding-right: calc(@c-layout-padding - 5%);
+        padding: 1rem var(--appbar-padding-horizontal);
         background-color: #fff;
         // backdrop-filter: blur(2px);
         // 将 less 变量暴露为普通 CSS 变量，以供 .item 使用
         --c-color-theme: @c-color-theme;
+
+        .title:hover { color: var(--c-color-theme); }
+        .item:hover { color: var(--c-color-theme); }
+        .link {
+            display: var(--appbar-link-display);
+            .item {
+                padding: 0 16px;
+            }
+        }
     }
     header:not(.top) {
         border-bottom: 1px solid @c-color-bar-border;
     }
-</style>
 
-<style is:global>
-    header > .link > .item {
-        padding: 0 16px;
+    // 响应式适配 ---- PC
+    @media screen and (min-width: 1024px) {
+        :root {
+            --appbar-padding-horizontal: calc(@c-layout-padding - 5%);
+            --appbar-link-display: block;
+        }
     }
-    header > .link > .item:hover, header > .title:hover {
-        color: var(--c-color-theme);
+
+    // 响应式适配 ---- 移动端
+    @media screen and (max-width: 1024px) {
+        :root {
+            --appbar-padding-horizontal: 1em;
+            --appbar-link-display: none;
+        }
     }
 </style>
 

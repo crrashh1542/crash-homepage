@@ -33,23 +33,26 @@ import avatar from '@/assets/images/avatar.jpg'
     </div>
 </div>
 
-<style lang="less">
+<style is:global lang="less">
     @import url('@/styles/global.less');
+
+    // 基础样式
     .banner {
         margin-bottom: 2em;
+
         .title {
             font-size: 54px;
             background: linear-gradient(120deg, #fbe65c, #fab664);
             // Tailwind 中使用 background-clip 会因优先级低被挤占
             background-clip: text;
         }
-    }
-</style>
 
-<style is:global>
-    .social .button {
-        background: #fff8ca;
-        box-shadow: 0 0 3px #fcea78;
-        backdrop-filter: blur(5px);
+        .social .button {
+            background: #fff8ca;
+            box-shadow: 0 0 3px #fcea78;
+            backdrop-filter: blur(5px);
+        }
     }
+
+    // 响应式 ---- TODO
 </style>

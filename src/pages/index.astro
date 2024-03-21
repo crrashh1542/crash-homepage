@@ -29,17 +29,31 @@ import Footer from '@/components/Footer.astro'
 </Layout>
 
 <style is:global lang="less">
-/** 此处样式表用于设定全局基础样式
- *  Version: 1.0-dev / Date: 2024-03-13
- */
-@import url('@/styles/global.less');
+	/** 此处样式表用于设定全局基础样式
+	 *  Version: 1.0-dev / Date: 2024-03-22
+	 */
+	@import url('@/styles/global.less');
 
-* {
-	font-family: @c-font-family;
-}
+	// 基础样式
+	* {
+		font-family: @c-font-family;
 
-main {
-	padding: 9em @c-layout-banner-padding 0;
-}
+		main {
+			padding: 9em var(--main-padding-horiziontal) 0;
+		}
+	}
 
+	// 响应式适配 ---- PC
+	@media screen and (min-width: 1024px) {
+		body {
+			--main-padding-horiziontal: @c-layout-banner-padding;
+		}
+	}
+
+	// 响应式适配 ---- 移动端
+	@media screen and (max-width: 1024px) {
+		body {
+			--main-padding-horiziontal: 2em;
+		}
+	}
 </style>

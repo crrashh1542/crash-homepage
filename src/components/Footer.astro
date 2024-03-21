@@ -6,7 +6,7 @@ const { content } = Astro.props
 // 
 ---
 
-<footer class="text-center mt-6 py-6 text-md leading-7">
+<footer class="text-center mt-6 py-6">
     <p>{ content.copyright }</p>
     <p set:html={ content.beian } />
 </footer>
@@ -14,12 +14,31 @@ const { content } = Astro.props
 <style lang="less">
     @import url('@/styles/global.less');
 
+    // 基础样式
     footer {
         border-top: 1px solid @c-color-bar-border;
         color: #666;
+        font-size: var(--footer-text-size);
+        line-height: var(--footer-text-height);
 
         p > a:hover {
             color: @c-color-theme;
+        }
+    }
+
+    // 响应式适配 ------ PC
+    @media screen and (min-width: 1024px) {
+        :root {
+            --footer-text-size: 16px;
+            --footer-text-height: 24px;
+        }
+    }
+
+    // 响应式适配 ------ 移动端
+    @media screen and (max-width: 1024px) {
+        :root {
+            --footer-text-size: 14px;
+            --footer-text-height: 24px;
         }
     }
 </style>

@@ -9,7 +9,7 @@ let linkElement = ''
 for(let i = 0; i < to.length; i++) {
     let currentLink = to[i]
     linkElement += '<a href="' + currentLink.to + '" target="_blank" class=' + 
-        '"section block rounded-lg px-5 py-4 my-2 mr-4"><div class="title text-lg' + 
+        '"section block rounded-lg px-5 py-3 my-2 mr-4"><div class="title text-lg' + 
         ' font-semibold">' + currentLink.title + '</div><div class="description ' + 
         'text-base break-all">' + currentLink.description + '</div></a>'
 }
@@ -27,7 +27,7 @@ for(let i = 0; i < to.length; i++) {
     }
 
     .section > .title {
-        line-height: 48px;
+        line-height: 42px;
     }
 
     .section > .description {

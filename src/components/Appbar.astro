@@ -30,8 +30,6 @@ for (let i = 0; i < nav.length; i++) {
         padding: 1rem var(--appbar-padding-horizontal);
         background-color: #fff;
         // backdrop-filter: blur(2px);
-        // 将 less 变量暴露为普通 CSS 变量，以供 .item 使用
-        --c-color-theme: @c-color-theme;
 
         .title:hover { color: var(--c-color-theme); }
         .item:hover { color: var(--c-color-theme); }
@@ -65,9 +63,10 @@ for (let i = 0; i < nav.length; i++) {
 
 <script lang="ts">
     // 监听用户是否到顶
-    var barEle = document.getElementsByTagName('header')[0]
+    let barEle = document.getElementsByTagName('header')[0]
     window.addEventListener('scroll', scroll)
-    function scroll() {
+    // 如果到顶加上 .top 以调整样式
+    let scroll = () => {
         let mainPosition = document.getElementsByTagName('main')[0].getBoundingClientRect()
         if (mainPosition.y == 0) {
             barEle.classList.add('top')
@@ -75,5 +74,5 @@ for (let i = 0; i < nav.length; i++) {
             barEle.classList.remove('top')
         }
     }
-    // window.removeEventListener('scroll', scroll)
+    window.removeEventListener('scroll', scroll)
 </script>

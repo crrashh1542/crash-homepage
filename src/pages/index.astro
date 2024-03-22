@@ -8,8 +8,10 @@ import Layout from '@/layouts/Layout.astro'
 import Appbar from '@/components/Appbar.astro'
 import Banner from '@/components/Banner.astro'
 import Catalog from '@/components/Catalog.astro'
-import Links from '@/components/main/Links.astro'
 import Footer from '@/components/Footer.astro'
+
+// 引入页面模块
+import Links from '@/components/main/Links.astro'
 ---
 
 <Layout title={ config.site.name + config.site.suffix } description={ config.site.seoDescription }>
@@ -29,9 +31,6 @@ import Footer from '@/components/Footer.astro'
 </Layout>
 
 <style is:global lang="less">
-	/** 此处样式表用于设定全局基础样式
-	 *  Version: 1.0-dev / Date: 2024-03-22
-	 */
 	@import url('@/styles/global.less');
 
 	// 基础样式
@@ -39,13 +38,14 @@ import Footer from '@/components/Footer.astro'
 		font-family: @c-font-family;
 
 		main {
-			padding: 9em var(--main-padding-horiziontal) 0;
+			padding: var(--main-padding-top) var(--main-padding-horiziontal) 0;
 		}
 	}
 
 	// 响应式适配 ---- PC
 	@media screen and (min-width: 1024px) {
 		body {
+			--main-padding-top: 9em;
 			--main-padding-horiziontal: @c-layout-banner-padding;
 		}
 	}
@@ -53,6 +53,7 @@ import Footer from '@/components/Footer.astro'
 	// 响应式适配 ---- 移动端
 	@media screen and (max-width: 1024px) {
 		body {
+			--main-padding-top: 8em;
 			--main-padding-horiziontal: 2em;
 		}
 	}

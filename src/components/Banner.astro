@@ -11,7 +11,7 @@ let socialElement = ''
 for (let i = 0; i < social.length; i++) {
     let currentLink = social[i]
     socialElement += '<a href="' + currentLink.url + '" target="_blank"<span class='
-        + '"button p-3 mr-3 text-2xl rounded-md icon-' + currentLink.icon + '"></span></a>'
+        + '"button mr-3 rounded-md icon-' + currentLink.icon + '"></span></a>'
 }
 
 // 引入头像
@@ -19,17 +19,17 @@ import { Image } from "astro:assets"
 import avatar from '@/assets/images/avatar.jpg'
 ---
 
-<div class="banner flex">
+<div class="banner">
     <!-- 左侧头像 -->
-    <Image src={ avatar } class="rounded-full h-52 w-52" alt="" />
+    <Image src={ avatar } class="avatar rounded-full" alt="" />
     <!-- 右侧信息 -->
-    <div class="content pl-16">
+    <div class="content">
         <!-- L1 - 站点名称 -->
-        <div class="title mt-2 font-semibold text-transparent">{ info.name }</div>
+        <div class="title font-semibold text-transparent">{ info.name }</div>
         <!-- L2 - 站点介绍 -->
-        <div class="text-xl mt-4">{ info.description }</div>
+        <div class="description">{ info.description }</div>
         <!-- L3 - 社交链接 -->
-        <div class="social mt-10" set:html={ socialElement } />
+        <div class="social" set:html={ socialElement } />
     </div>
 </div>
 
@@ -38,21 +38,73 @@ import avatar from '@/assets/images/avatar.jpg'
 
     // 基础样式
     .banner {
-        margin-bottom: 2em;
+        display: var(--banner-display);
+        margin-bottom: 1.8em;
 
-        .title {
-            font-size: 54px;
-            background: linear-gradient(120deg, #fbe65c, #fab664);
-            // Tailwind 中使用 background-clip 会因优先级低被挤占
-            background-clip: text;
+        .avatar {
+            width: var(--banner-avatar-size);
+            height: var(--banner-avatar-size);
         }
 
-        .social .button {
-            background: #fff8ca;
-            box-shadow: 0 0 3px #fcea78;
-            backdrop-filter: blur(5px);
+        .content {
+            padding-left: var(--banner-content-padding);
+
+            .title {
+                font-size: var(--banner-title-size);
+                margin-top: var(--banner-title-top);
+                background: linear-gradient(120deg, #fbe65c, #fab664);
+                // Tailwind 中使用 background-clip 会因优先级低被挤占
+                background-clip: text;
+            }
+
+            .description {
+                font-size: var(--banner-desc-size);
+                margin-top: var(--banner-desc-top);
+            }
+
+            .social {
+                margin-top: var(--banner-social-top);
+
+                .button {
+                    font-size: var(--banner-button-size);
+                    padding: var(--banner-button-padding);
+                    background: #fff8ca;
+                    box-shadow: 0 0 3px #fcea78;
+                    backdrop-filter: blur(5px);
+                }
+            }
         }
     }
 
-    // 响应式 ---- TODO
+    // 响应式适配 ---- PC
+    @media screen and (min-width: 750px) {
+        :root {
+            --banner-display: flex;
+            --banner-avatar-size: 200px;
+            --banner-content-padding: 4rem;
+            --banner-title-size: 54px;
+            --banner-title-top: 8px;
+            --banner-desc-size: 20px;
+            --banner-desc-top: 16px;
+            --banner-social-top: 40px;
+            --banner-button-size: 28px;
+            --banner-button-padding: 12px;
+        }
+    }
+
+    // 响应式适配 ---- 移动端
+    @media screen and (max-width: 750px) {
+        :root {
+            --banner-avatar-size: 120px;
+            --banner-display: block;
+            --banner-content-padding: 0;
+            --banner-title-size: 40px;
+            --banner-title-top: 16px;
+            --banner-desc-size: 18px;
+            --banner-desc-top: 12px;
+            --banner-social-top: 32px;
+            --banner-button-size: 21px;
+            --banner-button-padding: 10px;
+        }
+    }
 </style>

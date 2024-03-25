@@ -22,8 +22,10 @@ import Links from '@/components/main/Links.astro'
 	<main>
 		<Banner info={ config.site } social={ config.social } />
 
+		<div class="w-full h-16"><!-- placeholder --></div>
 		<Catalog>咱的好东西！</Catalog>
 		<Links to={ config.links } />
+
 	</main>
 
 	<!-- Part 3 页脚 -->
@@ -36,7 +38,6 @@ import Links from '@/components/main/Links.astro'
 	// 基础样式
 	* {
 		font-family: @c-font-family;
-
 		main {
 			padding: var(--main-padding-top) var(--main-padding-horiziontal) 0;
 		}
